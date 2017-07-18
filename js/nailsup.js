@@ -12,11 +12,11 @@ if (document.readyState) {
 
 function checkstate() {
     if (document.readyState == "complete" || document.readyState == "complete") {
-        document.getElementById("page").style.display = "block";
+        document.getElementById("page").style.display = "flex";
     }
 }
 
 function saydone() {
-    document.getElementById("page").style.display = "block";
+    document.getElementById("page").style.display = "flex";
 
 }

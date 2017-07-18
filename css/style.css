@@ -2,7 +2,9 @@ footer {
     bottom: -20px !important;
     position: fixed !important;
 }
-
+#page{
+    display: none;
+}
 .no-margin-height {
     min-height: 0px !important;
 }
