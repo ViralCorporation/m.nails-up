@@ -1,0 +1,107 @@
+footer {
+    bottom: -20px !important;
+    position: fixed !important;
+}
+
+.no-margin-height {
+    min-height: 0px !important;
+}
+
+.no-backg {
+    background: rgba(0, 0, 0, 0);
+}
+
+.bottom-navigator {
+    top: 10px !important;
+    line-height: 14px;
+    min-height: 80px !important;
+    margin: 0;
+}
+
+.bottom-navigator .mdl-layout__tab {
+    top: 10px !important;
+    line-height: 15px;
+    min-height: 800px !important;
+    font-size: 10px;
+    margin: 0;
+}
+
+.mdl-layout__tab-bar{
+    overflow: hidden;
+    height: 48px !important;
+}
+
+.material-icons.gold {
+    color: #fdd835;
+}
+
+header {
+    margin: auto;
+    height: 40px ! important;
+}
+
+header h6 {
+    margin: auto;
+    height: 40px ! important;
+}
+
+.padpage, .page-content .page-content{
+    padding: 10px;
+    background: #fafafa;
+    position: relative;
+}
+
+#scroll-tab-1 .demo-card-wide.mdl-card{
+    width: 100%;
+}
+
+.mdl-grid .mdl-card{
+    margin: auto;
+    float: inherit;
+    height: 100px !important;
+    min-height: 100px !important;
+    width: 50% !important;
+}
+
+.demo-card-wide>.mdl-card__title {
+    color: #fff;
+    height: 176px;
+}
+
+#fixed-tab-1 .demo-card-wide.mdl-card, .demo-card-wide>.mdl-card__title #spray_tan {
+    background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+}
+
+#fixed-tab-2 .demo-card-wide.mdl-card, .demo-card-wide>.mdl-card__title #eyes   {
+    background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+}
+
+#fixed-tab-3 .demo-card-wide.mdl-card, .demo-card-wide>.mdl-card__title #dtox{
+    background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+}
+
+#fixed-tab-4 .demo-card-wide.mdl-card, .demo-card-wide>.mdl-card__title #make_up{
+    background: url('https://ascarus.files.wordpress.com/2013/09/como-fazer-maquiagem-corretamente-pincel.jpg') center / cover;
+}
+
+#fixed-tab-5 .demo-card-wide.mdl-card, .demo-card-wide>.mdl-card__title #nails{
+    background: url('http://www.am.grupodifusora.com.br/wp-content/uploads/2016/10/manicure-lead.jpg') center / cover;
+}
+
+#fixed-tab-6 .demo-card-wide.mdl-card, .demo-card-wide>.mdl-card__title #massage{
+    background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+}
+
+#fixed-tab-7 .demo-card-wide.mdl-card, .demo-card-wide>.mdl-card__title #waxing{
+    background: url('http://spasindenver.net/wp-content/uploads/2016/05/shutterstock_166291439.jpg') center / cover;
+}
+
+.demo-card-wide>.mdl-card__menu {
+    color: #fff;
+}
+
+.mdl-card__actions.mdl-card--border{
+    height: 40px !important;
+    bottom: 0;
+    position: absolute;
+}
