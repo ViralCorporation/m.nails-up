@@ -180,14 +180,8 @@ i.material-icons {
 .material-icons.md-48 {
     font-size: 48px;
 }
-<<<<<<< HEAD
 
 @media (max-width 767px0{
     .navbar{display: none;
-=======
-@media screen and (max-width: 980px) {
-    #navbar{
-        display: none;
->>>>>>> navbar hidden
     }
 }
