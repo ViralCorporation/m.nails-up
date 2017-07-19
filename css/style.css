@@ -118,7 +118,6 @@ header h6 {
 .mdl-card__actions.mdl-card--border {
     height: 40px !important;
     bottom: 0;
-    position: absolute;
 }
 
 .contact {
@@ -137,6 +136,11 @@ h6.contact {
 i.material-icons {
     display: flex !important;
     justify-content: center !important;
+}
+
+.mdl-card__menu {
+    position: unset;
+    margin: auto;
 }
 
 .material-icons.md-18 {
