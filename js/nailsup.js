@@ -23,3 +23,7 @@ function saydone() {
 function sendEmail(){
     window.location.href = "mailto:info@nailsup.com.br?subject=Subject&body=message%20goes%20here";
 }
+function sendEmailHelp(){
+    window.location.href = "mailto:help@nailsup.com.br?subject=Subject&body=message%20goes%20here";
+}
+
