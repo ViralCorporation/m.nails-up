@@ -68,6 +68,10 @@ header h6 {
     width: 50% !important;
 }
 
+#fixed-tab-5 .mdl-grid .mdl-card {
+    width: 100% !important;
+}
+
 .demo-card-wide>.mdl-card__title {
     color: #fff;
     height: 176px;
@@ -118,18 +122,15 @@ header h6 {
 }
 
 .contact {
-    margin: auto;
     color: #757575;
-    font-size: 16px;
-    text-transform: none;
-    flex-flow: column;
+    margin: auto;
 }
 
-.contact h2{
+h2.contact {
     font-size: 14px;
 }
 
-.contact h6{
+h6.contact {
     font-size: 12px;
 }
 
@@ -138,3 +139,18 @@ i.material-icons {
     justify-content: center !important;
 }
 
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
