@@ -3,13 +3,27 @@ footer {
     position: fixed !important;
 }
 
+h6.primary-color{
+    margin: 0px;
+}
+
+.primary-color{
+    color: rgb(63,81,181);
+}
+
+.primary-bg{
+    background: rgb(63,81,181);
+}
+
 scroll{
     height: 20px ! important;
 }
 
 header {
     height: 40px ! important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 header h6{
     margin: auto !important;
     margin-top: 10px !important;
