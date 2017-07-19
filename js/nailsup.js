@@ -20,3 +20,6 @@ function saydone() {
     document.getElementById("page").style.display = "flex";
 
 }
+function sendEmail(){
+    window.location.href = "mailto:info@nailsup.com.br?subject=Subject&body=message%20goes%20here";
+}
