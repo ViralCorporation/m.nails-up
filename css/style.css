@@ -3,6 +3,20 @@ footer {
     position: fixed !important;
 }
 
+scroll{
+    height: 20px ! important;
+}
+
+header {
+    height: 40px ! important;
+}
+header h6{
+    margin: auto !important;
+    margin-top: 10px !important;
+    text-align: center;
+}
+
+
 #page {
     display: none;
 }
@@ -13,6 +27,10 @@ footer {
 
 .no-backg {
     background: rgba(0, 0, 0, 0);
+}
+
+.mdl-layout__tab {
+    font-size: 10px !important;
 }
 
 .bottom-navigator {
@@ -37,16 +55,6 @@ footer {
 
 .material-icons.gold {
     color: #fdd835;
-}
-
-header {
-    margin: auto;
-    height: 40px ! important;
-}
-
-header h6 {
-    margin: auto;
-    height: 40px ! important;
 }
 
 .padpage,
