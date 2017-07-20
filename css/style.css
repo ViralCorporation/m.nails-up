@@ -30,11 +30,6 @@ footer {
     position: fixed !important;
 }
 
-a {
-    color: darkgoldenrod;
-    padding: 2vh;
-}
-
 #page {
     display: none;
 }
@@ -149,29 +144,62 @@ i.material-icons {
     color: goldenrod;
 }
 
-#services .page-content .page-content {
+#services .demo-card-wide.mdl-card a {
+    color: goldenrod;
     padding: 2vw;
 }
 
-#services .demo-card-wide.mdl-card {
+.products .demo-card-wide.mdl-card {
     width: 108vw;
     left: -4vw;
     top: -4vw;
 }
 
-#spray_tan .demo-card-wide.mdl-card {}
+#packages .demo-card-wide.mdl-card {
+    width: 96vw;
+    padding: 2vw;
+}
 
-#eyes .demo-card-wide.mdl-card {}
+#services .page-content .page-content {
+    padding: 2vw;
+}
 
-#dtox .demo-card-wide.mdl-card {}
+#services .demo-card-wide>.mdl-card__title {
+    color: #fff;
+    height: 30vh;
+}
 
-#make_up .demo-card-wide.mdl-card {}
+#spray_tan .demo-card-wide>.mdl-card__title {
+    background: url('http://static.vix.com/pt/sites/default/files/styles/large/public/bdm/bronzeamento-artificial_0.jpg') center / cover;
+}
 
-#massage .demo-card-wide.mdl-card {}
+#eyes .demo-card-wide>.mdl-card__title {
+    background: url('https://i.ytimg.com/vi/WZerlq1RYUQ/maxresdefault.jpg') center / cover;
+}
 
-#waxing .demo-card-wide.mdl-card {}
+#dtox .demo-card-wide>.mdl-card__title {
+    background: url('http://fabianascaranzi.com.br/wp-content/uploads/2016/04/dieta-detox-para-emagrecer-rapido.jpg') center / cover;
+}
 
-#packages .demo-card-wide.mdl-card {}
+#make_up .demo-card-wide>.mdl-card__title {
+    background: url('http://wallpaperpulse.com/img/5231786.jpg') center / cover;
+}
+
+#nails .demo-card-wide>.mdl-card__title {
+    background: url(' http://cdn2.stylecraze.com/wp-content/uploads/2013/02/Manicure-At-Home2.jpg') center / cover;
+}
+
+#massage .demo-card-wide>.mdl-card__title {
+    background: url('http://www.channelcourt.com.au/_source/img/store-img/Thai-Massage.jpg') center / cover;
+}
+
+#waxing .demo-card-wide>.mdl-card__title {
+    background: url('http://jjwaxing.com/wp-content/uploads/2016/02/Waxing-Leg.jpg') center / cover;
+}
+
+#packages .demo-card-wide>.mdl-card__title {
+    background: url('http://www.kathavento.com.br/site/imagens/produtos_grandes/p25512.jpg') center / cover;
+}
 
 #help .mdl-grid .mdl-card {
     width: 100% !important;
