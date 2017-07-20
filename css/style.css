@@ -51,7 +51,7 @@ header h6{
 .bottom-navigator {
     top: 10px !important;
     line-height: 14px;
-    min-height: 56dp !important;
+    min-height: 140px !important;
     margin: 0;
 }
 
@@ -65,7 +65,7 @@ header h6{
 
 .mdl-layout__tab-bar {
     overflow: hidden;
-    height: 37dp !important;
+    height: 92px !important;
 }
 
 .material-icons.gold {
