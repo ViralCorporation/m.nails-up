@@ -30,6 +30,11 @@ footer {
     position: fixed !important;
 }
 
+a{
+    color: darkgoldenrod;
+    padding: 2vh;
+}
+
 #page {
     display: none;
 }
@@ -79,7 +84,7 @@ footer {
     position: relative;
 }
 
-#scroll-tab-1 .demo-card-wide.mdl-card {
+#spray_tan .demo-card-wide.mdl-card {
     width: 100%;
 }
 
@@ -91,7 +96,7 @@ footer {
     width: 50% !important;
 }
 
-#fixed-tab-5 .mdl-grid .mdl-card {
+#help .mdl-grid .mdl-card {
     width: 100% !important;
 }
 
