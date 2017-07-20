@@ -1,3 +1,8 @@
+.mdl-primary-color{
+   background-color:  #B71C1C;
+    margin: 0;
+    color: #B71C1C;
+}
 /**
  * material-design-lite - Material Design Components in CSS, JS and HTML
  * @version v1.3.0
@@ -905,7 +910,7 @@ p {
   margin-bottom: 16px; }
 
 a {
-  /*color: rgb(255,64,129);*/
+  /*color: gold;*/
     text-decoration-line: none;
     font-weight: 500;
 }
@@ -1391,6 +1396,8 @@ ul, ol {
 /* SNACKBAR */
 /* TOOLTIP */
 /* CHIP */
+
+
 .mdl-color-text--red {
   color: rgb(244,67,54) !important; }
 
@@ -1422,10 +1429,10 @@ ul, ol {
   background-color: rgb(229,115,115) !important; }
 
 .mdl-color-text--red-400 {
-  color: rgb(239,83,80) !important; }
+  color: #B71C1C !important; }
 
 .mdl-color--red-400 {
-  background-color: rgb(239,83,80) !important; }
+  background-color: #B71C1C !important; }
 
 .mdl-color-text--red-500 {
   color: rgb(244,67,54) !important; }
@@ -1554,10 +1561,10 @@ ul, ol {
   background-color: rgb(255,128,171) !important; }
 
 .mdl-color-text--pink-A200 {
-  color: rgb(255,64,129) !important; }
+  color: gold !important; }
 
 .mdl-color--pink-A200 {
-  background-color: rgb(255,64,129) !important; }
+  background-color: gold !important; }
 
 .mdl-color-text--pink-A400 {
   color: rgb(245,0,87) !important; }
@@ -3051,7 +3058,7 @@ ul, ol {
   background-color: rgb(48,63,159) !important; }
 
 .mdl-color--accent {
-  background-color: rgb(255,64,129) !important; }
+  background-color: gold !important; }
 
 .mdl-color--accent-contrast {
   background-color: rgb(255,255,255) !important; }
@@ -3066,7 +3073,7 @@ ul, ol {
   color: rgb(48,63,159) !important; }
 
 .mdl-color-text--accent {
-  color: rgb(255,64,129) !important; }
+  color: gold !important; }
 
 .mdl-color-text--accent-contrast {
   color: rgb(255,255,255) !important; }
@@ -3642,13 +3649,13 @@ ul, ol {
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background: rgb(255,64,129);
+    background: gold;
     color: rgb(255,255,255); }
     .mdl-button .mdl-badge[data-badge]:after {
       top: -10px;
       right: -5px; }
   .mdl-badge.mdl-badge--no-background[data-badge]:after {
-    color: rgb(255,64,129);
+    color: gold;
     background: rgba(255,255,255,0.2);
     box-shadow: 0 0 1px gray; }
   .mdl-badge.mdl-badge--overlap {
@@ -3941,14 +3948,14 @@ input.mdl-button[type="submit"] {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
     background-color: rgba(158,158,158, 0.40); }
   .mdl-button--fab.mdl-button--colored {
-    background: rgb(255,64,129);
+    background: gold;
     color: rgb(255,255,255); }
     .mdl-button--fab.mdl-button--colored:hover {
-      background-color: rgb(255,64,129); }
+      background-color: gold; }
     .mdl-button--fab.mdl-button--colored:focus:not(:active) {
-      background-color: rgb(255,64,129); }
+      background-color: gold; }
     .mdl-button--fab.mdl-button--colored:active {
-      background-color: rgb(255,64,129); }
+      background-color: gold; }
     .mdl-button--fab.mdl-button--colored .mdl-ripple {
       background: rgb(255,255,255); }
 
@@ -4005,12 +4012,12 @@ input.mdl-button[type="submit"] {
     background-color: rgb(63,81,181); }
 
 .mdl-button--accent.mdl-button--accent {
-  color: rgb(255,64,129); }
+  color: gold; }
   .mdl-button--accent.mdl-button--accent .mdl-ripple {
     background: rgb(255,255,255); }
   .mdl-button--accent.mdl-button--accent.mdl-button--raised, .mdl-button--accent.mdl-button--accent.mdl-button--fab {
     color: rgb(255,255,255);
-    background-color: rgb(255,64,129); }
+    background-color: gold; }
 
 .mdl-button[disabled][disabled], .mdl-button.mdl-button--disabled.mdl-button--disabled {
   color: rgba(0,0,0, 0.26);
@@ -4219,7 +4226,7 @@ input.mdl-button[type="submit"] {
   box-sizing: border-box; }
 
 .mdl-card__media {
-  background-color: rgb(255,64,129);
+  background-color: gold;
   background-repeat: repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -7749,7 +7756,7 @@ input.mdl-button[type="submit"] {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background-color: rgb(63,81,181);
+  background-color: #B71C1C;
   overflow-y: hidden;
   overflow-x: scroll; }
   .mdl-layout__tab-bar::-webkit-scrollbar {
@@ -7799,7 +7806,7 @@ input.mdl-button[type="submit"] {
   width: 56px;
   z-index: 4;
   text-align: center;
-  background-color: rgb(63,81,181);
+  background-color: #B71C1C;
   color: transparent;
   cursor: pointer;
   -webkit-user-select: none;
@@ -7869,7 +7876,7 @@ input.mdl-button[type="submit"] {
     bottom: 0;
     left: 0;
     position: absolute;
-    background: rgb(255,64,129);
+    background: gold;
     -webkit-animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) 0.01s alternate forwards;
             animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) 0.01s alternate forwards;
     transition: all 1s cubic-bezier(0.4, 0, 1, 1); }
@@ -8827,7 +8834,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
   .mdl-snackbar__action {
     background: transparent;
     border: none;
-    color: rgb(255,64,129);
+    color: gold;
     float: right;
     text-transform: uppercase;
     padding: 14px 24px 14px 12px;
