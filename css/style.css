@@ -17,11 +17,11 @@ h6.primary-color{
 }
 
 scroll{
-    height: 20px ! important;
+    height: 67px ! important;
 }
 
 header {
-    height: 40px ! important;
+    height: 133px ! important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -45,21 +45,21 @@ header h6{
 }
 
 .mdl-layout__tab {
-    font-size: 14sp !important;
+    font-size: 42sp !important;
 }
 
 .bottom-navigator {
     top: 10px !important;
-    line-height: 14px;
-    min-height: 140px !important;
+    line-height: 14sp;
+    min-height: 200px !important;
     margin: 0;
 }
 
 .bottom-navigator .mdl-layout__tab {
     top: 10px !important;
-    line-height: 15px;
+    line-height: 15sp;
     min-height: 800px !important;
-    font-size: 12sp !important;
+    font-size: 36sp !important;
     margin: 0;
 }
 
@@ -97,7 +97,7 @@ header h6{
 
 .demo-card-wide>.mdl-card__title {
     color: #fff;
-    height: 176px;
+    height: 586px;
 }
 
 #fixed-tab-1 .demo-card-wide.mdl-card,
@@ -139,7 +139,7 @@ header h6{
 }
 
 .mdl-card__actions.mdl-card--border {
-    height: 40px !important;
+    height: 133px !important;
     bottom: 0;
 }
 
@@ -149,11 +149,11 @@ header h6{
 }
 
 h2.contact {
-    font-size: 14px;
+    font-size: 48sp;
 }
 
 h6.contact {
-    font-size: 12px;
+    font-size: 36sp;
 }
 
 i.material-icons {
@@ -167,17 +167,17 @@ i.material-icons {
 }
 
 .material-icons.md-18 {
-    font-size: 18dp;
+    font-size: 54px;
 }
 
 .material-icons.md-24 {
-    font-size: 24dp;
+    font-size: 72px;
 }
 
 .material-icons.md-36 {
-    font-size: 36dp;
+    font-size: 108px;
 }
 
 .material-icons.md-48 {
-    font-size: 48dp;
+    font-size: 144px;
 }
