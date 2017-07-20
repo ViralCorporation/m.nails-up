@@ -32,3 +32,7 @@ setTimeout(function () {
   window.scrollTo(0, 1);
 }, 1000);
 
+
+addEventListener("load", function() {
+    window.scrollTo(1, 0);
+}, false);
