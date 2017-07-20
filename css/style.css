@@ -70,6 +70,7 @@ background: gold;
 }
 
 .mdl-layout__tab-bar {
+    overflow: hidden;
     height: 6vh !important;
 }
 
