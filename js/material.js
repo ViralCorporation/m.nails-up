@@ -3172,8 +3172,8 @@ MaterialLayout.prototype.Constant_ = {
     TAB_SCROLL_PIXELS: 100,
     RESIZE_TIMEOUT: 100,
     MENU_ICON: '&#xE5D2;',
-    CHEVRON_LEFT: 'chevron_left',
-    CHEVRON_RIGHT: 'chevron_right'
+    //CHEVRON_LEFT: 'chevron_left',
+    //CHEVRON_RIGHT: 'chevron_right'
 };
 /**
    * Keycodes, for code readability.
@@ -3225,9 +3225,9 @@ MaterialLayout.prototype.CssClasses_ = {
     TAB_BAR: 'mdl-layout__tab-bar',
     TAB_CONTAINER: 'mdl-layout__tab-bar-container',
     TAB: 'mdl-layout__tab',
-    TAB_BAR_BUTTON: 'mdl-layout__tab-bar-button',
-    TAB_BAR_LEFT_BUTTON: 'mdl-layout__tab-bar-left-button',
-    TAB_BAR_RIGHT_BUTTON: 'mdl-layout__tab-bar-right-button',
+    //TAB_BAR_BUTTON: 'mdl-layout__tab-bar-button',
+    //TAB_BAR_LEFT_BUTTON: 'mdl-layout__tab-bar-left-button',
+    //TAB_BAR_RIGHT_BUTTON: 'mdl-layout__tab-bar-right-button',
     TAB_MANUAL_SWITCH: 'mdl-layout__tab-manual-switch',
     PANEL: 'mdl-layout__tab-panel',
     HAS_DRAWER: 'has-drawer',
