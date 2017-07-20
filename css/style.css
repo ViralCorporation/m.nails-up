@@ -6,15 +6,11 @@ footer {
 .box {
     background: #666;
     height: 300px;
-    width: 1079px;
+    width: 411dp;
 }
 
 h6.primary-color {
     margin: 0px;
-}
-
-body{
-    width: 200vh;
 }
 
 .primary-color {
@@ -28,6 +24,9 @@ body{
 scroll {
     height: 20px ! important;
 }
+/*TODO: jfhkfhksdfhksjdhf
+
+*/
 
 header {
     height: 40px ! important;
