@@ -1,36 +1,44 @@
 footer {
     bottom: -20px !important;
     position: fixed !important;
-
 }
 
-h6.primary-color{
+.box {
+    background: #666;
+    height: 300px;
+    width: 1079px;
+}
+
+h6.primary-color {
     margin: 0px;
 }
 
-.primary-color{
-    color: rgb(63,81,181);
+body{
+    width: 200vh;
 }
 
-.primary-bg{
-    background: rgb(63,81,181);
+.primary-color {
+    color: rgb(63, 81, 181);
 }
 
-scroll{
-    height: 67px ! important;
+.primary-bg {
+    background: rgb(63, 81, 181);
+}
+
+scroll {
+    height: 20px ! important;
 }
 
 header {
-    height: 133px ! important;
+    height: 40px ! important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-header h6{
+header h6 {
     margin: auto !important;
     margin-top: 10px !important;
     text-align: center;
 }
-
 
 #page {
     display: none;
@@ -45,27 +53,27 @@ header h6{
 }
 
 .mdl-layout__tab {
-    font-size: 42sp !important;
+    font-size: 10px !important;
 }
 
 .bottom-navigator {
     top: 10px !important;
-    line-height: 14sp;
-    min-height: 200px !important;
+    line-height: 14px;
+    min-height: 80px !important;
     margin: 0;
 }
 
 .bottom-navigator .mdl-layout__tab {
     top: 10px !important;
-    line-height: 15sp;
+    line-height: 15px;
     min-height: 800px !important;
-    font-size: 36sp !important;
+    font-size: 10px;
     margin: 0;
 }
 
 .mdl-layout__tab-bar {
     overflow: hidden;
-    height: 92px !important;
+    height: 48px !important;
 }
 
 .material-icons.gold {
@@ -97,7 +105,7 @@ header h6{
 
 .demo-card-wide>.mdl-card__title {
     color: #fff;
-    height: 586px;
+    height: 176px;
 }
 
 #fixed-tab-1 .demo-card-wide.mdl-card,
@@ -139,7 +147,7 @@ header h6{
 }
 
 .mdl-card__actions.mdl-card--border {
-    height: 133px !important;
+    height: 40px !important;
     bottom: 0;
 }
 
@@ -149,11 +157,11 @@ header h6{
 }
 
 h2.contact {
-    font-size: 48sp;
+    font-size: 14px;
 }
 
 h6.contact {
-    font-size: 36sp;
+    font-size: 12px;
 }
 
 i.material-icons {
@@ -167,17 +175,17 @@ i.material-icons {
 }
 
 .material-icons.md-18 {
-    font-size: 54px;
+    font-size: 18px;
 }
 
 .material-icons.md-24 {
-    font-size: 72px;
+    font-size: 24px;
 }
 
 .material-icons.md-36 {
-    font-size: 108px;
+    font-size: 36px;
 }
 
 .material-icons.md-48 {
-    font-size: 144px;
+    font-size: 48px;
 }
