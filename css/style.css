@@ -72,7 +72,7 @@ header h6 {
 
 .mdl-layout__tab-bar {
     overflow: hidden;
-    height: 48px !important;
+    height: 56dp !important;
 }
 
 .material-icons.gold {
