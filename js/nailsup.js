@@ -27,3 +27,8 @@ function sendEmailHelp(){
     window.location.href = "mailto:help@nailsup.com.br?subject=Subject&body=message%20goes%20here";
 }
 
+
+setTimeout(function () {
+  window.scrollTo(0, 1);
+}, 1000);
+
