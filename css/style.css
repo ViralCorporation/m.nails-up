@@ -28,6 +28,10 @@ scroll {
 
 */
 
+body{
+    height: 110%;
+}
+
 header {
     height: 40px ! important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
