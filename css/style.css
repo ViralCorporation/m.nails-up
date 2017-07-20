@@ -30,7 +30,7 @@ footer {
     position: fixed !important;
 }
 
-a{
+a {
     color: darkgoldenrod;
     padding: 2vh;
 }
@@ -56,6 +56,10 @@ a{
     line-height: 1.5
 }
 
+.mdl-layout__tab-bar {
+    height: 6vh !important;
+}
+
 .bottom-navigator {
     line-height: 2.5vh;
     min-height: 12vh !important;
@@ -70,22 +74,9 @@ a{
     margin: 0;
 }
 
-.mdl-layout__tab-bar {
-    height: 6vh !important;
-}
-
-.material-icons.gold {
-    color: #fdd835;
-}
-
-.padpage,
 .page-content .page-content {
-    padding: 10px;
+    padding: 2vw;
     position: relative;
-}
-
-#spray_tan .demo-card-wide.mdl-card {
-    width: 100%;
 }
 
 .mdl-grid .mdl-card {
@@ -94,10 +85,6 @@ a{
     height: 100px !important;
     min-height: 100px !important;
     width: 50% !important;
-}
-
-#help .mdl-grid .mdl-card {
-    width: 100% !important;
 }
 
 .demo-card-wide>.mdl-card__title {
@@ -113,6 +100,11 @@ a{
 .mdl-card__actions.mdl-card--border {
     height: 40px !important;
     bottom: 0;
+}
+
+.mdl-card__menu {
+    position: unset;
+    margin: auto;
 }
 
 .contact {
@@ -133,9 +125,8 @@ i.material-icons {
     justify-content: center !important;
 }
 
-.mdl-card__menu {
-    position: unset;
-    margin: auto;
+.material-icons.gold {
+    color: #fdd835;
 }
 
 .material-icons.md-18 {
@@ -156,4 +147,32 @@ i.material-icons {
 
 .goldendark {
     color: goldenrod;
+}
+
+#services .page-content .page-content {
+    padding: 2vw;
+}
+
+#services .demo-card-wide.mdl-card {
+    width: 108vw;
+    left: -4vw;
+    top: -4vw;
+}
+
+#spray_tan .demo-card-wide.mdl-card {}
+
+#eyes .demo-card-wide.mdl-card {}
+
+#dtox .demo-card-wide.mdl-card {}
+
+#make_up .demo-card-wide.mdl-card {}
+
+#massage .demo-card-wide.mdl-card {}
+
+#waxing .demo-card-wide.mdl-card {}
+
+#packages .demo-card-wide.mdl-card {}
+
+#help .mdl-grid .mdl-card {
+    width: 100% !important;
 }
