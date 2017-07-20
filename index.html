@@ -3,7 +3,7 @@
 
 <head>
     <!-- try hide -->
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0, maximum-scale=1.0, user-scalable=0," />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, minimal-ui">
@@ -19,6 +19,7 @@
     <!-- Material -->
     <link rel="stylesheet" href="css/material.css">
     <script src="js/material.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 
@@ -338,27 +339,28 @@
         <footer class="no-margin-height mdl-layout__header mdl-layout--fixed-tabs">
 
             <div class="bottom-navigator mdl-layout__tab-bar mdl-js-ripple-effect  ">
-                <a href="#hello" class=" mdl-layout__tab">
-                    <i class="material-icons md-24">home</i>
+                <a href="#hello" class=" mdl-layout__tab home">
+                    <i class="material-icons md-24" id="home-icon">home</i>
                     <div class="icon-caption ">Olá</div>
                 </a>
-                <a href="#schedulling" class=" mdl-layout__tab ">
-                    <i class="material-icons md-24">assignment</i>
+                <a href="#schedulling" class=" mdl-layout__tab schedulling">
+                    <i class="material-icons md-24" id="schedulling-icon">assignment</i>
                     <div class="icon-caption ">Agendar</div>
                 </a>
-                <a href="#services" class="mdl-layout__tab is-active">
-                    <i class="material-icons md-24">dehaze</i>
+                <a href="#services" class="mdl-layout__tab is-active services">
+                    <i class="material-icons md-24" id="services-icon">dehaze</i>
                     <div class="icon-caption ">Serviços</div>
                 </a>
-                <a href="#gift" class=" mdl-layout__tab ">
-                    <i class="material-icons md-24">card_giftcard</i>
+                <a href="#gift" class=" mdl-layout__tab gift">
+                    <i class="material-icons md-24" id="gift-icon">card_giftcard</i>
                     <div class="icon-caption ">Convide</div>
                 </a>
-                <a href="#help" class="mdl-layout__tab">
-                    <i class="material-icons md-24">help</i>
+                <a href="#help" class="mdl-layout__tab help">
+                    <i class="material-icons md-24" id="help-icon">help</i>
                     <div class="icon-caption ">Contato</div>
                 </a>
             </div>
+
         </footer>
     </div>
 </body>
