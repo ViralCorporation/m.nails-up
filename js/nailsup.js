@@ -87,3 +87,17 @@ $(function () {
         });
     });
 });
+$(function () {
+    var dialogBronze = document.querySelector('dialog.bronze');
+    var showDialogButtonBronze = document.querySelector('#show-dialog-bronze');
+
+    if (!dialogBronze.showModal) {
+        dialogPolyfill.registerDialog(dialogBronze);
+    }
+    showDialogButtonBronze.addEventListener('click', function () {
+        dialogBronze.showModal();
+    });
+    dialogBronze.querySelector('.close').addEventListener('click', function () {
+        dialogBronze.close();
+    });
+});
