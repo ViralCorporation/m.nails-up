@@ -7798,38 +7798,6 @@ input.mdl-button[type="submit"] {
     top: 0;
     left: 0; }
 
-.mdl-layout__tab-bar-button {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  height: 48px;
-  width: 56px;
-  z-index: 4;
-  text-align: center;
-  background-color: #B71C1C;
-  color: transparent;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
-  .mdl-layout--no-desktop-drawer-button .mdl-layout__tab-bar-button,
-  .mdl-layout--no-drawer-button .mdl-layout__tab-bar-button {
-    width: 16px; }
-    .mdl-layout--no-desktop-drawer-button .mdl-layout__tab-bar-button .material-icons,
-    .mdl-layout--no-drawer-button .mdl-layout__tab-bar-button .material-icons {
-      position: relative;
-      left: -4px; }
-  @media screen and (max-width: 1024px) {
-    .mdl-layout__tab-bar-button {
-      width: 60px; } }
-  .mdl-layout--fixed-tabs .mdl-layout__tab-bar-button {
-    display: none; }
-  .mdl-layout__tab-bar-button .material-icons {
-    line-height: 48px; }
-  .mdl-layout__tab-bar-button.is-active {
-    color: rgb(255,255,255); }
-
 .mdl-layout__tab-bar-left-button {
   left: 0; }
 
