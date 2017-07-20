@@ -7775,7 +7775,6 @@ input.mdl-button[type="submit"] {
 
 .mdl-layout__tab-bar-container {
   position: relative;
-  min- height: 48px;
   width: 100%;
   border: none;
   margin: 0;
@@ -7844,7 +7843,6 @@ input.mdl-button[type="submit"] {
       -ms-flex-negative: 0;
           flex-shrink: 0;
   text-decoration: none;
-  height: 48px;
   line-height: 48px;
   text-align: center;
   font-weight: 500;
