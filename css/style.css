@@ -1,6 +1,7 @@
 footer {
     bottom: -20px !important;
     position: fixed !important;
+
 }
 
 h6.primary-color{
@@ -179,9 +180,4 @@ i.material-icons {
 
 .material-icons.md-48 {
     font-size: 48px;
-}
-
-@media (max-width 767px0{
-    .navbar{display: none;
-    }
 }
