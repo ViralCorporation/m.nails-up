@@ -213,13 +213,18 @@ i.material-icons.quartenion_color {
     max-width: 96vw;
     margin-top: 2.5vw;
     min-height: 100%;
+    padding: 0px 0px 0px 16px;
+}
+
+.content .mdl-card {
+    display: flow-root;
 }
 
 .content .demo-card-wide>.mdl-card__title {
     background: white !important;
     color: var(--coadjuvant-1) !important;
     max-height: 2em;
-    padding: .1em 16px .1em 16px;
+    padding: 0px;
 }
 
 .content .mdl-card__title-text {
@@ -227,7 +232,7 @@ i.material-icons.quartenion_color {
 }
 
 .content .mdl-card__supporting-text {
-    padding: .1em 16px .1em 16px;
+    padding: 0px;
     font-size: 10px;
     text-align: justify;
 }
@@ -239,9 +244,22 @@ i.material-icons.quartenion_color {
 
 .content a {
     font-size: 12px;
-    padding: 0em 0em 0em 16px !important;
+    padding: 0px !important;
     margin: auto;
-    color: var(--secondary_color_1) !important;
+    color: rgba(221, 113, 47, 0.49) !important;
+}
+
+.more {
+    color: var(--secondary_color_1);
+    font-size: 10px;
+    padding: 0;
+}
+
+.more.mdl-button {
+    min-width: 0;
+    padding: 0;
+    height: 19px;
+    line-height: 20px;
 }
 
 #packages .demo-card-wide.mdl-card {

@@ -23,7 +23,7 @@
 
     <!-- Project -->
     <title>Nails Up</title>
-    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/material-datetime-picker.css">
     <link rel="shortcut icon" href="images/favicon.png" />
@@ -57,12 +57,11 @@
     <meta property="og:url" content="http://nailsup.com/" />
     <meta property="og:site_name" content="Nails Up" />
 
-<script>
+    <script>
+        var rotate = 0 - window.orientation;
+        setAttribute("transform:rotate(" + rotate + "deg);-ms-transform:rotate(" + rotate + "deg);-webkit-transform:rotate(" + rotate + "deg)", "style");
 
-var rotate = 0 - window.orientation;
-setAttribute("transform:rotate("+rotate+"deg);-ms-transform:rotate("+rotate+"deg);-webkit-transform:rotate("+rotate+"deg)", "style");
-
-</script>
+    </script>
 
 </head>
 
@@ -156,6 +155,45 @@ setAttribute("transform:rotate("+rotate+"deg);-ms-transform:rotate("+rotate+"deg
                                             </div>
                                         </div>
                                         <div class="content" id="content">
+                                            <div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
+                                                <div class="mdl-card__title" id="spray_tan">
+                                                    <h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
+                                                </div>
+                                                <span class="mdl-card__supporting-text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
+                                                </span>
+                                                <span id="show-dialog-bronze" type="button" class="more mdl-button">More</span>
+                                                <dialog class="mdl-dialog bronze">
+                                                    <h4 class="mdl-dialog__title">Service</h4>
+                                                    <div class="mdl-dialog__content">
+                                                        <p>
+                                                            More info about the services here
+                                                        </p>
+                                                    </div>
+                                                    <div class="mdl-dialog__actions">
+                                                        <button type="button" class="mdl-button close">Close</button>
+
+                                                    </div>
+                                                </dialog>
+                                                <div class="mdl-card__actions mdl-card--border">
+                                                    <a id="value">R$ 3~15 </a>
+                                                    <a>|</a>
+                                                    <a id="time">30min </a>
+                                                </div>
+                                            </div>
+                                            <div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
+                                                <div class="mdl-card__title" id="spray_tan">
+                                                    <h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
+                                                </div>
+                                                <div class="mdl-card__supporting-text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
+                                                </div>
+                                                <div class="mdl-card__actions mdl-card--border">
+                                                    <a>R$ 3~15 </a>
+                                                    <a>|</a>
+                                                    <a>R$ 3~15 </a>
+                                                </div>
+                                            </div>
                                             <div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
                                                 <div class="mdl-card__title" id="spray_tan">
                                                     <h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
