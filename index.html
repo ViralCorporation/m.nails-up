@@ -25,26 +25,13 @@
     <title>Nails Up</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/material-datetime-picker.css">
     <link rel="shortcut icon" href="images/favicon.png" />
     <script src="js/nailsup.js"></script>
 
     <!-- Datapicker -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rome/2.1.22/rome.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
-    <script src="/js/material-datetime-picker.js" charset="utf-8"></script>
-    <script>
-        import MaterialDateTimePicker from 'material-datetime-picker';
 
-        const picker = new MaterialDateTimePicker()
-            .on('submit', (val) => console.log(`data: ${val}`))
-            .on('open', () => console.log('opened'))
-            .on('close', () => console.log('closed'));
-
-        document.querySelector('.c-datepicker-btn')
-            .on('click', () => picker.open());
-
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
@@ -113,7 +100,7 @@
                     <div class="presentation">
 
                         <div class="mdl-grid">
-                            <div class="prest_align" <div class="mdl-cell mdl-cell--2-col animated fadeInRight">
+                            <div class="mdl-cell mdl-cell--2-col animated fadeInRight">
                                 <div class="demo-card-wide mdl-card mdl-shadow--6dp">
                                     <div class="mdl-card__title">
                                         <h2 class="mdl-card__title-text">Agenda</h2>
@@ -209,7 +196,7 @@
                                         <div class="content" id="content">
                                             <div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
                                                 <div class="mdl-card__title" id="spray_tan">
-                                                    <h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
+                                                    <h2 class="mdl-card__title-text" id="bronze-title">Bronzeamento Natural</h2>
                                                 </div>
                                                 <div class="little_text">
                                                     <span class="mdl-card__supporting-text">
@@ -225,10 +212,10 @@
                                                 <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect ">
                                                     <i class="contact material-icons md-24 secondary-color">add_circle</i>
                                                 </div>
-                                                <dialog class="mdl-dialog bronze">
-                                                    <h4 class="mdl-dialog__title">Service</h4>
+                                                <dialog class="mdl-dialog">
+                                                    <h4 class="mdl-dialog__title" id="title-more">Service</h4>
                                                     <div class="mdl-dialog__content">
-                                                        <p>
+                                                        <p id="content-service-info">
                                                             More info about the services here
                                                         </p>
                                                     </div>
@@ -240,11 +227,12 @@
                                             </div>
                                             <div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
                                                 <div class="mdl-card__title" id="spray_tan">
-                                                    <h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
+                                                    <h2 class="mdl-card__title-text" id="bronze-title1">Bronzeamento Natural 2</h2>
                                                 </div>
                                                 <div class="mdl-card__supporting-text">
                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
                                                 </div>
+                                                <span id="show-dialog-bronze_1" type="button" class="more mdl-button">More</span>
                                                 <div class="mdl-card__actions mdl-card--border">
                                                     <a>R$ 3~15 </a>
                                                     <a>|</a>
@@ -253,11 +241,12 @@
                                             </div>
                                             <div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
                                                 <div class="mdl-card__title" id="spray_tan">
-                                                    <h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
+                                                    <h2 class="mdl-card__title-text" id="title-bronze2" >Bronzeamento Natural 2</h2>
                                                 </div>
                                                 <div class="mdl-card__supporting-text">
                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
                                                 </div>
+                                                <span id="show-dialog-bronze_2" type="button" class="more mdl-button">More</span>
                                                 <div class="mdl-card__actions mdl-card--border">
                                                     <a id="value">R$ 3~15 </a>
                                                     <a>|</a>
@@ -266,11 +255,12 @@
                                             </div>
                                             <div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
                                                 <div class="mdl-card__title" id="spray_tan">
-                                                    <h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
+                                                    <h2 class="mdl-card__title-text" id="title-bronze3">Bronzeamento Natural</h2>
                                                 </div>
                                                 <div class="mdl-card__supporting-text">
                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
                                                 </div>
+                                                <span id="show-dialog-bronze3" type="button" class="more mdl-button">More</span>
                                                 <div class="mdl-card__actions mdl-card--border">
                                                     <a>R$ 3~15 </a>
                                                     <a>|</a>
@@ -290,6 +280,7 @@
                                             <div class="mdl-card__supporting-text">
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
                                             </div>
+                                            <span id="show-dialog-eyes" type="button" class="more mdl-button">More</span>
                                             <div class="mdl-card__actions mdl-card--border">
                                                 <a>R$ 3~15 </a>
                                             </div>
@@ -308,6 +299,7 @@
                                             <div class="mdl-card__supporting-text">
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
                                             </div>
+                                            <span id="show-dialog-detox" type="button" class="more mdl-button">More</span>
                                             <div class="mdl-card__actions mdl-card--border">
                                                 <a>R$ 3~15 </a>
                                             </div>
@@ -321,11 +313,12 @@
 
                                         <div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
                                             <div class="mdl-card__title" id="spray_tan">
-                                                <h2 class="mdl-card__title-text">Maquiagem</h2>
+                                                <h2 class="mdl-card__title-text" id="make-title">Maquiagem</h2>
                                             </div>
                                             <div class="mdl-card__supporting-text">
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
                                             </div>
+                                            <span id="show-dialog-make" type="button" class="more mdl-button">More</span>
                                             <div class="mdl-card__actions mdl-card--border">
                                                 <a>R$ 3~15 </a>
                                             </div>
@@ -338,11 +331,12 @@
 
                                         <div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
                                             <div class="mdl-card__title" id="spray_tan">
-                                                <h2 class="mdl-card__title-text">Unhas</h2>
+                                                <h2 class="mdl-card__title-text" id="spray-tan-title">Unhas</h2>
                                             </div>
                                             <div class="mdl-card__supporting-text">
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
                                             </div>
+                                            <span id="show-dialog-sprayTan" type="button" class="more mdl-button">More</span>
                                             <div class="mdl-card__actions mdl-card--border">
                                                 <a>R$ 3~15 </a>
                                             </div>
@@ -356,11 +350,12 @@
 
                                         <div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
                                             <div class="mdl-card__title" id="spray_tan">
-                                                <h2 class="mdl-card__title-text">Massagem</h2>
+                                                <h2 class="mdl-card__title-text" id="massage-title">Massagem</h2>
                                             </div>
                                             <div class="mdl-card__supporting-text">
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
                                             </div>
+                                            <span id="show-dialog-massage" type="button" class="more mdl-button">More</span>
                                             <div class="mdl-card__actions mdl-card--border">
                                                 <a>R$ 3~15 </a>
                                             </div>

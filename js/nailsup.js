@@ -2,7 +2,7 @@ function Scrolldown() {
     window.scroll(0, 300);
 }
 
-window.onload = Scrolldown;
+window.onload = Scrolldown
 
 if (document.readyState) {
     document.onreadystatechange = checkstate;
@@ -88,53 +88,99 @@ $(function () {
     });
 });
 $(function () {
-    var dialogBronze = document.querySelector('dialog.bronze');
+    var dialog = document.querySelector('dialog');
+    var title = document.getElementById("title-more");
+    var info = document.getElementById("content-service-info");
+
     var showDialogButtonBronze = document.querySelector('#show-dialog-bronze');
-
-    if (!dialogBronze.showModal) {
-        dialogPolyfill.registerDialog(dialogBronze);
-    }
-    showDialogButtonBronze.addEventListener('click', function () {
-        dialogBronze.showModal();
-    });
-    dialogBronze.querySelector('.close').addEventListener('click', function () {
-        dialogBronze.close();
-    });
-
-    var dialogEyes = document.querySelector('dialog.eyes');
+    var showDialogButtonBronze1 = document.querySelector('#show-dialog-bronze_1');
+    var showDialogButtonBronze2 = document.querySelector('#show-dialog-bronze_2');
     var showDialogButtonEyes = document.querySelector('#show-dialog-eyes');
-
-    if (!dialogEyes.showModal) {
-        dialogPolyfill.registerDialog(dialogEyes);
-    }
-    showDialogButtonEyes.addEventListener('click', function () {
-        dialogEyes.showModal();
-    });
-    dialogEyes.querySelector('.close').addEventListener('click', function () {
-        dialogEyes.close();
-    });
-
-    var dialogDetox = document.querySelector('dialog.detox');
+    var showDialogButtonDep = document.querySelector('#show-dialog-dep');
+    var showDialogButtonMassage = document.querySelector('#show-dialog-massage');
+    var showDialogButtonSprayTan = document.querySelector('show-dialog-sprayTan');
     var showDialogButtonDetox = document.querySelector('#show-dialog-detox');
+    var showDialogButtonPac = document.querySelector('#show-dialog-pac');
 
-    if (!dialogDetox.showModal) {
-        dialogPolyfill.registerDialog(dialogDetox);
+    if (!dialog.showModal) {
+        dialogPolyfill.registerDialog(dialog);
     }
+    dialog.querySelector('.close').addEventListener('click', function () {
+        dialog.close();
+    });
+
+    showDialogButtonBronze.addEventListener('click', function () {
+
+        title.innerHTML = (document.getElementById("bronze-title").innerHTML);
+        info.innerHTML = (document.getElementById("content-service-info").innerHTML);
+        dialog.showModal();
+    });
+    showDialogButtonBronze1.addEventListener('click', function () {
+
+        title.innerHTML = (document.getElementById("bronze-title1").innerHTML);
+        info.innerHTML = (document.getElementById("content-service-info").innerHTML);
+        dialog.showModal();
+    });
+
+    showDialogButtonDep.addEventListener('click', function () {
+
+        title.innerHTML = (document.getElementById("dep-title").innerHTML);
+        info.innerHTML = (document.getElementById("content-service-info").innerHTML);
+        dialog.showModal();
+    });
+
+    showDialogButtonMassage.addEventListener('click', function () {
+
+       title.innerHTML = (document.getElementById("massage-title").innerHTML);
+       title.innerHTML = (document.getElementById("content-service-info").innerHTML);
+        dialog.showModal();
+    });
+    if (!dialog.showModal) {
+        dialogPolyfill.registerDialog(dialog);
+    }
+    dialog.querySelector('.close').addEventListener('click', function () {
+        dialog.close();
+    });
+
+    showDialogButtonEyes.addEventListener('click', function () {
+       document.getElementById("title-more").innerHTML = (document.getElementById("eyes-title").innerHTML);
+        document.getElementById("content-service-info").innerHTML = (document.getElementById("content-service-info").innerHTML);
+        dialog.showModal();
+    });
+
     showDialogButtonDetox.addEventListener('click', function () {
-        dialogDetox.showModal();
+        document.getElementById("title-more").innerHTML = (document.getElementById("detox-title").value);
+        document.getElementById("content-service-info").innerHTML = (document.getElementById("content-service-info").value);
+        dialog.showModal();
     });
-    dialogDetox.querySelector('.close').addEventListener('click', function () {
-        dialogDetox.close();
+    showDialogButtonPac.addEventListener('click', function () {
+
+        document.getElementById("title-more").innerHTML = (document.getElementById("pac-title").innerHTML);
+        document.getElementById("content-service-info").innerHTML = (document.getElementById("content-service-info").innerHTML);
+        dialog.showModal();
+    });
+    showDialogButtonSprayTan.addEventListener('click', function () {
+
+        document.getElementById("title-more").innerHTML = (document.getElementById("spray-tan-title").value);
+        document.getElementById("content-service-info").innerHTML = (document.getElementById("content-service-info").value);
+        dialog.showModal();
     });
 
 
+    /*
+    $('#date').bootstrapMaterialDatePicker({
+        weekStart: 0,
+        time: false
+    });
+    $('#time').bootstrapMaterialDatePicker({
+        date: false
+    });
+*/
 });
 
-
-
+/*
 //Block Autorotate
 screen.lockOrientation("landscape");
 screen.orientation.lock();
 screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
-
-
+*/
