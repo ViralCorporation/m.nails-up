@@ -185,7 +185,7 @@ i.material-icons.quartenion_color {
 }
 
 i.material-icons.secondary-color {
-    color: rgba(221, 113, 47, 0.49) !important;
+    color: var(--secondary_color_1) !important;
 }
 
 .material-icons.md-18 {
@@ -276,6 +276,12 @@ i.material-icons.secondary-color {
     width: 80vw;
 }
 
+.mdl-button--fab{
+    height: 3vh;
+    width: 3vh;
+    min-width: 3vh;
+}
+
 #packages .demo-card-wide.mdl-card {
     width: 96vw;
     padding: 2vw;
@@ -325,4 +331,3 @@ i.material-icons.secondary-color {
 #help .mdl-grid .mdl-card {
     width: 100% !important;
 }
-
