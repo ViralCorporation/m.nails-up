@@ -232,13 +232,13 @@ i.material-icons.quartenion_color {
 }
 
 .content .mdl-card__supporting-text {
-    padding: 0px;
+    padding: 0px 0px 0px 0px;
     font-size: 10px;
     text-align: justify;
 }
 
 .content .mdl-card__actions.mdl-card--border {
-    padding: 0;
+    padding: .5vh .5vh .5vh .0 ;
     height: 1.5em !important;
 }
 
@@ -261,6 +261,11 @@ i.material-icons.quartenion_color {
     height: 100%;
     line-height: 100%;
     font-family: "Helvetica", "Arial", sans-serif;
+}
+
+.little_text{
+    float: left;
+    width: 80vw;
 }
 
 #packages .demo-card-wide.mdl-card {
