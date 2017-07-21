@@ -33,13 +33,16 @@
     background: linear-gradient(var(--secondary_color_deg), var(--secondary_color_1), var(--secondary_color_2));
 }
 
+.secondary-color {
+    color: var(--secondary_color_2);
+}
+
 .terciary-color {
     background: linear-gradient(var(--terciary_color_deg), var(--terciary_color_1), var(--terciary_color_2)) !important;
 }
 
 .quartenion_color {
-    color: var(--quartion_color_1);
-    !important;
+    color: var(--quartion_color_1)!important;
 }
 
 
@@ -127,6 +130,7 @@ footer a.mdl-layout__tab {
     font-size: 2vh !important;
     text-transform: none;
     margin: 0;
+    width: 13vw;
 }
 
 .page-content .page-content {
@@ -178,6 +182,10 @@ i.material-icons {
 
 i.material-icons.quartenion_color {
     color: var(--quartion_color_1);
+}
+
+i.material-icons.secondary-color {
+    color: rgba(221, 113, 47, 0.49) !important;
 }
 
 .material-icons.md-18 {
@@ -238,7 +246,7 @@ i.material-icons.quartenion_color {
 }
 
 .content .mdl-card__actions.mdl-card--border {
-    padding: .5vh .5vh .5vh .0 ;
+    padding: .5vh .5vh .5vh .0;
     height: 1.5em !important;
 }
 
@@ -263,7 +271,7 @@ i.material-icons.quartenion_color {
     font-family: "Helvetica", "Arial", sans-serif;
 }
 
-.little_text{
+.little_text {
     float: left;
     width: 80vw;
 }
@@ -317,3 +325,4 @@ i.material-icons.quartenion_color {
 #help .mdl-grid .mdl-card {
     width: 100% !important;
 }
+
