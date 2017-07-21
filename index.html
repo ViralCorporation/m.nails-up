@@ -3,12 +3,10 @@
 
 <head>
     <!-- try hide -->
-    <meta name="viewport" content="width=device-width; initial-scale=1.0, maximum-scale=1.0, user-scalable=0," />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0," />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, minimal-ui">
-
-
 
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -16,20 +14,38 @@
 
     <link rel="shortcut icon" href="images/favicon.png" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rome/2.1.22/rome.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+    <script src="/js/material-datetime-picker.js" charset="utf-8"></script>
+
     <!-- Material -->
     <link rel="stylesheet" href="css/material.css">
     <script src="js/material.js"></script>
     <script src="js/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
     <!-- Project -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="js/nailsup.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rome/2.1.22/rome.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+    <script src="/js/material-datetime-picker.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/material-datetime-picker.css">
     <script src="js/nailsup.js"></script>
 
+    <script>
+        import MaterialDateTimePicker from 'material-datetime-picker';
 
+        const picker = new MaterialDateTimePicker()
+            .on('submit', (val) => console.log(`data: ${val}`))
+            .on('open', () => console.log('opened'))
+            .on('close', () => console.log('closed'));
+
+        document.querySelector('.c-datepicker-btn')
+            .on('click', () => picker.open());
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
@@ -47,6 +63,7 @@
 </head>
 
 <body>
+
     <h6 class="mdl-primary-color">navbar hidden</h6>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" id="page">
 
@@ -88,6 +105,8 @@
                         <div class="mdl-card__actions mdl-card--border">
                             <a>R$ 3~15 </a>
                         </div>
+                        <a class="mdl-button c-btn c-datepicker-btn">Open Picker</a>
+                        <pre id="events"></pre>
                     </div>
 
                 </div>
@@ -331,18 +350,18 @@
                                             <a>R$ 3~15 </a>
                                         </div>
                                         <button id="show-dialog-pac" type="button" class="mdl-button">More</button>
-                                            <dialog class="mdl-dialog ác">
-                                                <h4 class="mdl-dialog__title">Service</h4>
-                                                <div class="mdl-dialog__content">
-                                                    <p>
-                                                        More info about the services here
-                                                    </p>
-                                                </div>
-                                                <div class="mdl-dialog__actions">
-                                                    <button type="button" class="mdl-button close">Close</button>
+                                        <dialog class="mdl-dialog ác">
+                                            <h4 class="mdl-dialog__title">Service</h4>
+                                            <div class="mdl-dialog__content">
+                                                <p>
+                                                    More info about the services here
+                                                </p>
+                                            </div>
+                                            <div class="mdl-dialog__actions">
+                                                <button type="button" class="mdl-button close">Close</button>
 
-                                                </div>
-                                            </dialog>
+                                            </div>
+                                        </dialog>
                                     </div>
 
                                 </div>
@@ -363,7 +382,7 @@
             </section>
 
             <!-- HELP -->
-            <section class="mdl-layout__tab-panel " id="help">
+            <section class="mdl-layout__tab-panel " id="help" onselectstart="return false">
                 <div class="page-content">
                     <div class="mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col animated fadeInRight">
