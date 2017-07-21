@@ -12,17 +12,23 @@
     --primary_color_1: rgba(255, 255, 255, 1);
     --primary_color_2:  rgba(255, 255, 255, 0.9);
     --primary_color_deg: -0deg;
+
     --hidden-primary-color: rgba(226, 20, 222, 0);
     --secondary_color_1: rgba(218, 83, 117, 0.92);
     --secondary_color_2: rgb(226, 93, 36);
     --secondary_color_deg: -90deg;
+
     --terciary_color_1: rgba(255, 255, 255, 0.22);
     --terciary_color_2: rgba(255, 255, 255, 1);
     --terciary_color_deg: 0deg;
-    --quartion_color_1: rgba(233, 152, 6, 0.95);
+
+    --quartion_color_1: rgba(233, 152, 6, 0.72);
+
     --tab-icon: rgba(193, 34, 75, 0.81);
-    --tab-icon-contrast-services: rgba(197, 197, 197, 0.81);
-    --tab-icon-contrast-footer: rgba(197, 197, 197, 0.81);
+
+    --coadjuvant-2: rgba(193, 34, 75, 0.81);
+    --coadjuvant-1: rgba(197, 197, 197, 0.81);
+
     --background: rgba(246, 215, 221, 0.37);
 }
 
@@ -35,6 +41,10 @@
 
 .terciary-color {
     background: linear-gradient(var(--terciary_color_deg), var(--terciary_color_1), var(--terciary_color_2)) !important;
+}
+
+.quartenion_color {
+    color: var(--quartion_color_1); !important;
 }
 
 
@@ -75,11 +85,11 @@ footer {
 }
 
 a.mdl-layout__tab {
-    color: var(--tab-icon-contrast-footer) !important;
+    color: var(--coadjuvant-1) !important;
 }
 
 footer a.mdl-layout__tab {
-    color: var(--tab-icon-contrast-services) !imporant;
+    color: var(coadjuvant-2) !imporant;
     ;
 }
 
@@ -158,7 +168,7 @@ footer a.mdl-layout__tab {
 }
 
 .contact {
-    color: #757575;
+    color: var(--coadjuvant-1);
     margin: auto;
 }
 
@@ -176,8 +186,8 @@ i.material-icons {
     justify-content: center !important;
 }
 
-.material-icons.gold {
-    color: #fdd835;
+i.material-icons.quartenion_color {
+    color: var(--quartion_color_1);
 }
 
 .material-icons.md-18 {
@@ -197,7 +207,7 @@ i.material-icons {
 }
 
 #services .demo-card-wide.mdl-card a {
-    color: goldenrod;
+    color: var(--quartion_color_1);
     padding: 2vw;
 }
 
@@ -217,7 +227,7 @@ i.material-icons {
 }
 
 #services .demo-card-wide>.mdl-card__title {
-    color: #fff;
+    color: white;
     height: 30vh;
 }
 
