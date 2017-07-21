@@ -100,4 +100,31 @@ $(function () {
     dialogBronze.querySelector('.close').addEventListener('click', function () {
         dialogBronze.close();
     });
+
+    var dialogEyes = document.querySelector('dialog.eyes');
+    var showDialogButtonEyes = document.querySelector('#show-dialog-eyes');
+
+    if (!dialogEyes.showModal) {
+        dialogPolyfill.registerDialog(dialogEyes);
+    }
+    showDialogButtonEyes.addEventListener('click', function () {
+        dialogEyes.showModal();
+    });
+    dialogEyes.querySelector('.close').addEventListener('click', function () {
+        dialogEyes.close();
+    });
+
+    var dialogDetox = document.querySelector('dialog.detox');
+    var showDialogButtonDetox = document.querySelector('#show-dialog-detox');
+
+    if (!dialogDetox.showModal) {
+        dialogPolyfill.registerDialog(dialogDetox);
+    }
+    showDialogButtonDetox.addEventListener('click', function () {
+        dialogDetox.showModal();
+    });
+    dialogDetox.querySelector('.close').addEventListener('click', function () {
+        dialogDetox.close();
+    });
+
 });
