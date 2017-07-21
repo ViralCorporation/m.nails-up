@@ -131,8 +131,8 @@ $(function () {
 
     showDialogButtonMassage.addEventListener('click', function () {
 
-       title.innerHTML = (document.getElementById("massage-title").innerHTML);
-       title.innerHTML = (document.getElementById("content-service-info").innerHTML);
+        title.innerHTML = (document.getElementById("massage-title").innerHTML);
+        title.innerHTML = (document.getElementById("content-service-info").innerHTML);
         dialog.showModal();
     });
     if (!dialog.showModal) {
@@ -143,7 +143,7 @@ $(function () {
     });
 
     showDialogButtonEyes.addEventListener('click', function () {
-       document.getElementById("title-more").innerHTML = (document.getElementById("eyes-title").innerHTML);
+        document.getElementById("title-more").innerHTML = (document.getElementById("eyes-title").innerHTML);
         document.getElementById("content-service-info").innerHTML = (document.getElementById("content-service-info").innerHTML);
         dialog.showModal();
     });

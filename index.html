@@ -29,7 +29,11 @@
     <script src="js/nailsup.js"></script>
 
     <!-- Datapicker -->
+    <link rel="stylesheet" href="css/material-datetime-picker.css">
+    <script src="js/material-datetime-picker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rome/2.1.22/rome.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+    <script src="material-datetime-picker.js" charset="utf-8"></script>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -47,7 +51,6 @@
     <script>
         var rotate = 0 - window.orientation;
         setAttribute("transform:rotate(" + rotate + "deg);-ms-transform:rotate(" + rotate + "deg);-webkit-transform:rotate(" + rotate + "deg)", "style");
-
     </script>
 
 </head>
@@ -86,8 +89,7 @@
                         <div class="mdl-card__actions mdl-card--border">
                             <a>R$ 3~15 </a>
                         </div>
-                        <input type="text" id="date-format" class="form-control floating-label" placeholder="Begin Date Time">
-                        <pre id="events"></pre>
+                        <input class="c-datepicker-input" />
                     </div>
 
                 </div>
@@ -242,7 +244,7 @@
                                             </div>
                                             <div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
                                                 <div class="mdl-card__title" id="spray_tan">
-                                                    <h2 class="mdl-card__title-text" id="title-bronze2" >Bronzeamento Natural 2</h2>
+                                                    <h2 class="mdl-card__title-text" id="title-bronze2">Bronzeamento Natural 2</h2>
                                                 </div>
                                                 <div class="mdl-card__supporting-text">
                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
