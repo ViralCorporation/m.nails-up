@@ -282,6 +282,10 @@ i.material-icons.secondary-color {
     min-width: 3.5vh;
 }
 
+.presentation{
+    height: 100vh
+}
+
 #packages .demo-card-wide.mdl-card {
     width: 96vw;
     padding: 2vw;
