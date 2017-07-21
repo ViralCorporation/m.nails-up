@@ -23,7 +23,7 @@
 
     <!-- Project -->
     <title>Nails Up</title>
-    <link rel="stylesheet" href="css/style.css" media="screen and (orientation: portrait)">
+    <link rel="stylesheet" href="css/style.css" >
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/material-datetime-picker.css">
     <link rel="shortcut icon" href="images/favicon.png" />
@@ -56,6 +56,13 @@
     <meta property="og:description" content="A unique approach to the traditional spa experience." />
     <meta property="og:url" content="http://nailsup.com/" />
     <meta property="og:site_name" content="Nails Up" />
+
+<script>
+
+var rotate = 0 - window.orientation;
+setAttribute("transform:rotate("+rotate+"deg);-ms-transform:rotate("+rotate+"deg);-webkit-transform:rotate("+rotate+"deg)", "style");
+
+</script>
 
 </head>
 
