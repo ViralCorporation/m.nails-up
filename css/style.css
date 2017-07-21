@@ -141,9 +141,9 @@ footer a.mdl-layout__tab {
 .mdl-grid .mdl-card {
     margin: auto;
     float: inherit;
-    height: 100px !important;
+    height: 100px;
     min-height: 100px !important;
-    width: 50% !important;
+    width: 50%;
 }
 
 .demo-card-wide>.mdl-card__title {
@@ -204,9 +204,8 @@ i.material-icons.secondary-color {
     font-size: 5vh;
 }
 
-#services .demo-card-wide.mdl-card a {
-    color: var(--quartion_color_1);
-    padding: 2vw;
+.services_content {
+    background: rgb(251, 240, 242);
 }
 
 .products .demo-card-wide.mdl-card {
@@ -276,22 +275,56 @@ i.material-icons.secondary-color {
     width: 80vw;
 }
 
-.mdl-button--fab{
+.mdl-button--fab {
     height: 3.5vh;
     width: 3.5vh;
     min-width: 3.5vh;
 }
 
-.presentation{
-    height: 100vh
+body.presentation {
+    padding: 2vh;
+}
+
+.presentation {
+    top: 10vh;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+}
+
+.presentation .demo-card-wide.mdl-card{
+    width: 100%;
+
+}
+
+.presentation .mdl-grid{
+    padding: 0;
+    margin: auto;
+}
+
+.presentation .mdl-cell{
+    margin: 2vw;
+}
+
+.presentation .mdl-grid .mdl-card{
+    width: 100%;
+    height: 17.5vh;
 }
 
 #packages .demo-card-wide.mdl-card {
     width: 96vw;
+}
+
+#services .demo-card-wide.mdl-card a {
+    color: var(--quartion_color_1);
     padding: 2vw;
 }
 
 #services .page-content .page-content {
+    padding: 2vw;
+}
+
+#services .page-content .presentation {
     padding: 2vw;
 }
 
