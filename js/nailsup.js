@@ -129,3 +129,10 @@ $(function () {
 
 
 });
+
+
+
+//Block Autorotate
+screen.lockOrientation("landscape");
+screen.orientation.lock();
+screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;

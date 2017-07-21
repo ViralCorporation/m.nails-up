@@ -10,25 +10,19 @@
 
 :root {
     --primary_color_1: rgba(255, 255, 255, 1);
-    --primary_color_2:  rgba(255, 255, 255, 0.9);
+    --primary_color_2: rgba(255, 255, 255, 0.9);
     --primary_color_deg: -0deg;
-
     --hidden-primary-color: rgba(226, 20, 222, 0);
     --secondary_color_1: rgba(218, 83, 117, 0.92);
     --secondary_color_2: rgb(226, 93, 36);
     --secondary_color_deg: -90deg;
-
-    --terciary_color_1: rgba(255, 255, 255, 0.22);
-    --terciary_color_2: rgba(255, 255, 255, 1);
+    --terciary_color_1: rgba(252, 245, 247, 0.97);
+    --terciary_color_2: rgba(255, 255, 255, 0.92);
     --terciary_color_deg: 0deg;
-
     --quartion_color_1: rgba(233, 152, 6, 0.72);
-
-    --tab-icon: rgba(193, 34, 75, 0.81);
-
+    --tab-icon: rgba(221, 47, 102, 0.65);
     --coadjuvant-2: rgba(193, 34, 75, 0.81);
-    --coadjuvant-1: rgba(197, 197, 197, 0.81);
-
+    --coadjuvant-1: rgba(165, 165, 165, 0.68);
     --background: rgba(246, 215, 221, 0.37);
 }
 
@@ -44,7 +38,8 @@
 }
 
 .quartenion_color {
-    color: var(--quartion_color_1); !important;
+    color: var(--quartion_color_1);
+    !important;
 }
 
 
@@ -89,7 +84,7 @@ a.mdl-layout__tab {
 }
 
 footer a.mdl-layout__tab {
-    color: var(coadjuvant-2) !imporant;
+    color: var(--coadjuvant-2) !imporant;
     ;
 }
 
@@ -157,11 +152,6 @@ footer a.mdl-layout__tab {
     color: #fff;
 }
 
-.mdl-card__actions.mdl-card--border {
-    height: 40px !important;
-    bottom: 0;
-}
-
 .mdl-card__menu {
     position: unset;
     margin: auto;
@@ -215,6 +205,43 @@ i.material-icons.quartenion_color {
     width: 108vw;
     left: -4vw;
     top: -4vw;
+}
+
+.content .demo-card-wide.mdl-card {
+    top: -2.5vh;
+    left: 0;
+    max-width: 96vw;
+    margin-top: 2.5vw;
+    min-height: 100%;
+}
+
+.content .demo-card-wide>.mdl-card__title {
+    background: white !important;
+    color: var(--coadjuvant-1) !important;
+    max-height: 2em;
+    padding: .1em 16px .1em 16px;
+}
+
+.content .mdl-card__title-text {
+    font-size: 16px;
+}
+
+.content .mdl-card__supporting-text {
+    padding: .1em 16px .1em 16px;
+    font-size: 10px;
+    text-align: justify;
+}
+
+.content .mdl-card__actions.mdl-card--border {
+    padding: 0;
+    height: 1.5em !important;
+}
+
+.content a {
+    font-size: 12px;
+    padding: 0em 0em 0em 16px !important;
+    margin: auto;
+    color: var(--secondary_color_1) !important;
 }
 
 #packages .demo-card-wide.mdl-card {
