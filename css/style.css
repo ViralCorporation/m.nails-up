@@ -277,9 +277,9 @@ i.material-icons.secondary-color {
 }
 
 .mdl-button--fab{
-    height: 3vh;
-    width: 3vh;
-    min-width: 3vh;
+    height: 3.5vh;
+    width: 3.5vh;
+    min-width: 3.5vh;
 }
 
 #packages .demo-card-wide.mdl-card {
