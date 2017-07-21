@@ -1,10 +1,3 @@
-.mdl-primary-color {
-    background-color: #B71C1C;
-    margin: 0;
-    color: #B71C1C;
-}
-
-
 /**
  * material-design-lite - Material Design Components in CSS, JS and HTML
  * @version v1.3.0
@@ -1422,7 +1415,7 @@ p {
 }
 
 a {
-    /*color: gold;*/
+    /*color: var(--quartion_color_1);*/
     text-decoration-line: none;
     font-weight: 500;
 }
@@ -2127,11 +2120,11 @@ ol {
 }
 
 .mdl-color-text--red-400 {
-    color: #B71C1C !important;
+    color: linear-gradient(var(--primary_color_deg), var(--primary_color_1), var(--primary_color_2)) !important;
 }
 
 .mdl-color--red-400 {
-    background-color: #B71C1C !important;
+    background-color: linear-gradient(var(--primary_color_deg), var(--primary_color_1), var(--primary_color_2)) !important;
 }
 
 .mdl-color-text--red-500 {
@@ -2303,11 +2296,11 @@ ol {
 }
 
 .mdl-color-text--pink-A200 {
-    color: gold !important;
+    color: var(--quartion_color_1) !important;
 }
 
 .mdl-color--pink-A200 {
-    background-color: gold !important;
+    background-color: var(--quartion_color_1) !important;
 }
 
 .mdl-color-text--pink-A400 {
@@ -2567,11 +2560,11 @@ ol {
 }
 
 .mdl-color-text--indigo {
-    color: rgb(63, 81, 181) !important;
+    color: var(--hidden-primary-color) !important;
 }
 
 .mdl-color--indigo {
-    background-color: rgb(63, 81, 181) !important;
+    background-color: var(--hidden-primary-color) !important;
 }
 
 .mdl-color-text--indigo-50 {
@@ -2615,11 +2608,11 @@ ol {
 }
 
 .mdl-color-text--indigo-500 {
-    color: rgb(63, 81, 181) !important;
+    color: var(--hidden-primary-color) !important;
 }
 
 .mdl-color--indigo-500 {
-    background-color: rgb(63, 81, 181) !important;
+    background-color: var(--hidden-primary-color) !important;
 }
 
 .mdl-color-text--indigo-600 {
@@ -4287,7 +4280,7 @@ ol {
 }
 
 .mdl-color--primary {
-    background-color: rgb(63, 81, 181) !important;
+    background-color: var(--hidden-primary-color) !important;
 }
 
 .mdl-color--primary-contrast {
@@ -4299,7 +4292,7 @@ ol {
 }
 
 .mdl-color--accent {
-    background-color: gold !important;
+    background-color: var(--quartion_color_1) !important;
 }
 
 .mdl-color--accent-contrast {
@@ -4307,7 +4300,7 @@ ol {
 }
 
 .mdl-color-text--primary {
-    color: rgb(63, 81, 181) !important;
+    color: var(--hidden-primary-color) !important;
 }
 
 .mdl-color-text--primary-contrast {
@@ -4319,7 +4312,7 @@ ol {
 }
 
 .mdl-color-text--accent {
-    color: gold !important;
+    color: var(--quartion_color_1) !important;
 }
 
 .mdl-color-text--accent-contrast {
@@ -5276,7 +5269,7 @@ ol {
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background: gold;
+    background: var(--quartion_color_1);
     color: rgb(255, 255, 255);
 }
 
@@ -5286,7 +5279,7 @@ ol {
 }
 
 .mdl-badge.mdl-badge--no-background[data-badge]:after {
-    color: gold;
+    color: var(--quartion_color_1);
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 1px gray;
 }
@@ -5663,7 +5656,7 @@ ol {
 }
 
 .mdl-button.mdl-button--colored {
-    color: rgb(63, 81, 181);
+    color: var(--hidden-primary-color);
 }
 
 .mdl-button.mdl-button--colored:focus:not(:active) {
@@ -5690,20 +5683,20 @@ input.mdl-button[type="submit"] {
 }
 
 .mdl-button--raised.mdl-button--colored {
-    background: rgb(63, 81, 181);
+    background: var(--hidden-primary-color);
     color: rgb(255, 255, 255);
 }
 
 .mdl-button--raised.mdl-button--colored:hover {
-    background-color: rgb(63, 81, 181);
+    background-color: var(--hidden-primary-color);
 }
 
 .mdl-button--raised.mdl-button--colored:active {
-    background-color: rgb(63, 81, 181);
+    background-color: var(--hidden-primary-color);
 }
 
 .mdl-button--raised.mdl-button--colored:focus:not(:active) {
-    background-color: rgb(63, 81, 181);
+    background-color: var(--hidden-primary-color);
 }
 
 .mdl-button--raised.mdl-button--colored .mdl-ripple {
@@ -5757,20 +5750,20 @@ input.mdl-button[type="submit"] {
 }
 
 .mdl-button--fab.mdl-button--colored {
-    background: gold;
+    background: var(--quartion_color_1);
     color: rgb(255, 255, 255);
 }
 
 .mdl-button--fab.mdl-button--colored:hover {
-    background-color: gold;
+    background-color: var(--quartion_color_1);
 }
 
 .mdl-button--fab.mdl-button--colored:focus:not(:active) {
-    background-color: gold;
+    background-color: var(--quartion_color_1);
 }
 
 .mdl-button--fab.mdl-button--colored:active {
-    background-color: gold;
+    background-color: var(--quartion_color_1);
 }
 
 .mdl-button--fab.mdl-button--colored .mdl-ripple {
@@ -5834,7 +5827,7 @@ input.mdl-button[type="submit"] {
 }
 
 .mdl-button--primary.mdl-button--primary {
-    color: rgb(63, 81, 181);
+    color: var(--hidden-primary-color);
 }
 
 .mdl-button--primary.mdl-button--primary .mdl-ripple {
@@ -5844,11 +5837,11 @@ input.mdl-button[type="submit"] {
 .mdl-button--primary.mdl-button--primary.mdl-button--raised,
 .mdl-button--primary.mdl-button--primary.mdl-button--fab {
     color: rgb(255, 255, 255);
-    background-color: rgb(63, 81, 181);
+    background-color: var(--hidden-primary-color);
 }
 
 .mdl-button--accent.mdl-button--accent {
-    color: gold;
+    color: var(--quartion_color_1);
 }
 
 .mdl-button--accent.mdl-button--accent .mdl-ripple {
@@ -5858,7 +5851,7 @@ input.mdl-button[type="submit"] {
 .mdl-button--accent.mdl-button--accent.mdl-button--raised,
 .mdl-button--accent.mdl-button--accent.mdl-button--fab {
     color: rgb(255, 255, 255);
-    background-color: gold;
+    background-color: var(--quartion_color_1);
 }
 
 .mdl-button[disabled][disabled],
@@ -6200,7 +6193,7 @@ input.mdl-button[type="submit"] {
 }
 
 .mdl-card__media {
-    background-color: gold;
+    background-color: var(--quartion_color_1);
     background-repeat: repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -6666,7 +6659,7 @@ input.mdl-button[type="submit"] {
 }
 
 .mdl-checkbox.is-checked .mdl-checkbox__box-outline {
-    border: 2px solid rgb(63, 81, 181);
+    border: 2px solid var(--hidden-primary-color);
 }
 
 fieldset[disabled] .mdl-checkbox .mdl-checkbox__box-outline,
@@ -6712,7 +6705,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__box-outline,
 }
 
 .mdl-checkbox.is-checked .mdl-checkbox__tick-outline {
-    background: rgb(63, 81, 181) url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgdmVyc2lvbj0iMS4xIgogICB2aWV3Qm94PSIwIDAgMSAxIgogICBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0Ij4KICA8cGF0aAogICAgIGQ9Ik0gMC4wNDAzODA1OSwwLjYyNjc3NjcgMC4xNDY0NDY2MSwwLjUyMDcxMDY4IDAuNDI5Mjg5MzIsMC44MDM1NTMzOSAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IE0gMC4yMTcxNTcyOSwwLjgwMzU1MzM5IDAuODUzNTUzMzksMC4xNjcxNTcyOSAwLjk1OTYxOTQxLDAuMjczMjIzMyAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IgogICAgIGlkPSJyZWN0Mzc4MCIKICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lIiAvPgo8L3N2Zz4K");
+    background: var(--hidden-primary-color) url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgdmVyc2lvbj0iMS4xIgogICB2aWV3Qm94PSIwIDAgMSAxIgogICBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0Ij4KICA8cGF0aAogICAgIGQ9Ik0gMC4wNDAzODA1OSwwLjYyNjc3NjcgMC4xNDY0NDY2MSwwLjUyMDcxMDY4IDAuNDI5Mjg5MzIsMC44MDM1NTMzOSAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IE0gMC4yMTcxNTcyOSwwLjgwMzU1MzM5IDAuODUzNTUzMzksMC4xNjcxNTcyOSAwLjk1OTYxOTQxLDAuMjczMjIzMyAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IgogICAgIGlkPSJyZWN0Mzc4MCIKICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lIiAvPgo8L3N2Zz4K");
 }
 
 fieldset[disabled] .mdl-checkbox.is-checked .mdl-checkbox__tick-outline,
@@ -6749,7 +6742,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__label,
 }
 
 .mdl-checkbox__ripple-container .mdl-ripple {
-    background: rgb(63, 81, 181);
+    background: var(--hidden-primary-color);
 }
 
 fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container,
@@ -9273,7 +9266,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 }
 
 .mdl-icon-toggle.is-checked .mdl-icon-toggle__label {
-    color: rgb(63, 81, 181);
+    color: var(--hidden-primary-color);
 }
 
 .mdl-icon-toggle.is-disabled .mdl-icon-toggle__label {
@@ -10631,13 +10624,13 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 }
 
 .mdl-progress>.progressbar {
-    background-color: rgb(63, 81, 181);
+    background-color: var(--hidden-primary-color);
     z-index: 1;
     left: 0;
 }
 
 .mdl-progress>.bufferbar {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), linear-gradient(to right, rgb(63, 81, 181), rgb(63, 81, 181));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), linear-gradient(to right, var(--hidden-primary-color), var(--hidden-primary-color));
     z-index: 0;
     left: 0;
 }
@@ -10649,7 +10642,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 @supports (-webkit-appearance: none) {
     .mdl-progress:not(.mdl-progress--indeterminate):not(.mdl-progress--indeterminate)>.auxbar,
     .mdl-progress:not(.mdl-progress__indeterminate):not(.mdl-progress__indeterminate)>.auxbar {
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), linear-gradient(to right, rgb(63, 81, 181), rgb(63, 81, 181));
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), linear-gradient(to right, var(--hidden-primary-color), var(--hidden-primary-color));
         -webkit-mask: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjEyIiBoZWlnaHQ9IjQiIHZpZXdQb3J0PSIwIDAgMTIgNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxlbGxpcHNlIGN4PSIyIiBjeT0iMiIgcng9IjIiIHJ5PSIyIj4KICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImN4IiBmcm9tPSIyIiB0bz0iLTEwIiBkdXI9IjAuNnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogIDwvZWxsaXBzZT4KICA8ZWxsaXBzZSBjeD0iMTQiIGN5PSIyIiByeD0iMiIgcnk9IjIiIGNsYXNzPSJsb2FkZXIiPgogICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iY3giIGZyb209IjE0IiB0bz0iMiIgZHVyPSIwLjZzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICA8L2VsbGlwc2U+Cjwvc3ZnPgo=");
         mask: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjEyIiBoZWlnaHQ9IjQiIHZpZXdQb3J0PSIwIDAgMTIgNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxlbGxpcHNlIGN4PSIyIiBjeT0iMiIgcng9IjIiIHJ5PSIyIj4KICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImN4IiBmcm9tPSIyIiB0bz0iLTEwIiBkdXI9IjAuNnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogIDwvZWxsaXBzZT4KICA8ZWxsaXBzZSBjeD0iMTQiIGN5PSIyIiByeD0iMiIgcnk9IjIiIGNsYXNzPSJsb2FkZXIiPgogICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iY3giIGZyb209IjE0IiB0bz0iMiIgZHVyPSIwLjZzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICA8L2VsbGlwc2U+Cjwvc3ZnPgo=");
     }
@@ -10657,12 +10650,12 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 
 .mdl-progress:not(.mdl-progress--indeterminate)>.auxbar,
 .mdl-progress:not(.mdl-progress__indeterminate)>.auxbar {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), linear-gradient(to right, rgb(63, 81, 181), rgb(63, 81, 181));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), linear-gradient(to right, var(--hidden-primary-color), var(--hidden-primary-color));
 }
 
 .mdl-progress.mdl-progress--indeterminate>.bar1,
 .mdl-progress.mdl-progress__indeterminate>.bar1 {
-    background-color: rgb(63, 81, 181);
+    background-color: var(--hidden-primary-color);
     -webkit-animation-name: indeterminate1;
     animation-name: indeterminate1;
     -webkit-animation-duration: 2s;
@@ -10676,7 +10669,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 .mdl-progress.mdl-progress--indeterminate>.bar3,
 .mdl-progress.mdl-progress__indeterminate>.bar3 {
     background-image: none;
-    background-color: rgb(63, 81, 181);
+    background-color: var(--hidden-primary-color);
     -webkit-animation-name: indeterminate2;
     animation-name: indeterminate2;
     -webkit-animation-duration: 2s;
@@ -11330,7 +11323,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     min-height: 64px;
     max-height: 1000px;
     z-index: 3;
-    background-color: rgb(63, 81, 181);
+    background-color: var(--hidden-primary-color);
     color: rgb(255, 255, 255);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     transition-duration: 0.2s;
@@ -11593,7 +11586,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    background-color: #B71C1C;
+    background: linear-gradient(var(--primary_color_deg), var(--primary_color_1), var(--primary_color_2));
     overflow-y: hidden;
     overflow-x: scroll;
 }
@@ -11694,7 +11687,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 }
 
 .mdl-layout.is-upgraded .mdl-layout__tab.is-active {
-    color: rgb(255, 255, 255);
+    color: rgb(255,255,255);
 }
 
 .mdl-layout.is-upgraded .mdl-layout__tab.is-active::after {
@@ -11705,7 +11698,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     bottom: 0;
     left: 0;
     position: absolute;
-    background: gold;
+    background: var(--quartion_color_1);
     -webkit-animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) 0.01s alternate forwards;
     animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) 0.01s alternate forwards;
     transition: all 1s cubic-bezier(0.4, 0, 1, 1);
@@ -12107,7 +12100,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 }
 
 .mdl-radio.is-checked .mdl-radio__outer-circle {
-    border: 2px solid rgb(63, 81, 181);
+    border: 2px solid var(--hidden-primary-color);
 }
 
 .mdl-radio__outer-circle fieldset[disabled] .mdl-radio,
@@ -12134,7 +12127,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     -webkit-transform: scale(0, 0);
     transform: scale(0, 0);
     border-radius: 50%;
-    background: rgb(63, 81, 181);
+    background: var(--hidden-primary-color);
 }
 
 .mdl-radio.is-checked .mdl-radio__inner-circle {
@@ -12177,7 +12170,7 @@ fieldset[disabled] .mdl-radio .mdl-radio__label,
 }
 
 .mdl-radio__ripple-container .mdl-ripple {
-    background: rgb(63, 81, 181);
+    background: var(--hidden-primary-color);
 }
 
 fieldset[disabled] .mdl-radio .mdl-radio__ripple-container,
@@ -12504,7 +12497,7 @@ _:-ms-input-placeholder,
     user-select: none;
     outline: 0;
     padding: 0;
-    color: rgb(63, 81, 181);
+    color: var(--hidden-primary-color);
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
@@ -12544,7 +12537,7 @@ _:-ms-input-placeholder,
 
 .mdl-slider.is-upgraded::-ms-fill-lower {
     padding: 0;
-    background: linear-gradient(to right, transparent, transparent 16px, rgb(63, 81, 181) 16px, rgb(63, 81, 181) 0);
+    background: linear-gradient(to right, transparent, transparent 16px, var(--hidden-primary-color) 16px, var(--hidden-primary-color) 0);
 }
 
 .mdl-slider.is-upgraded::-ms-fill-upper {
@@ -12558,7 +12551,7 @@ _:-ms-input-placeholder,
     height: 12px;
     box-sizing: border-box;
     border-radius: 50%;
-    background: rgb(63, 81, 181);
+    background: var(--hidden-primary-color);
     border: none;
     transition: border 0.18s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.18s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), border 0.18s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.18s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
@@ -12572,7 +12565,7 @@ _:-ms-input-placeholder,
     box-sizing: border-box;
     border-radius: 50%;
     background-image: none;
-    background: rgb(63, 81, 181);
+    background: var(--hidden-primary-color);
     border: none;
 }
 
@@ -12586,14 +12579,14 @@ _:-ms-input-placeholder,
 
 .mdl-slider.is-upgraded:active::-webkit-slider-thumb {
     background-image: none;
-    background: rgb(63, 81, 181);
+    background: var(--hidden-primary-color);
     -webkit-transform: scale(1.5);
     transform: scale(1.5);
 }
 
 .mdl-slider.is-upgraded:active::-moz-range-thumb {
     background-image: none;
-    background: rgb(63, 81, 181);
+    background: var(--hidden-primary-color);
     transform: scale(1.5);
 }
 
@@ -12602,7 +12595,7 @@ _:-ms-input-placeholder,
     height: 32px;
     border: none;
     border-radius: 50%;
-    background: rgb(63, 81, 181);
+    background: var(--hidden-primary-color);
     transform: scale(0.375);
     transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
@@ -12610,12 +12603,12 @@ _:-ms-input-placeholder,
 }
 
 .mdl-slider.is-upgraded:focus:not(:active)::-ms-thumb {
-    background: radial-gradient(circle closest-side, rgb(63, 81, 181) 0%, rgb(63, 81, 181) 37.5%, rgba(63, 81, 181, 0.26) 37.5%, rgba(63, 81, 181, 0.26) 100%);
+    background: radial-gradient(circle closest-side, var(--hidden-primary-color) 0%, var(--hidden-primary-color) 37.5%, rgba(63, 81, 181, 0.26) 37.5%, rgba(63, 81, 181, 0.26) 100%);
     transform: scale(1);
 }
 
 .mdl-slider.is-upgraded:active::-ms-thumb {
-    background: rgb(63, 81, 181);
+    background: var(--hidden-primary-color);
     transform: scale(0.5625);
 }
 
@@ -12795,7 +12788,7 @@ _:-ms-input-placeholder,
 }
 
 .mdl-slider__background-lower {
-    background: rgb(63, 81, 181);
+    background: var(--hidden-primary-color);
     -webkit-flex: 0;
     -ms-flex: 0;
     flex: 0;
@@ -13203,7 +13196,7 @@ _:-ms-input-placeholder,
 .mdl-snackbar__action {
     background: transparent;
     border: none;
-    color: gold;
+    color: var(--quartion_color_1);
     float: right;
     text-transform: uppercase;
     padding: 14px 24px 14px 12px;
@@ -13567,7 +13560,7 @@ _:-ms-input-placeholder,
 }
 
 .mdl-spinner--single-color .mdl-spinner__layer-1 {
-    border-color: rgb(63, 81, 181);
+    border-color: var(--hidden-primary-color);
 }
 
 .mdl-spinner.is-active .mdl-spinner__layer-1 {
@@ -13580,7 +13573,7 @@ _:-ms-input-placeholder,
 }
 
 .mdl-spinner--single-color .mdl-spinner__layer-2 {
-    border-color: rgb(63, 81, 181);
+    border-color: var(--hidden-primary-color);
 }
 
 .mdl-spinner.is-active .mdl-spinner__layer-2 {
@@ -13593,7 +13586,7 @@ _:-ms-input-placeholder,
 }
 
 .mdl-spinner--single-color .mdl-spinner__layer-3 {
-    border-color: rgb(63, 81, 181);
+    border-color: var(--hidden-primary-color);
 }
 
 .mdl-spinner.is-active .mdl-spinner__layer-3 {
@@ -13606,7 +13599,7 @@ _:-ms-input-placeholder,
 }
 
 .mdl-spinner--single-color .mdl-spinner__layer-4 {
-    border-color: rgb(63, 81, 181);
+    border-color: var(--hidden-primary-color);
 }
 
 .mdl-spinner.is-active .mdl-spinner__layer-4 {
@@ -14388,7 +14381,7 @@ _:-ms-input-placeholder,
 }
 
 .mdl-switch.is-checked .mdl-switch__thumb {
-    background: rgb(63, 81, 181);
+    background: var(--hidden-primary-color);
     left: 16px;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
@@ -14456,7 +14449,7 @@ _:-ms-input-placeholder,
 }
 
 .mdl-switch__ripple-container .mdl-ripple {
-    background: rgb(63, 81, 181);
+    background: var(--hidden-primary-color);
 }
 
 .mdl-switch__ripple-container fieldset[disabled] .mdl-switch,
@@ -14820,7 +14813,7 @@ fieldset[disabled] .mdl-switch .mdl-switch__ripple-container .mdl-ripple,
     bottom: 0px;
     left: 0px;
     position: absolute;
-    background: rgb(63, 81, 181);
+    background: var(--hidden-primary-color);
     -webkit-animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) 0.01s alternate forwards;
     animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) 0.01s alternate forwards;
     transition: all 1s cubic-bezier(0.4, 0, 1, 1);
@@ -14838,7 +14831,7 @@ fieldset[disabled] .mdl-switch .mdl-switch__ripple-container .mdl-ripple,
 }
 
 .mdl-tabs__tab .mdl-tabs__ripple-container .mdl-ripple {
-    background: rgb(63, 81, 181);
+    background: var(--hidden-primary-color);
 }
 
 .mdl-tabs__panel {
@@ -15310,7 +15303,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 .mdl-textfield--floating-label.is-focused .mdl-textfield__label,
 .mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
 .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
-    color: rgb(63, 81, 181);
+    color: var(--hidden-primary-color);
     font-size: 12px;
     top: 4px;
     visibility: visible;
@@ -15328,7 +15321,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 }
 
 .mdl-textfield__label:after {
-    background-color: rgb(63, 81, 181);
+    background-color: var(--hidden-primary-color);
     bottom: 20px;
     content: '';
     height: 2px;

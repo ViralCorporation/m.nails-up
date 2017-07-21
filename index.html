@@ -2,21 +2,16 @@
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
 
 <head>
-    <!-- try hide -->
+    <!-- Try Hide -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0," />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, minimal-ui">
 
+    <!-- Techlogies -->
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <link rel="shortcut icon" href="images/favicon.png" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rome/2.1.22/rome.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
-    <script src="/js/material-datetime-picker.js" charset="utf-8"></script>
 
     <!-- Material -->
     <link rel="stylesheet" href="css/material.css">
@@ -29,11 +24,15 @@
     <!-- Project -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/material-datetime-picker.css">
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <script src="js/nailsup.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rome/2.1.22/rome.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
     <script src="/js/material-datetime-picker.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="css/material-datetime-picker.css">
-    <script src="js/nailsup.js"></script>
+
+
+
 
     <script>
         import MaterialDateTimePicker from 'material-datetime-picker';
@@ -45,6 +44,7 @@
 
         document.querySelector('.c-datepicker-btn')
             .on('click', () => picker.open());
+
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -63,17 +63,16 @@
 </head>
 
 <body>
-
-    <h6 class="mdl-primary-color">navbar hidden</h6>
+    <div class="primary-color scroll"></div>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" id="page">
 
         <!-- TITLE -->
         <div class="mdl-card__title-text"></div>
-        <header class="mdl-primary-color">
+        <header class="primary-color">
             <h6>Nails-Up</h6>
         </header>
 
-        <main class="mdl-layout__content ">
+        <main class="mdl-layout__content">
             <!-- HELLO -->
             <section class="mdl-layout__tab-panel" id="hello">
                 <div class="page-content">
@@ -437,7 +436,7 @@
         <!-- FOOTER ICONS -->
         <footer class="no-margin-height mdl-layout__header mdl-layout--fixed-tabs">
 
-            <div class="bottom-navigator mdl-layout__tab-bar mdl-js-ripple-effect  ">
+            <div class="terciary-color bottom-navigator mdl-layout__tab-bar mdl-js-ripple-effect">
                 <a href="#hello" class=" mdl-layout__tab home">
                     <i class="material-icons md-24" id="home-icon">home</i>
                     <div class="icon-caption ">Olá</div>
@@ -446,7 +445,7 @@
                     <i class="material-icons md-24" id="schedulling-icon">assignment</i>
                     <div class="icon-caption ">Agendar</div>
                 </a>
-                <a href="#services" class="mdl-layout__tab is-active services">
+                <a href="#services" class=" mdl-layout__tab is-active services">
                     <i class="material-icons md-24" id="services-icon">dehaze</i>
                     <div class="icon-caption ">Serviços</div>
                 </a>
@@ -454,8 +453,8 @@
                     <i class="material-icons md-24" id="gift-icon">card_giftcard</i>
                     <div class="icon-caption ">Convide</div>
                 </a>
-                <a href="#help" class="mdl-layout__tab help">
-                    <i class="material-icons md-24" id="help-icon">help</i>
+                <a href="#help" class=" mdl-layout__tab help">
+                    <i class=" material-icons md-24" id="help-icon">help</i>
                     <div class="icon-caption ">Contato</div>
                 </a>
             </div>
