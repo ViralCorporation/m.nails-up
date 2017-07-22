@@ -2,510 +2,506 @@
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
 
 <head>
-	<!-- Try Hide -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0," />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	<meta name="viewport" content="width=device-width, minimal-ui">
+    <!-- Try Hide -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0," />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, minimal-ui">
 
-	<!-- Techlogies -->
-	<meta charset="UTF-8">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Techlogies -->
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	<!-- Material -->
-	<link rel="stylesheet" href="css/material.css">
-	<script src="js/material.js"></script>
-	<script src="js/jquery-3.2.1.js"></script>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!-- Material -->
+    <link rel="stylesheet" href="css/material.css">
+    <script src="js/material.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
-	<!-- Project -->
-	<title>Nails Up</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/material-datetime-picker.css">
-	<link rel="shortcut icon" href="images/favicon.png" />
-	<script src="js/nailsup.js"></script>
+    <!-- Project -->
+    <title>Nails Up</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/material-datetime-picker.css">
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <script src="js/nailsup.js"></script>
 
-	<!-- Datapicker -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/rome/2.1.22/rome.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
-	<script src="/js/material-datetime-picker.js" charset="utf-8"></script>
-	<script>
-		import MaterialDateTimePicker from 'material-datetime-picker';
+    <!-- Datapicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rome/2.1.22/rome.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+    <script src="/js/material-datetime-picker.js" charset="utf-8"></script>
+    <script>
+        import MaterialDateTimePicker from 'material-datetime-picker';
 
-		const picker = new MaterialDateTimePicker()
-			.on('submit', (val) => console.log(`data: ${val}`))
-			.on('open', () => console.log('opened'))
-			.on('close', () => console.log('closed'));
+        const picker = new MaterialDateTimePicker()
+            .on('submit', (val) => console.log(`data: ${val}`))
+            .on('open', () => console.log('opened'))
+            .on('close', () => console.log('closed'));
 
-		document.querySelector('.c-datepicker-btn')
-			.on('click', () => picker.open());
+        document.querySelector('.c-datepicker-btn')
+            .on('click', () => picker.open());
 
-	</script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
-	<!-- Google Stuff -->
-	<link rel="canonical" href="http://nailsup.com/" />
-	<meta property="og:locale" content="en_US" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Nails Up" />
-	<meta property="og:description" content="A unique approach to the traditional spa experience." />
-	<meta property="og:url" content="http://nailsup.com/" />
-	<meta property="og:site_name" content="Nails Up" />
+    <!-- Google Stuff -->
+    <link rel="canonical" href="http://nailsup.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nails Up" />
+    <meta property="og:description" content="A unique approach to the traditional spa experience." />
+    <meta property="og:url" content="http://nailsup.com/" />
+    <meta property="og:site_name" content="Nails Up" />
 
-	<script>
-		var rotate = 0 - window.orientation;
-		setAttribute("transform:rotate(" + rotate + "deg);-ms-transform:rotate(" + rotate + "deg);-webkit-transform:rotate(" + rotate + "deg)", "style");
+    <script>
+        var rotate = 0 - window.orientation;
+        setAttribute("transform:rotate(" + rotate + "deg);-ms-transform:rotate(" + rotate + "deg);-webkit-transform:rotate(" + rotate + "deg)", "style");
 
-	</script>
+    </script>
 
 </head>
 
-<body class=" no-scrolling">
-	<div class="primary-color scroll"></div>
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" id="page">
+<body>
+    <div class="primary-color scroll"></div>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" id="page">
 
-		<!-- TITLE -->
-		<div class="mdl-card__title-text"></div>
-		<header class="primary-color">
-			<h6>Nails-Up</h6>
-		</header>
+        <!-- TITLE -->
+        <div class="mdl-card__title-text"></div>
+        <header class="primary-color">
+            <h6>Nails-Up</h6>
+        </header>
 
-		<main class="mdl-layout__content">
-			<!-- HELLO -->
-			<section class="mdl-layout__tab-panel" id="hello">
-				<div class="page-content">
-
-
-
-				</div>
-			</section>
-
-			<!-- SCHEDULE -->
-			<section class="mdl-layout__tab-panel " id="schedulling">
-				<div class="page-content">
-
-					<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-						<div class="mdl-card__title" id="spray_tan">
-							<h2 class="mdl-card__title-text">Agenda</h2>
-						</div>
-						<div class="mdl-card__supporting-text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-						</div>
-						<div class="mdl-card__actions mdl-card--border">
-							<a>R$ 3~15 </a>
-						</div>
-						<a class="mdl-button c-btn c-datepicker-btn">Open Picker</a>
-						<pre id="events"></pre>
-					</div>
-
-				</div>
-			</section>
-
-			<!-- SERVICES -->
-			<section class="mdl-layout__tab-panel  no-scrolling is-active" id="services">
+        <main class="mdl-layout__content">
+            <!-- HELLO -->
+            <section class="mdl-layout__tab-panel" id="hello">
+                <div class="page-content">
 
 
 
-				<!-- Simple header with scrollable tabs. -->
-				<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-					<div class="no-margin-height mdl-layout__header">
+                </div>
+            </section>
 
+            <!-- SCHEDULE -->
+            <section class="mdl-layout__tab-panel" id="schedulling">
+                <div class="page-content">
 
-						<div class="presentation">
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title" id="spray_tan">
+                            <h2 class="mdl-card__title-text">Agenda</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a>R$ 3~15 </a>
+                        </div>
+                        <a class="mdl-button c-btn c-datepicker-btn">Open Picker</a>
+                        <pre id="events"></pre>
+                    </div>
 
-							<div class="mdl-grid">
-								<div href="#spray_tan" onclick="hide_s_prst()" class="mdl-cell mdl-cell--2-col animated fadeInRight">
-									<div class="demo-card-wide mdl-card mdl-shadow--6dp">
-										<div href="#spray_tan" onclick="hide_s_prst()" class="mdl-card__title">
-											<h2 class="mdl-card__title-text">Bronzeamento</h2>
-										</div>
-									</div>
-								</div>
-								<div href="#spray_tan" onclick="hide_s_prst()"  class="mdl-cell mdl-cell--2-col animated fadeInRight">
-									<div class="demo-card-wide mdl-card mdl-shadow--6dp">
-										<div class="mdl-card__title">
-											<h2 class="mdl-card__title-text">Agenda</h2>
-										</div>
-									</div>
-								</div>
-								<div href="#spray_tan" onclick="hide_s_prst()"  class="mdl-cell mdl-cell--2-col animated fadeInRight">
-									<div class="demo-card-wide mdl-card mdl-shadow--6dp">
-										<div class="mdl-card__title">
-											<h2 class="mdl-card__title-text">Agenda</h2>
-										</div>
-									</div>
-								</div>
-								<div href="#spray_tan" onclick="hide_s_prst()"  class="mdl-cell mdl-cell--2-col animated fadeInRight">
-									<div class="demo-card-wide mdl-card mdl-shadow--6dp">
-										<div class="mdl-card__title">
-											<h2 class="mdl-card__title-text">Agenda</h2>
-										</div>
-									</div>
-								</div>
-								<div href="#spray_tan" onclick="hide_s_prst()"  class="mdl-cell mdl-cell--2-col animated fadeInRight">
-									<div class="demo-card-wide mdl-card mdl-shadow--6dp">
-										<div class="mdl-card__title">
-											<h2 class="mdl-card__title-text">Agenda</h2>
-										</div>
-									</div>
-								</div>
-								<div href="#spray_tan" onclick="hide_s_prst()"  class="mdl-cell mdl-cell--2-col animated fadeInRight">
-									<div class="demo-card-wide mdl-card mdl-shadow--6dp">
-										<div class="mdl-card__title">
-											<h2 class="mdl-card__title-text">Agenda</h2>
-										</div>
-									</div>
-								</div>
-								<div href="#spray_tan" onclick="hide_s_prst()" class="mdl-cell mdl-cell--2-col animated fadeInRight">
-									<div class="demo-card-wide mdl-card mdl-shadow--6dp">
-										<div class="mdl-card__title">
-											<h2 class="mdl-card__title-text">Agenda</h2>
-										</div>
-									</div>
-								</div>
-								<div href="#spray_tan" onclick="hide_s_prst()"  class="mdl-cell mdl-cell--2-col animated fadeInRight">
-									<div class="demo-card-wide mdl-card mdl-shadow--6dp">
-										<div class="mdl-card__title">
-											<h2 class="mdl-card__title-text">Agenda</h2>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+                </div>
+            </section>
 
-						<!-- Tabs -->
-						<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-							<a href="#spray_tan" onclick="hide_s_prst()" class="mdl-layout__tab is-active ">Bronzeamento</a>
-							<a href="#eyes" onclick="hide_s_prst()" class="mdl-layout__tab ">Olhos</a>
-							<a href="#dtox" onclick="hide_s_prst()" class="mdl-layout__tab">Dtox</a>
-							<a href="#make_up" onclick="hide_s_prst()" class="mdl-layout__tab">Maquiagem</a>
-							<a href="#nails" onclick="hide_s_prst()" class="mdl-layout__tab">Unhas</a>
-							<a href="#massage" onclick="hide_s_prst()" class="mdl-layout__tab">Massagem</a>
-							<a href="#waxing" onclick="hide_s_prst()" class="mdl-layout__tab">Depilação</a>
-							<a href="#packages" onclick="hide_s_prst()" class="mdl-layout__tab">Pacotes</a>
-						</div>
-					</div>
-					<main class="mdl-layout__content">
-						<div class="page-content">
+            <!-- SERVICES -->
+            <section class="mdl-layout__tab-panel is-active" id="services">
+                <div class="page-content">
 
-							<div class="services_content">
-								<div class="products">
-									<section class="mdl-layout__tab-panel is-active" id="spray_tan">
-										<div class="page-content">
+                    <div class="presentation">
 
-											<div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
-												<div class="mdl-card__title" id="spray_tan">
-													<h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
-												</div>
-												<div class="mdl-card__supporting-text">
-													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-												</div>
-												<div class="mdl-card__actions mdl-card--border">
-													<a>R$ 3~15 </a>
-												</div>
-											</div>
-											<div class="content" id="content">
-												<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
-													<div class="mdl-card__title" id="spray_tan">
-														<h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
-													</div>
-													<div class="little_text">
-														<span class="mdl-card__supporting-text">
+                        <div class="mdl-grid">
+                            <div class="prest_align" <div class="mdl-cell mdl-cell--2-col animated fadeInRight">
+                                <div class="demo-card-wide mdl-card mdl-shadow--6dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">Agenda</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--2-col animated fadeInRight">
+                                <div class="demo-card-wide mdl-card mdl-shadow--6dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">Agenda</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--2-col animated fadeInRight">
+                                <div class="demo-card-wide mdl-card mdl-shadow--6dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">Agenda</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--2-col animated fadeInRight">
+                                <div class="demo-card-wide mdl-card mdl-shadow--6dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">Agenda</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--2-col animated fadeInRight">
+                                <div class="demo-card-wide mdl-card mdl-shadow--6dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">Agenda</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--2-col animated fadeInRight">
+                                <div class="demo-card-wide mdl-card mdl-shadow--6dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">Agenda</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--2-col animated fadeInRight">
+                                <div class="demo-card-wide mdl-card mdl-shadow--6dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">Agenda</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--2-col animated fadeInRight">
+                                <div class="demo-card-wide mdl-card mdl-shadow--6dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">Agenda</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple header with scrollable tabs. -->
+                <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+                    <div class="no-margin-height mdl-layout__header">
+                        <!-- Tabs -->
+                        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                            <a href="#spray_tan" class="mdl-layout__tab is-active ">Bronzeamento</a>
+                            <a href="#eyes" class="mdl-layout__tab ">Olhos</a>
+                            <a href="#dtox" class="mdl-layout__tab">Dtox</a>
+                            <a href="#make_up" class="mdl-layout__tab">Maquiagem</a>
+                            <a href="#nails" class="mdl-layout__tab">Unhas</a>
+                            <a href="#massage" class="mdl-layout__tab">Massagem</a>
+                            <a href="#waxing" class="mdl-layout__tab">Depilação</a>
+                            <a href="#packages" class="mdl-layout__tab">Pacotes</a>
+                        </div>
+                    </div>
+                    <main class="mdl-layout__content">
+
+                        <div class="services_content">
+                            <div class="products">
+                                <section class="mdl-layout__tab-panel is-active" id="spray_tan">
+                                    <div class="page-content">
+
+                                        <div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
+                                            <div class="mdl-card__title" id="spray_tan">
+                                                <h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
+                                            </div>
+                                            <div class="mdl-card__supporting-text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
+                                            </div>
+                                            <div class="mdl-card__actions mdl-card--border">
+                                                <a>R$ 3~15 </a>
+                                            </div>
+                                        </div>
+                                        <div class="content" id="content">
+                                            <div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
+                                                <div class="mdl-card__title" id="spray_tan">
+                                                    <h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
+                                                </div>
+                                                <div class="little_text">
+                                                    <span class="mdl-card__supporting-text">
                                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
                                                     </span>
-														<span id="show-dialog-bronze" type="button" class="more mdl-button">More</span>
-														<div class="mdl-card__actions mdl-card--border">
-															<a id="value">R$ 3~15 </a>
-															<a>|</a>
-															<a id="time">30min </a>
-														</div>
-													</div>
-													<div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect ">
-														<i class="contact material-icons md-24 quartenion_color">add_circle</i>
-													</div>
-													<dialog class="mdl-dialog bronze">
-														<h4 class="mdl-dialog__title">Service</h4>
-														<div class="mdl-dialog__content">
-															<p>
-																More info about the services here
-															</p>
-														</div>
-														<div class="mdl-dialog__actions">
-															<button type="button" class="mdl-button close">Close</button>
+                                                    <span id="show-dialog-bronze" type="button" class="more mdl-button">More</span>
+                                                    <div class="mdl-card__actions mdl-card--border">
+                                                        <a id="value">R$ 3~15 </a>
+                                                        <a>|</a>
+                                                        <a id="time">30min </a>
+                                                    </div>
+                                                </div>
+                                                <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect ">
+                                                    <i class="contact material-icons md-24 secondary-color">add_circle</i>
+                                                </div>
+                                                <dialog class="mdl-dialog bronze">
+                                                    <h4 class="mdl-dialog__title">Service</h4>
+                                                    <div class="mdl-dialog__content">
+                                                        <p>
+                                                            More info about the services here
+                                                        </p>
+                                                    </div>
+                                                    <div class="mdl-dialog__actions">
+                                                        <button type="button" class="mdl-button close">Close</button>
 
-														</div>
-													</dialog>
-												</div>
-												<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
-													<div class="mdl-card__title" id="spray_tan">
-														<h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
-													</div>
-													<div class="mdl-card__supporting-text">
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-													</div>
-													<div class="mdl-card__actions mdl-card--border">
-														<a>R$ 3~15 </a>
-														<a>|</a>
-														<a>R$ 3~15 </a>
-													</div>
-												</div>
-												<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
-													<div class="mdl-card__title" id="spray_tan">
-														<h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
-													</div>
-													<div class="mdl-card__supporting-text">
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-													</div>
-													<div class="mdl-card__actions mdl-card--border">
-														<a>R$ 3~15 </a>
-														<a>|</a>
-														<a>R$ 3~15 </a>
-													</div>
-												</div>
-												<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
-													<div class="mdl-card__title" id="spray_tan">
-														<h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
-													</div>
-													<div class="mdl-card__supporting-text">
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-													</div>
-													<div class="mdl-card__actions mdl-card--border">
-														<a>R$ 3~15 </a>
-														<a>|</a>
-														<a>R$ 3~15 </a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</section>
-									<section class="mdl-layout__tab-panel" id="eyes">
-										<div class="page-content">
+                                                    </div>
+                                                </dialog>
+                                            </div>
+                                            <div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
+                                                <div class="mdl-card__title" id="spray_tan">
+                                                    <h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
+                                                </div>
+                                                <div class="mdl-card__supporting-text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
+                                                </div>
+                                                <div class="mdl-card__actions mdl-card--border">
+                                                    <a>R$ 3~15 </a>
+                                                    <a>|</a>
+                                                    <a>R$ 3~15 </a>
+                                                </div>
+                                            </div>
+                                            <div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
+                                                <div class="mdl-card__title" id="spray_tan">
+                                                    <h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
+                                                </div>
+                                                <div class="mdl-card__supporting-text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
+                                                </div>
+                                                <div class="mdl-card__actions mdl-card--border">
+                                                    <a id="value">R$ 3~15 </a>
+                                                    <a>|</a>
+                                                    <a id="time">30min </a>
+                                                </div>
+                                            </div>
+                                            <div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
+                                                <div class="mdl-card__title" id="spray_tan">
+                                                    <h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
+                                                </div>
+                                                <div class="mdl-card__supporting-text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
+                                                </div>
+                                                <div class="mdl-card__actions mdl-card--border">
+                                                    <a>R$ 3~15 </a>
+                                                    <a>|</a>
+                                                    <a>R$ 3~15 </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="mdl-layout__tab-panel" id="eyes">
+                                    <div class="page-content">
 
-											<div id="show-dialog-eyes" class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
-												<div class="mdl-card__title" id="spray_tan">
-													<h2 class="mdl-card__title-text">Olhos</h2>
-												</div>
-												<div class="mdl-card__supporting-text">
-													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-												</div>
-												<div class="mdl-card__actions mdl-card--border">
-													<a>R$ 3~15 </a>
-												</div>
+                                        <div id="show-dialog-eyes" class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
+                                            <div class="mdl-card__title" id="spray_tan">
+                                                <h2 class="mdl-card__title-text">Olhos</h2>
+                                            </div>
+                                            <div class="mdl-card__supporting-text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
+                                            </div>
+                                            <div class="mdl-card__actions mdl-card--border">
+                                                <a>R$ 3~15 </a>
+                                            </div>
 
-											</div>
+                                        </div>
 
-										</div>
-									</section>
-									<section class="mdl-layout__tab-panel" id="dtox">
-										<div class="page-content">
+                                    </div>
+                                </section>
+                                <section class="mdl-layout__tab-panel" id="dtox">
+                                    <div class="page-content">
 
-											<div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
-												<div class="mdl-card__title" id="spray_tan">
-													<h2 class="mdl-card__title-text">Dtox Facial e Corporal</h2>
-												</div>
-												<div class="mdl-card__supporting-text">
-													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-												</div>
-												<div class="mdl-card__actions mdl-card--border">
-													<a>R$ 3~15 </a>
-												</div>
+                                        <div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
+                                            <div class="mdl-card__title" id="spray_tan">
+                                                <h2 class="mdl-card__title-text">Dtox Facial e Corporal</h2>
+                                            </div>
+                                            <div class="mdl-card__supporting-text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
+                                            </div>
+                                            <div class="mdl-card__actions mdl-card--border">
+                                                <a>R$ 3~15 </a>
+                                            </div>
 
-											</div>
+                                        </div>
 
-										</div>
-									</section>
-									<section class="mdl-layout__tab-panel" id="make_up">
-										<div class="page-content">
+                                    </div>
+                                </section>
+                                <section class="mdl-layout__tab-panel" id="make_up">
+                                    <div class="page-content">
 
-											<div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
-												<div class="mdl-card__title" id="spray_tan">
-													<h2 class="mdl-card__title-text">Maquiagem</h2>
-												</div>
-												<div class="mdl-card__supporting-text">
-													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-												</div>
-												<div class="mdl-card__actions mdl-card--border">
-													<a>R$ 3~15 </a>
-												</div>
-											</div>
+                                        <div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
+                                            <div class="mdl-card__title" id="spray_tan">
+                                                <h2 class="mdl-card__title-text">Maquiagem</h2>
+                                            </div>
+                                            <div class="mdl-card__supporting-text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
+                                            </div>
+                                            <div class="mdl-card__actions mdl-card--border">
+                                                <a>R$ 3~15 </a>
+                                            </div>
+                                        </div>
 
-										</div>
-									</section>
-									<section class="mdl-layout__tab-panel" id="nails">
-										<div class="page-content">
+                                    </div>
+                                </section>
+                                <section class="mdl-layout__tab-panel" id="nails">
+                                    <div class="page-content">
 
-											<div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
-												<div class="mdl-card__title" id="spray_tan">
-													<h2 class="mdl-card__title-text">Unhas</h2>
-												</div>
-												<div class="mdl-card__supporting-text">
-													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-												</div>
-												<div class="mdl-card__actions mdl-card--border">
-													<a>R$ 3~15 </a>
-												</div>
+                                        <div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
+                                            <div class="mdl-card__title" id="spray_tan">
+                                                <h2 class="mdl-card__title-text">Unhas</h2>
+                                            </div>
+                                            <div class="mdl-card__supporting-text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
+                                            </div>
+                                            <div class="mdl-card__actions mdl-card--border">
+                                                <a>R$ 3~15 </a>
+                                            </div>
 
-											</div>
+                                        </div>
 
-										</div>
-									</section>
-									<section class="mdl-layout__tab-panel" id="massage">
-										<div class="page-content">
+                                    </div>
+                                </section>
+                                <section class="mdl-layout__tab-panel" id="massage">
+                                    <div class="page-content">
 
-											<div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
-												<div class="mdl-card__title" id="spray_tan">
-													<h2 class="mdl-card__title-text">Massagem</h2>
-												</div>
-												<div class="mdl-card__supporting-text">
-													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-												</div>
-												<div class="mdl-card__actions mdl-card--border">
-													<a>R$ 3~15 </a>
-												</div>
+                                        <div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
+                                            <div class="mdl-card__title" id="spray_tan">
+                                                <h2 class="mdl-card__title-text">Massagem</h2>
+                                            </div>
+                                            <div class="mdl-card__supporting-text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
+                                            </div>
+                                            <div class="mdl-card__actions mdl-card--border">
+                                                <a>R$ 3~15 </a>
+                                            </div>
 
-											</div>
+                                        </div>
 
-										</div>
-									</section>
-									<section class="mdl-layout__tab-panel" id="waxing">
-										<div class="page-content">
+                                    </div>
+                                </section>
+                                <section class="mdl-layout__tab-panel" id="waxing">
+                                    <div class="page-content">
 
-											<div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
-												<div class="mdl-card__title" id="spray_tan">
-													<h2 class="mdl-card__title-text">Depilação</h2>
-												</div>
-												<div class="mdl-card__supporting-text">
-													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-												</div>
-												<div class="mdl-card__actions mdl-card--border">
-													<a>R$ 3~15 </a>
-												</div>
+                                        <div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
+                                            <div class="mdl-card__title" id="spray_tan">
+                                                <h2 class="mdl-card__title-text">Depilação</h2>
+                                            </div>
+                                            <div class="mdl-card__supporting-text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
+                                            </div>
+                                            <div class="mdl-card__actions mdl-card--border">
+                                                <a>R$ 3~15 </a>
+                                            </div>
 
-											</div>
+                                        </div>
 
-										</div>
-									</section>
-								</div>
-								<section class="mdl-layout__tab-panel" id="packages">
-									<div class="page-content">
+                                    </div>
+                                </section>
+                            </div>
+                            <section class="mdl-layout__tab-panel" id="packages">
+                                <div class="page-content">
 
-										<div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
-											<div class="mdl-card__title" id="spray_tan">
-												<h2 class="mdl-card__title-text">Pacotes</h2>
-											</div>
-											<div class="mdl-card__supporting-text">d Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-											</div>
-											<div class="mdl-card__actions mdl-card--border">
-												<a>R$ 3~15 </a>
-											</div>
+                                    <div class="demo-card-wide mdl-card mdl-shadow--0dp animated fadeIn">
+                                        <div class="mdl-card__title" id="spray_tan">
+                                            <h2 class="mdl-card__title-text">Pacotes</h2>
+                                        </div>
+                                        <div class="mdl-card__supporting-text">d Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
+                                        </div>
+                                        <div class="mdl-card__actions mdl-card--border">
+                                            <a>R$ 3~15 </a>
+                                        </div>
 
-										</div>
+                                    </div>
 
-									</div>
-								</section>
-							</div>
-						</div>
-					</main>
-				</div>
-			</section>
+                                </div>
+                            </section>
+                        </div>
+                    </main>
+                </div>
+            </section>
 
-			<!-- GIFT -->
-			<section class="mdl-layout__tab-panel" id="gift">
-				<div class="page-content">
-
+            <!-- GIFT -->
+            <section class="mdl-layout__tab-panel" id="gift">
+                <div class="page-content">
 
 
-				</div>
-			</section>
 
-			<!-- HELP -->
-			<section class="mdl-layout__tab-panel " id="help" onselectstart="return false">
-				<div class="page-content">
-					<div class="mdl-grid">
-						<div class="mdl-cell mdl-cell--4-col animated fadeInRight">
-							<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-								<h2 class="contact mdl-card__title-text">Deseja falar por telefone?</h2>
-								<div class="mdl-card__menu">
-									<a href="tel:+5583998614541">
-										<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                </div>
+            </section>
+
+            <!-- HELP -->
+            <section class="mdl-layout__tab-panel " id="help" onselectstart="return false">
+                <div class="page-content">
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col animated fadeInRight">
+                            <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                                <h2 class="contact mdl-card__title-text">Deseja falar por telefone?</h2>
+                                <div class="mdl-card__menu">
+                                    <a href="tel:+5583998614541">
+                                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
                                         <i class="contact material-icons md-48  quartenion_color">phone</i>
                                     </button></a>
-								</div>
-								<h6 class="contact mdl-card__title-text">(85) 9 9861 4541</h6>
-							</div>
-						</div>
-						<div class="mdl-cell mdl-cell--4-col animated fadeInLeft">
-							<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-								<h2 class="contact mdl-card__title-text">Indique e ganhe descontos.</h2>
-								<div class="mdl-card__menu">
-									<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                </div>
+                                <h6 class="contact mdl-card__title-text">(85) 9 9861 4541</h6>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col animated fadeInLeft">
+                            <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                                <h2 class="contact mdl-card__title-text">Indique e ganhe descontos.</h2>
+                                <div class="mdl-card__menu">
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
                                     <i class="contact material-icons md-48 quartenion_color">share</i>
                                 </button>
-								</div>
-								<h6 class="contact mdl-card__title-text">www.nailsup.com.br</h6>
-							</div>
-						</div>
-						<div class="mdl-cell mdl-cell--4-col animated fadeInRight">
-							<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-								<h2 class="contact mdl-card__title-text ">Deseja saber de algo?</h2>
-								<div class="mdl-card__menu">
-									<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" onclick="sendEmail()">
+                                </div>
+                                <h6 class="contact mdl-card__title-text">www.nailsup.com.br</h6>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col animated fadeInRight">
+                            <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                                <h2 class="contact mdl-card__title-text ">Deseja saber de algo?</h2>
+                                <div class="mdl-card__menu">
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" onclick="sendEmail()">
                                     <i class="contact material-icons md-48 quartenion_color">mail</i>
                                     </button>
-								</div>
-								<h6 class="contact mdl-card__title-text">info@nailsup.com.br</h6>
-							</div>
-						</div>
-						<div class="mdl-cell mdl-cell--4-col animated fadeInLeft">
-							<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-								<h2 class="contact mdl-card__title-text">Aconteceu alguma coisa?</h2>
-								<h2 class="contact mdl-card__title-text">Conte para que nós possamos resolver.</h2>
-								<div class="mdl-card__menu">
-									<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" onclick="sendEmailHelp()">
+                                </div>
+                                <h6 class="contact mdl-card__title-text">info@nailsup.com.br</h6>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col animated fadeInLeft">
+                            <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                                <h2 class="contact mdl-card__title-text">Aconteceu alguma coisa?</h2>
+                                <h2 class="contact mdl-card__title-text">Conte para que nós possamos resolver.</h2>
+                                <div class="mdl-card__menu">
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" onclick="sendEmailHelp()">
                                         <i class="contact material-icons md-48 quartenion_color">report</i>
                                 </button>
-								</div>
-								<h6 class="contact mdl-card__title-text">help@nailsup.com.br</h6>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
+                                </div>
+                                <h6 class="contact mdl-card__title-text">help@nailsup.com.br</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-		<!-- FOOTER ICONS -->
-		<footer class="no-margin-height mdl-layout__header mdl-layout--fixed-tabs">
+        <!-- FOOTER ICONS -->
+        <footer class="no-margin-height mdl-layout__header mdl-layout--fixed-tabs">
 
-			<div class="terciary-color bottom-navigator mdl-layout__tab-bar mdl-js-ripple-effect">
-				<a href="#hello" class=" mdl-layout__tab home">
-					<i class="material-icons md-24" id="home-icon">home</i>
-					<div class="icon-caption ">Olá</div>
-				</a>
-				<a href="#schedulling" class=" mdl-layout__tab schedulling">
-					<i class="material-icons md-24" id="schedulling-icon">assignment</i>
-					<div class="icon-caption ">Agendar</div>
-				</a>
-				<a href="#services" onclick="show_s_prst()" class=" mdl-layout__tab is-active services">
-					<i class="material-icons md-24 " id="services-icon">dehaze</i>
-					<div class="icon-caption ">Serviços</div>
-				</a>
-				<a href="#gift" class=" mdl-layout__tab gift">
-					<i class="material-icons md-24" id="gift-icon">card_giftcard</i>
-					<div class="icon-caption ">Convide</div>
-				</a>
-				<a href="#help" class=" mdl-layout__tab help">
-					<i class=" material-icons md-24" id="help-icon">help</i>
-					<div class="icon-caption ">Contato</div>
-				</a>
-			</div>
+            <div class="terciary-color bottom-navigator mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#hello" class=" mdl-layout__tab home">
+                    <i class="material-icons md-24" id="home-icon">home</i>
+                    <div class="icon-caption ">Olá</div>
+                </a>
+                <a href="#schedulling" class=" mdl-layout__tab schedulling">
+                    <i class="material-icons md-24" id="schedulling-icon">assignment</i>
+                    <div class="icon-caption ">Agendar</div>
+                </a>
+                <a href="#services" class=" mdl-layout__tab is-active services">
+                    <i class="material-icons md-24 " id="services-icon">dehaze</i>
+                    <div class="icon-caption ">Serviços</div>
+                </a>
+                <a href="#gift" class=" mdl-layout__tab gift">
+                    <i class="material-icons md-24" id="gift-icon">card_giftcard</i>
+                    <div class="icon-caption ">Convide</div>
+                </a>
+                <a href="#help" class=" mdl-layout__tab help">
+                    <i class=" material-icons md-24" id="help-icon">help</i>
+                    <div class="icon-caption ">Contato</div>
+                </a>
+            </div>
 
-		</footer>
-	</div>
+        </footer>
+    </div>
 </body>
 
 </html>
