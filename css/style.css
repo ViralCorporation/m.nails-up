@@ -49,7 +49,7 @@
 /* Contents */
 
 body {
-    position: fixed !imporant;
+    position: fixed !important;
     height: 100vh;
     background: var(--background);
 }
