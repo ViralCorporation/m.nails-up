@@ -1,3 +1,51 @@
+var list_services = [];
+var list_car_services = [];
+
+class Service {
+    /* Guide Types of Service
+        PACK
+        DEPIL
+        MASSAGE
+        NAILS
+        MAKEUP
+        EYES
+        SPRAYTAN
+    */
+    constructor(name_service, descrition, price, type_service) {
+        this.name_service = name_service;
+        this.descrition = descrition;
+        this.price = price;
+        this.type_service = type_service;
+    }
+}
+
+/*
+-ADDED SERVICES HERE
+Guide Types of Service
+        PACK
+        DEPIL
+        MASSAGE
+        NAILS
+        MAKEUP
+        EYES
+        SPRAYTAN
+Guide to constructor
+    name of service, Descrition of service, price, categorie
+    */
+
+list_services[0] = new Service("Bronzeamento Natural", "Bronzeamento natural com uso pasma", "39", "SPRAY-TAN");
+list_services[1] = new Service("Bronzeamento Natural na Galaxia", "Bronzeamento natural com uso pasma", "39", "SPRAY-TAN");
+list_services[2] = new Service("Bronzeamento Natural na Lua", "Bronzeamento natural com uso pasma", "50", "SPRAY-TAN");
+list_services[3] = new Service("Bronzeamento Natural na Sol", "Bronzeamento natural com uso pasma", "60", "SPRAY-TAN");
+list_services[4] = new Service("Manicure", "Pintura de unhas", "30", "NAILS");
+list_services[5] = new Service("Make Up", "Maquiagem basica", "50", "MAKEUP");
+list_services[6] = new Service("Sombras", "Maquiagem basica", "50", "EYES");
+list_services[7] = new Service("Depilação Buço", "Maquiagem basica", "50", "DEPIL");
+list_services[8] = new Service("Pacote Depilação completa", "Maquiagem basica", "50", "PACK");
+list_services[9] = new Service("Massagem", "Maquiagem basica", "50", "MASSAGE");
+list_services[10] = new Service("Suco Detox", "genginbre", "12", "DETOX");
+
+var started = false;
 function Scrolldown() {
     window.scroll(0, 300);
 }
@@ -87,42 +135,6 @@ $(function () {
     });
 });
 
-class Service {
-    /* Guide Types of Service
-        PACK
-        DEPIL
-        MASSAGE
-        NAILS
-        MAKEUP
-        EYES
-        SPRAYTAN
-    */
-    constructor(name_service, descrition, price, type_service) {
-        this.name_service = name_service;
-        this.descrition = descrition;
-        this.price = price;
-        this.type_service = type_service;
-    }
-}
-
-
-var list_services = [];
-var list_car_services = [];
-
-list_services[0] = new Service("Bronzeamento Natural", "Bronzeamento natural com uso pasma", "39", "SPRAY-TAN");
-list_services[1] = new Service("Bronzeamento Natural na Galaxia", "Bronzeamento natural com uso pasma", "39", "SPRAY-TAN");
-list_services[2] = new Service("Bronzeamento Natural na Lua", "Bronzeamento natural com uso pasma", "50", "SPRAY-TAN");
-list_services[3] = new Service("Bronzeamento Natural na Sol", "Bronzeamento natural com uso pasma", "60", "SPRAY-TAN");
-list_services[4] = new Service("Manicure", "Pintura de unhas", "30", "NAILS");
-list_services[5] = new Service("Make Up", "Maquiagem basica", "50", "MAKEUP");
-list_services[6] = new Service("Sombras", "Maquiagem basica", "50", "EYES");
-list_services[7] = new Service("Depilação Buço", "Maquiagem basica", "50", "DEPIL");
-list_services[8] = new Service("Pacote Depilação completa", "Maquiagem basica", "50", "PACK");
-list_services[9] = new Service("Massagem", "Maquiagem basica", "50", "MASSAGE");
-list_services[10] = new Service("Suco Detox", "genginbre", "12", "DETOX");
-
-var started = false;
-
 function createServiceCard(service_name, descrition, price, infoservice, id) {
 
     var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service_name + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + descrition + '...</span><span id ="show-dialog-' +id + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect " id="add_service_'+id+'"><i class="contact material-icons md-24 secondary-color"> add_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
@@ -182,7 +194,7 @@ $(function () {
     add_service_0.addEventListener('click', function () {
 
         var card_add = createServiceCarAdded(list_services[0]);
-        $('div.car').append(card_add);
+        $('.car').append(card_add);
 
     });
     add_service_1.addEventListener('click', function () {
