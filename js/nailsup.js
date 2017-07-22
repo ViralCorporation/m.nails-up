@@ -107,6 +107,8 @@ class Service {
 
 
 var list_services = [];
+var list_car_services = [];
+
 list_services[0] = new Service("Bronzeamento Natural", "Bronzeamento natural com uso pasma", "39", "SPRAY-TAN");
 list_services[1] = new Service("Bronzeamento Natural na Galaxia", "Bronzeamento natural com uso pasma", "39", "SPRAY-TAN");
 list_services[2] = new Service("Bronzeamento Natural na Lua", "Bronzeamento natural com uso pasma", "50", "SPRAY-TAN");
@@ -118,12 +120,19 @@ list_services[7] = new Service("Depilação Buço", "Maquiagem basica", "50", "D
 list_services[8] = new Service("Pacote Depilação completa", "Maquiagem basica", "50", "PACK");
 list_services[9] = new Service("Massagem", "Maquiagem basica", "50", "MASSAGE");
 list_services[10] = new Service("Suco Detox", "genginbre", "12", "DETOX");
+
 var started = false;
 
 function createServiceCard(service_name, descrition, price, infoservice, id) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service_name + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + descrition + '...</span><span id ="show-dialog-' +id + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect "><i class="contact material-icons md-24 secondary-color"> add_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service_name + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + descrition + '...</span><span id ="show-dialog-' +id + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect " id="add_service_'+id+'"><i class="contact material-icons md-24 secondary-color"> add_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
     return service_card;
+}
+
+function createServiceCarAdded(service) {
+
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service+ '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + descritio.descrition + '...</span><span id ="show-dialog-' +service.id + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect " id="add_service_' +service.id+'><i class="contact material-icons md-24 secondary-color" > add_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
+    return service_card_added;
 }
 
 function createAllServiceCardsOnArray() {
@@ -151,11 +160,67 @@ function createAllServiceCardsOnArray() {
             started = true;
         }
     }
+
+    function updateCarServices(){
+        var aux = list_car;
+    }
 }
 $(function () {
     var dialog = document.querySelector('dialog');
     var title = document.getElementById("title-more");
     var info = document.getElementById("content-service-info");
+    this.list_services = list_services;
+
+    var add_service_0 = document.querySelector('add_service_0');
+    var add_service_1 = document.querySelector('add_service_1');
+    var add_service_2 = document.querySelector('add_service_2');
+    var add_service_3 = document.querySelector('add_service_3');
+    var add_service_4 = document.querySelector('add_service_4');
+    var add_service_5 = document.querySelector('add_service_5');
+    var add_service_6 = document.querySelector('add_service_6');
+
+    add_service_0.addEventListener('click', function () {
+
+        var card_add = createServiceCarAdded(list_services[0]);
+        $('div.car').append(card_add);
+
+    });
+    add_service_1.addEventListener('click', function () {
+
+        var card_add = createServiceCarAdded(list_car_services[0]);
+        $('div.car').append(card_add);
+
+    });
+    add_service_2.addEventListener('click', function () {
+
+        var card_add = createServiceCarAdded(list_car_services[2]);
+        $('div.car').append(card_add);
+
+    });
+    add_service_3.addEventListener('click', function () {
+
+        var card_add = createServiceCarAdded(list_car_services[3]);
+        $('div.car').append(card_add);
+
+    });
+    add_service_4.addEventListener('click', function () {
+
+        var card_add = createServiceCarAdded(list_car_services[4]);
+        $('div.car').append(card_add);
+
+    });
+    add_service_5.addEventListener('click', function () {
+
+        var card_add = createServiceCarAdded(list_car_services[5]);
+        $('div.car').append(card_add);
+
+    });
+    add_service_6.addEventListener('click', function () {
+
+        var card_add = createServiceCarAdded(list_car_services[6]);
+        $('div.car').append(card_add);
+
+    });
 
     var showDialogButton_0 = document.querySelector('#show-dialog-0');
     var showDialogButton_1 = document.querySelector('#show-dialog-1');
@@ -178,6 +243,7 @@ $(function () {
         info.innerHTML = (list_services[0].descrition);
         dialog.showModal();
     });
+
     showDialogButton_1.addEventListener('click', function () {
 
         title.innerHTML = (list_services[1].name_service);
