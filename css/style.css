@@ -1,369 +1,376 @@
 /* Fonts */
 
 @font-face {
-    font-family: "Cinzel";
-    src: url('fonts/cinzel.otf') format('truetype');
+	font-family: "Cinzel";
+	src: url('fonts/cinzel.otf') format('truetype');
 }
 
 
 /* Variables */
 
 :root {
-    --primary_color_1: rgba(255, 253, 250, 1);
-    --primary_color_2: rgba(255, 255, 255, 1);
-    --secondary_color_1: rgba(218, 83, 117, 0.92);
-    --secondary_color_2: rgb(226, 93, 36);
-    --terciary_color_1: rgba(252, 245, 247, 0.97);
-    --terciary_color_2: rgba(255, 255, 255, 0.92);
-    --quartion_color_1: rgba(233, 152, 6, 0.72);
-    --tab-icon: rgba(221, 47, 102, 0.65);
-    --coadjuvant-2: rgba(193, 34, 75, 0.81);
-    --coadjuvant-1: rgba(165, 165, 165, 0.68);
-    --background: rgba(246, 215, 221, 0.37);
-    --hidden-primary-color: rgba(226, 20, 222, 0);
-    --primary_color_deg: -0deg;
-    --secondary_color_deg: -90deg;
-    --terciary_color_deg: 0deg;
+	/* Color */
+	--primary_color_1: rgba(255, 253, 250, 1);
+	--primary_color_2: rgba(255, 255, 255, 1);
+	--secondary_color_1: rgba(218, 83, 117, 0.92);
+	--secondary_color_2: rgb(226, 93, 36);
+	--terciary_color_1: rgba(252, 245, 247, 0.97);
+	--terciary_color_2: rgba(255, 255, 255, 0.92);
+	--quartion_color_1: rgba(233, 152, 6, 0.72);
+	--tab-icon: rgba(221, 47, 102, 0.65);
+	--coadjuvant-2: rgba(193, 34, 75, 0.81);
+	--coadjuvant-1: rgba(165, 165, 165, 0.68);
+	--background: rgba(246, 215, 221, 0.37);
+	--hidden-primary-color: rgba(226, 20, 222, 0);
+	--primary_color_deg: -0deg;
+	--secondary_color_deg: -90deg;
+	--terciary_color_deg: 0deg;
+	/* Services Presentation */
+	--state_s_prst: none;
+	--state_s_tbar: contents;
+	--state_s_box: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-
-/* Color */
-
 .primary-color {
-    background: linear-gradient(var(--secondary_color_deg), var(--secondary_color_1), var(--secondary_color_2));
+	background: linear-gradient(var(--secondary_color_deg), var(--secondary_color_1), var(--secondary_color_2));
 }
 
 .secondary-color {
-    color: var(--secondary_color_2);
+	color: var(--secondary_color_2);
 }
 
 .terciary-color {
-    background: linear-gradient(var(--terciary_color_deg), var(--terciary_color_1), var(--terciary_color_2)) !important;
+	background: linear-gradient(var(--terciary_color_deg), var(--terciary_color_1), var(--terciary_color_2)) !important;
 }
 
 .quartenion_color {
-    color: var(--quartion_color_1)!important;
+	color: var(--quartion_color_1)!important;
 }
 
 
 /* Contents */
 
 body {
-    height: 100vh;
-    background: var(--background);
+	height: 100vh;
+	background: var(--background);
 }
 
 .scroll {
-    /* height: 5vh; */
-    width: 100%;
+	/* height: 5vh; */
+	width: 100%;
 }
 
 header {
-    height: 4vh ! important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	height: 4vh ! important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 header h6 {
-    margin: auto !important;
-    text-align: center;
-    line-height: 4vh;
-    color: whitesmoke;
-    font-weight: 100;
-    font-size: 2.5vh;
-    font-family: "Cinzel" !important;
+	margin: auto !important;
+	text-align: center;
+	line-height: 4vh;
+	color: whitesmoke;
+	font-weight: 100;
+	font-size: 2.5vh;
+	font-family: "Cinzel" !important;
 }
 
 footer {
-    bottom: -20px !important;
-    position: fixed !important;
+	bottom: -20px !important;
+	position: fixed !important;
 }
 
 #page {
-    display: none;
+	display: none;
 }
 
 a.mdl-layout__tab {
-    color: var(--coadjuvant-1) !important;
+	color: var(--coadjuvant-1) !important;
 }
 
 footer a.mdl-layout__tab {
-    color: var(--coadjuvant-2) !imporant;
-    ;
+	color: var(--coadjuvant-2) !imporant;
+	;
 }
 
 .mdl-layout.is-upgraded .mdl-layout__tab.is-active {
-    color: var(--tab-icon) !important;
+	color: var(--tab-icon) !important;
 }
 
 .no-margin-height {
-    min-height: 0px !important;
+	min-height: 0px !important;
 }
 
 .no-backg {
-    background: rgba(0, 0, 0, 0);
+	background: rgba(0, 0, 0, 0);
 }
 
 .mdl-layout__tab {
-    font-size: 2vh;
-    font-weight: 100;
-    font-family: "Cinzel" !important;
+	font-size: 2vh;
+	font-weight: 100;
+	font-family: "Cinzel" !important;
 }
 
 .mdl-layout__tab i {
-    line-height: 1.5
+	line-height: 1.5
 }
 
 .mdl-layout__tab-bar {
-    height: 6vh !important;
+	height: 6vh !important;
 }
 
 .bottom-navigator {
-    min-height: 12vh !important;
-    font-weight: 100;
-    margin: 0;
+	min-height: 12vh !important;
+	font-weight: 100;
+	margin: 0;
 }
 
 .bottom-navigator .mdl-layout__tab {
-    line-height: 1vh;
-    min-height: 800px !important;
-    font-family: "Cinzel" !important;
-    font-size: 2vh !important;
-    text-transform: none;
-    margin: 0;
-    width: 13vw;
+	line-height: 1vh;
+	min-height: 800px !important;
+	font-family: "Cinzel" !important;
+	font-size: 2vh !important;
+	text-transform: none;
+	margin: 0;
+	width: 13vw;
 }
 
 .page-content .page-content {
-    padding: 2vw;
-    position: relative;
+	padding: 2vw;
+	position: relative;
 }
 
 .mdl-grid .mdl-card {
-    margin: auto;
-    float: inherit;
-    height: 100px;
-    min-height: 100px !important;
-    width: 50%;
+	margin: auto;
+	float: inherit;
+	height: 100px;
+	min-height: 100px !important;
+	width: 50%;
 }
 
 .demo-card-wide>.mdl-card__title {
-    color: #fff;
-    height: 30vh;
-    background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+	color: #fff;
+	height: 30vh;
+	background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
 }
 
 .demo-card-wide>.mdl-card__menu {
-    color: #fff;
+	color: #fff;
 }
 
 .mdl-card__menu {
-    position: unset;
-    margin: auto;
+	position: unset;
+	margin: auto;
 }
 
 .contact {
-    color: var(--coadjuvant-1);
-    margin: auto;
+	color: var(--coadjuvant-1);
+	margin: auto;
 }
 
 h2.contact {
-    font-size: 2.5vh;
+	font-size: 2.5vh;
 }
 
 h6.contact {
-    font-size: 1.8vh;
-    ;
+	font-size: 1.8vh;
+	;
 }
 
 i.material-icons {
-    display: flex !important;
-    justify-content: center !important;
+	display: flex !important;
+	justify-content: center !important;
 }
 
 i.material-icons.quartenion_color {
-    color: var(--quartion_color_1);
+	color: var(--quartion_color_1);
 }
 
 i.material-icons.secondary-color {
-    color: var(--secondary_color_1) !important;
+	color: var(--secondary_color_1) !important;
 }
 
 .material-icons.md-18 {
-    font-size: 18px;
+	font-size: 18px;
 }
 
 .material-icons.md-24 {
-    font-size: 4vh;
+	font-size: 4vh;
 }
 
 .material-icons.md-36 {
-    font-size: 36px;
+	font-size: 36px;
 }
 
 .material-icons.md-48 {
-    font-size: 5vh;
+	font-size: 5vh;
 }
 
 .services_content {
-    background: rgb(251, 240, 242);
+	background: rgb(251, 240, 242);
 }
 
 .products .demo-card-wide.mdl-card {
-    width: 108vw;
-    left: -4vw;
-    top: -4vw;
+	width: 108vw;
+	left: -4vw;
+	top: -4vw;
 }
 
 .content .demo-card-wide.mdl-card {
-    top: -2.5vh;
-    left: 0;
-    max-width: 96vw;
-    margin-top: 2.5vw;
-    min-height: 100%;
-    padding: 0px 0px 0px 16px;
+	top: -2.5vh;
+	left: 0;
+	max-width: 96vw;
+	margin-top: 2.5vw;
+	min-height: 100%;
+	padding: 0px 0px 0px 16px;
 }
 
 .content .mdl-card {
-    display: flow-root;
+	display: flow-root;
 }
 
 .content .demo-card-wide>.mdl-card__title {
-    background: white !important;
-    color: var(--coadjuvant-1) !important;
-    max-height: 2em;
-    padding: 0px;
+	background: white !important;
+	color: var(--coadjuvant-1) !important;
+	max-height: 2em;
+	padding: 0px;
 }
 
 .content .mdl-card__title-text {
-    font-size: 16px;
+	font-size: 16px;
 }
 
 .content .mdl-card__supporting-text {
-    padding: 0px 0px 0px 0px;
-    font-size: 10px;
-    text-align: justify;
+	padding: 0px 0px 0px 0px;
+	font-size: 10px;
+	text-align: justify;
 }
 
 .content .mdl-card__actions.mdl-card--border {
-    padding: .5vh .5vh .5vh .0;
-    height: 1.5em !important;
+	padding: .5vh .5vh .5vh .0;
+	height: 1.5em !important;
 }
 
 .content a {
-    font-size: 12px;
-    padding: 0px !important;
-    margin: auto;
-    color: rgba(221, 113, 47, 0.49) !important;
+	font-size: 12px;
+	padding: 0px !important;
+	margin: auto;
+	color: rgba(221, 113, 47, 0.49) !important;
 }
 
 .more {
-    color: var(--secondary_color_1);
-    font-size: 10px;
-    padding: 0;
+	color: var(--secondary_color_1);
+	font-size: 10px;
+	padding: 0;
 }
 
 .more.mdl-button {
-    min-width: 0;
-    padding: 0;
-    height: 100%;
-    line-height: 100%;
-    font-family: "Helvetica", "Arial", sans-serif;
+	min-width: 0;
+	padding: 0;
+	height: 100%;
+	line-height: 100%;
+	font-family: "Helvetica", "Arial", sans-serif;
 }
 
 .little_text {
-    float: left;
-    width: 80vw;
+	float: left;
+	width: 80vw;
 }
 
 .mdl-button--fab {
-    height: 3.5vh;
-    width: 3.5vh;
-    min-width: 3.5vh;
+	height: 3.5vh;
+	width: 3.5vh;
+	min-width: 3.5vh;
 }
 
 .presentation {
-    top: 10vh;
-    height: 100vh;
-    position: fixed;
-    overflow: hidden;
+	padding-top: calc((100vh - (4*17.5vh))/8);
+	display: var(--state_s_prst);
+	margin: auto;
+	overflow: hidden;
 }
 
 .presentation .demo-card-wide.mdl-card {
-    width: 100%;
+	width: 100%;
 }
 
 .presentation .mdl-grid {
-    padding: 0;
-    margin: auto;
+	padding: 0;
+	margin: auto;
 }
 
 .presentation .mdl-cell {
-    margin: 2vw;
+	margin: 2vw;
 }
 
 .presentation .mdl-grid .mdl-card {
-    width: 100%;
-    height: 17.5vh;
+	width: 100%;
+	height: 17.5vh;
 }
 
 #packages .demo-card-wide.mdl-card {
-    width: 96vw;
+	width: 96vw;
 }
 
-#services .mdl-layout__content{
+#services .mdl-layout__tab-bar-container {
+	display: var(--state_s_tbar) !important;
+}
+
+#services .mdl-layout__header {
+	box-shadow: var(--state_s_box);
 }
 
 #services .demo-card-wide.mdl-card a {
-    color: var(--quartion_color_1);
-    padding: 2vw;
+	color: var(--quartion_color_1);
+	padding: 2vw;
 }
 
 #services .page-content .page-content {
-    padding: 2vw 2vw 2vw 2vw;
-    height: 100vh;
+	padding: 2vw 2vw 2vw 2vw;
+	height: 100vh;
 }
 
 #services .page-content .presentation {
-    padding: 2vw 2vw 2vw 2vw;
+	padding: 2vw 2vw 2vw 2vw;
 }
 
 #services .demo-card-wide>.mdl-card__title {
-    color: white;
-    height: 30vh;
+	color: white;
+	height: 30vh;
 }
 
 #spray_tan .demo-card-wide>.mdl-card__title {
-    background: url('http://static.vix.com/pt/sites/default/files/styles/large/public/bdm/bronzeamento-artificial_0.jpg') center / cover;
+	background: url('http://static.vix.com/pt/sites/default/files/styles/large/public/bdm/bronzeamento-artificial_0.jpg') center / cover;
 }
 
 #eyes .demo-card-wide>.mdl-card__title {
-    background: url('https://i.ytimg.com/vi/WZerlq1RYUQ/maxresdefault.jpg') center / cover;
+	background: url('https://i.ytimg.com/vi/WZerlq1RYUQ/maxresdefault.jpg') center / cover;
 }
 
 #dtox .demo-card-wide>.mdl-card__title {
-    background: url('http://fabianascaranzi.com.br/wp-content/uploads/2016/04/dieta-detox-para-emagrecer-rapido.jpg') center / cover;
+	background: url('http://fabianascaranzi.com.br/wp-content/uploads/2016/04/dieta-detox-para-emagrecer-rapido.jpg') center / cover;
 }
 
 #make_up .demo-card-wide>.mdl-card__title {
-    background: url('http://wallpaperpulse.com/img/5231786.jpg') center / cover;
+	background: url('http://wallpaperpulse.com/img/5231786.jpg') center / cover;
 }
 
 #nails .demo-card-wide>.mdl-card__title {
-    background: url(' http://cdn2.stylecraze.com/wp-content/uploads/2013/02/Manicure-At-Home2.jpg') center / cover;
+	background: url(' http://cdn2.stylecraze.com/wp-content/uploads/2013/02/Manicure-At-Home2.jpg') center / cover;
 }
 
 #massage .demo-card-wide>.mdl-card__title {
-    background: url('http://www.channelcourt.com.au/_source/img/store-img/Thai-Massage.jpg') center / cover;
+	background: url('http://www.channelcourt.com.au/_source/img/store-img/Thai-Massage.jpg') center / cover;
 }
 
 #waxing .demo-card-wide>.mdl-card__title {
-    background: url('http://jjwaxing.com/wp-content/uploads/2016/02/Waxing-Leg.jpg') center / cover;
+	background: url('http://jjwaxing.com/wp-content/uploads/2016/02/Waxing-Leg.jpg') center / cover;
 }
 
 #packages .demo-card-wide>.mdl-card__title {
-    background: url('http://www.kathavento.com.br/site/imagens/produtos_grandes/p25512.jpg') center / cover;
+	background: url('http://www.kathavento.com.br/site/imagens/produtos_grandes/p25512.jpg') center / cover;
 }
 
 #help .mdl-grid .mdl-card {
-    width: 100% !important;
+	width: 100% !important;
 }
