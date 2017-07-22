@@ -168,7 +168,15 @@ $(function () {
 });
 
 class Service {
-
+    /* Guide Types of Service
+        PACK
+        DEPIL
+        MASSAGE
+        NAILS
+        MAKEUP
+        EYES
+        SPRAYTAN
+    */
     constructor(name_service, descrition, price, type_service) {
         this.name_service = name_service;
         this.descrition = descrition;
@@ -177,13 +185,19 @@ class Service {
     }
 }
 
+
 var list_services = [];
 list_services[0] = new Service("Bronzeamento Natural", "Bronzeamento natural com uso pasma", "39", "SPRAY-TAN");
 list_services[1] = new Service("Bronzeamento Natural na Galaxia", "Bronzeamento natural com uso pasma", "39", "SPRAY-TAN");
 list_services[2] = new Service("Bronzeamento Natural na Lua", "Bronzeamento natural com uso pasma", "50", "SPRAY-TAN");
 list_services[3] = new Service("Bronzeamento Natural na Sol", "Bronzeamento natural com uso pasma", "60", "SPRAY-TAN");
 list_services[4] = new Service("Manicure", "Pintura de unhas", "30", "NAILS");
-list_services[5] = new Service("Make Up", "Maquiagem basica", "50", "MAKE-UP");
+list_services[5] = new Service("Make Up", "Maquiagem basica", "50", "MAKEUP");
+list_services[6] = new Service("Sombras", "Maquiagem basica", "50", "EYES");
+list_services[7] = new Service("Depilação Buço", "Maquiagem basica", "50", "DEPIL");
+list_services[8] = new Service("Pacote Depilação completa", "Maquiagem basica", "50", "PACK");
+list_services[9] = new Service("Massagem", "Maquiagem basica", "50", "MASSAGE");
+list_services[10] = new Service("Suco Detox", "genginbre", "12", "DETOX");
 var started = false;
 
 function createServiceCard(service_name, descrition, price, infoservice) {
@@ -198,6 +212,20 @@ function createAllServiceCardsOnArray() {
             var card = createServiceCard(list_services[i].name_service, list_services[i].descrition, list_services[i].price, list_services[i].infoservice);
             if (list_services[i].type_service == "SPRAY-TAN") {
                 $('div.spraytan').append(card);
+            } else if (list_services[i].type_service == "EYES") {
+                $('div.eyes').append(card);
+            } else if (list_services[i].type_service == "DETOX") {
+                $('div.detox').append(card);
+            }else if (list_services[i].type_service == "MAKEUP") {
+                $('div.makeup').append(card);
+            }else if (list_services[i].type_service == "NAILS") {
+                $('div.nails').append(card);
+            }else if (list_services[i].type_service == "MASSAGE") {
+                $('div.massage').append(card);
+            }else if (list_services[i].type_service == "DEPIL") {
+                $('div.depil').append(card);
+            }else if (list_services[i].type_service == "PACK") {
+                $('div.pack').append(card);
             }
             started = true;
         }
@@ -218,6 +246,7 @@ function show_s_prst() {
     document.documentElement.style.setProperty(`--state_s_box`, 'none');
 }
 window.onload = initPage;
-function initPage(){
+
+function initPage() {
     createAllServiceCardsOnArray();
 }
