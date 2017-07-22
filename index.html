@@ -25,26 +25,13 @@
     <title>Nails Up</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/material-datetime-picker.css">
     <link rel="shortcut icon" href="images/favicon.png" />
     <script src="js/nailsup.js"></script>
 
     <!-- Datapicker -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rome/2.1.22/rome.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
-    <script src="/js/material-datetime-picker.js" charset="utf-8"></script>
-    <script>
-        import MaterialDateTimePicker from 'material-datetime-picker';
 
-        const picker = new MaterialDateTimePicker()
-            .on('submit', (val) => console.log(`data: ${val}`))
-            .on('open', () => console.log('opened'))
-            .on('close', () => console.log('closed'));
-
-        document.querySelector('.c-datepicker-btn')
-            .on('click', () => picker.open());
-
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
@@ -113,7 +100,8 @@
                     <div class="presentation">
 
                         <div class="mdl-grid">
-                            <div class="prest_align" <div class="mdl-cell mdl-cell--2-col animated fadeInRight">
+                            <div class="prest_align">
+                            <div class="mdl-cell mdl-cell--2-col animated fadeInRight">
                                 <div class="demo-card-wide mdl-card mdl-shadow--6dp">
                                     <div class="mdl-card__title">
                                         <h2 class="mdl-card__title-text">Agenda</h2>
@@ -206,7 +194,7 @@
                                                 <a>R$ 3~15 </a>
                                             </div>
                                         </div>
-                                        <div class="content" id="content">
+                                        <div class="content spraytan" id="content">
                                             <div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
                                                 <div class="mdl-card__title" id="spray_tan">
                                                     <h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
@@ -238,45 +226,8 @@
                                                     </div>
                                                 </dialog>
                                             </div>
-                                            <div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
-                                                <div class="mdl-card__title" id="spray_tan">
-                                                    <h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
-                                                </div>
-                                                <div class="mdl-card__supporting-text">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-                                                </div>
-                                                <div class="mdl-card__actions mdl-card--border">
-                                                    <a>R$ 3~15 </a>
-                                                    <a>|</a>
-                                                    <a>R$ 3~15 </a>
-                                                </div>
-                                            </div>
-                                            <div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
-                                                <div class="mdl-card__title" id="spray_tan">
-                                                    <h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
-                                                </div>
-                                                <div class="mdl-card__supporting-text">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-                                                </div>
-                                                <div class="mdl-card__actions mdl-card--border">
-                                                    <a id="value">R$ 3~15 </a>
-                                                    <a>|</a>
-                                                    <a id="time">30min </a>
-                                                </div>
-                                            </div>
-                                            <div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
-                                                <div class="mdl-card__title" id="spray_tan">
-                                                    <h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
-                                                </div>
-                                                <div class="mdl-card__supporting-text">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-                                                </div>
-                                                <div class="mdl-card__actions mdl-card--border">
-                                                    <a>R$ 3~15 </a>
-                                                    <a>|</a>
-                                                    <a>R$ 3~15 </a>
-                                                </div>
-                                            </div>
+
+
                                         </div>
                                     </div>
                                 </section>

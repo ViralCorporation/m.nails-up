@@ -216,3 +216,7 @@ function show_s_prst() {
     document.documentElement.style.setProperty(`--state_s_tbar`, 'none');
     document.documentElement.style.setProperty(`--state_s_box`, 'none');
 }
+window.onload = initPage;
+function initPage(){
+    createAllServiceCardsOnArray();
+}
