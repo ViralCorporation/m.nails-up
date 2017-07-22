@@ -49,7 +49,6 @@
 /* Contents */
 
 body {
-    position: fixed !important;
     height: 100vh;
     background: var(--background);
 }
