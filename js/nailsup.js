@@ -28,8 +28,6 @@ function sendEmailHelp() {
     window.location.href = "mailto:help@nailsup.com.br?subject=Subject&body=message%20goes%20here";
 }
 
-window.onload(createAllServiceCardsOnArray);
-
 setTimeout(function () {
     window.scrollTo(0, 1);
 }, 1000);
@@ -179,43 +177,32 @@ class Service {
     }
 }
 
-var list_services = new Array(50);
-
-list_services.push(new Service("Bronzeamento Natural na Galaxia", "Bronzeamento natural com uso pasma", "30", "SPRAY-TAN"));
-list_services.push(new Service("Manicure", "Pintura de unhas", "30", "NAILS"));
-list_services.push(new Service("Make Up", "Maquiagem basica", "50", "MAKE-UP"));
+var list_services = [];
+list_services[0] = new Service("Bronzeamento Natural na Galaxia", "Bronzeamento natural com uso pasma", "39", "SPRAY-TAN");
+list_services[1] = new Service("Bronzeamento Natural na Lua", "Bronzeamento natural com uso pasma", "50", "SPRAY-TAN");
+list_services[2] = new Service("Bronzeamento Natural na Sol", "Bronzeamento natural com uso pasma", "60", "SPRAY-TAN");
+list_services[3] = new Service("Manicure", "Pintura de unhas", "30", "NAILS");
+list_services[4] = new Service("Make Up", "Maquiagem basica", "50", "MAKE-UP");
+var started = false;
 
 function createServiceCard(service_name, descrition, price, infoservice) {
-    var service_card = '< div class = "content" id = "content "> <div class = "demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">'
-    service_card += '<div class = "mdl-card__title" id = "spray_tan"><h2 class = "mdl-card__title-text" id = "bronze-title" >'
-    service_card += service_name;
-    service_card += '< /h2> </div> '
-    service_card += '<div class = "little_text" ><span class = "mdl-card__supporting-text" > '
-    service_card += descrition;
-    service_card += '</span> <span id = "show-dialog-bronze"type = "button" class = "more mdl-button" > More < /span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value" > R$'
-    service_card += price;
-    service_card += '< /a> <a > | < /a> <a id = "time" > 30 min < /a> < /div > </div> <div class = "button mdl-js-button mdl-button--fab mdl-js-ripple-effect " ><i class = "contact material-icons md-24 secondary-color" > add_circle < /i> < /div >'
-    service_card += '<dialog class = "mdl-dialog" ><h4 class = "mdl-dialog__title" id = "title-more" > Service < /h4> <div class = "mdl-dialog__content" ><p id = "content-service-info" >'
-    service_card += info_service;
-    service_card += '</p> < /div > <div class = "mdl-dialog__actions" ><button type = "button" class = "mdl-button close" > Close </button></div>< /dialog > </div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service_name + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + descrition + '...</span><span id ="show-dialog-bronze" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect "><i class="contact material-icons md-24 secondary-color"> add_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>;'
     return service_card;
 }
 
 function createAllServiceCardsOnArray() {
-    for (i in list_services) {
-        console.log(i);
-        var card = createServiceCard(i.name_service, i.descrition, i.price, i.infoservice);
-        if (i.type_service == "SPRAY-TAN") {
-            document.getElementById('spraytan').innerHTML += service_card;
+    if (started == false) {
+        for (i = 0; i < list_services.length; i++) {
+            console.log(list_services[i]);
+            var card = createServiceCard(list_services[i].name_service, list_services[i].descrition, list_services[i].price, list_services[i].infoservice);
+            if (list_services[i].type_service == "SPRAY-TAN") {
+                $('div.spraytan').append(card);
+            }
+            started = true;
         }
     }
 }
-
-//Block Autorotate
-screen.lockOrientation("landscape");
-screen.orientation.lock();
-screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
-
+var car_sch = Array(10);
 
 //Hidding and showing the Services Presentation
 function hide_s_prst() {
