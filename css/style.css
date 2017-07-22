@@ -207,7 +207,7 @@ i.material-icons.secondary-color {
 	background: rgb(251, 240, 242);
 }
 
-.products .demo-card-wide.mdl-card {
+.services_content .demo-card-wide.mdl-card {
 	width: 108vw;
 	left: -4vw;
 	top: -4vw;
@@ -358,10 +358,6 @@ i.material-icons.secondary-color {
 #services .demo-card-wide>.mdl-card__title {
 	color: white;
 	height: 30vh;
-}
-
-#packages .demo-card-wide.mdl-card {
-	width: 96vw;
 }
 
 #spray_tan .demo-card-wide>.mdl-card__title {
