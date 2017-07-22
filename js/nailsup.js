@@ -134,3 +134,15 @@ screen.orientation.lock();
 screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 
 
+//Hidding and showing the Services Presentation
+function hide_s_prst(){
+	 document.documentElement.style.setProperty(`--state_s_prst`, 'none');
+}
+function show_s_prst(){
+	 document.documentElement.style.setProperty(`--state_s_prst`, 'contents');
+}
+	display: var(--state_s_prst);
+
+
+
+
