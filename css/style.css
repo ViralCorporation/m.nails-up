@@ -49,6 +49,7 @@
 /* Contents */
 
 body {
+    position: fixed !imporant;
     height: 100vh;
     background: var(--background);
 }
@@ -206,7 +207,6 @@ i.material-icons.secondary-color {
 
 .services_content {
     background: rgb(251, 240, 242);
-    height: 110%;
 }
 
 .products .demo-card-wide.mdl-card {
@@ -282,10 +282,6 @@ i.material-icons.secondary-color {
     min-width: 3.5vh;
 }
 
-body.presentation {
-    padding: 2vh;
-}
-
 .presentation {
     top: 10vh;
     height: 100vh;
@@ -315,17 +311,20 @@ body.presentation {
     width: 96vw;
 }
 
+#services .mdl-layout__content{
+}
+
 #services .demo-card-wide.mdl-card a {
     color: var(--quartion_color_1);
     padding: 2vw;
 }
 
 #services .page-content .page-content {
-    padding: 2vw;
+    padding: 2vw 2vw 2vw 2vw;
 }
 
 #services .page-content .presentation {
-    padding: 2vw;
+    padding: 2vw 2vw 2vw 2vw;
 }
 
 #services .demo-card-wide>.mdl-card__title {
