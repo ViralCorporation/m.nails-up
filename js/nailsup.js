@@ -46,6 +46,7 @@ list_services[9] = new Service("Massagem", "Maquiagem basica", "50", "MASSAGE");
 list_services[10] = new Service("Suco Detox", "genginbre", "12", "DETOX");
 
 var started = false;
+
 function Scrolldown() {
     window.scroll(0, 300);
 }
@@ -137,14 +138,14 @@ $(function () {
 
 function createServiceCard(service_name, descrition, price, infoservice, id) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service_name + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + descrition + '...</span><span id ="show-dialog-' +id + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect " id="add_service_'+id+'"><i class="contact material-icons md-24 secondary-color"> add_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service_name + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + descrition + '...</span><span id ="show-dialog-' + id + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect " id="add_service_' + id + '"><i class="contact material-icons md-24 secondary-color"> add_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
     return service_card;
 }
 
 function createServiceCarAdded(service) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service+ '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + descritio.descrition + '...</span><span id ="show-dialog-' +service.id + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect " id="add_service_' +service.id+'><i class="contact material-icons md-24 secondary-color" > add_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
-    return service_card_added;
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + service.id + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_' + service.id + '"><i class="contact material-icons md-24 secondary-color"> remove_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
+    return service_card;
 }
 
 function createAllServiceCardsOnArray() {
@@ -158,79 +159,105 @@ function createAllServiceCardsOnArray() {
                 $('div.eyes').append(card);
             } else if (list_services[i].type_service == "DETOX") {
                 $('div.detox').append(card);
-            }else if (list_services[i].type_service == "MAKEUP") {
+            } else if (list_services[i].type_service == "MAKEUP") {
                 $('div.makeup').append(card);
-            }else if (list_services[i].type_service == "NAILS") {
+            } else if (list_services[i].type_service == "NAILS") {
                 $('div.nails').append(card);
-            }else if (list_services[i].type_service == "MASSAGE") {
+            } else if (list_services[i].type_service == "MASSAGE") {
                 $('div.massage').append(card);
-            }else if (list_services[i].type_service == "DEPIL") {
+            } else if (list_services[i].type_service == "DEPIL") {
                 $('div.depil').append(card);
-            }else if (list_services[i].type_service == "PACK") {
+            } else if (list_services[i].type_service == "PACK") {
                 $('div.pack').append(card);
             }
             started = true;
         }
     }
-
-    function updateCarServices(){
-        var aux = list_car;
-    }
 }
+
+function updateCarServices(aux_service) {
+    $('div.car').append(createServiceCarAdded(aux_service));
+
+}
+
 $(function () {
     var dialog = document.querySelector('dialog');
     var title = document.getElementById("title-more");
     var info = document.getElementById("content-service-info");
     this.list_services = list_services;
 
-    var add_service_0 = document.querySelector('add_service_0');
-    var add_service_1 = document.querySelector('add_service_1');
-    var add_service_2 = document.querySelector('add_service_2');
-    var add_service_3 = document.querySelector('add_service_3');
-    var add_service_4 = document.querySelector('add_service_4');
-    var add_service_5 = document.querySelector('add_service_5');
-    var add_service_6 = document.querySelector('add_service_6');
+    var add_service_0 = document.getElementById('add_service_0');
+    var add_service_1 = document.getElementById('add_service_1');
+    var add_service_2 = document.getElementById('add_service_2');
+    var add_service_3 = document.getElementById('add_service_3');
+    var add_service_4 = document.getElementById('add_service_4');
+    var add_service_5 = document.getElementById('add_service_5');
+    var add_service_6 = document.getElementById('add_service_6');
+    var add_service_7 = document.getElementById('add_service_7');
+    var add_service_8 = document.getElementById('add_service_8');
+    var add_service_9 = document.getElementById('add_service_9');
+    var add_service_10 = document.getElementById('add_service_10');
+
 
     add_service_0.addEventListener('click', function () {
 
-        var card_add = createServiceCarAdded(list_services[0]);
-        $('.car').append(card_add);
-
+        list_car_services.push(list_services[0]);
+        updateCarServices(list_services[0]);
     });
     add_service_1.addEventListener('click', function () {
 
-        var card_add = createServiceCarAdded(list_car_services[0]);
-        $('div.car').append(card_add);
+        list_car_services.push(list_services[1]);
+        updateCarServices(list_services[1]);
 
     });
     add_service_2.addEventListener('click', function () {
 
-        var card_add = createServiceCarAdded(list_car_services[2]);
-        $('div.car').append(card_add);
+        list_car_services.push(list_services[2]);
+        updateCarServices(list_services[2]);
 
     });
     add_service_3.addEventListener('click', function () {
 
-        var card_add = createServiceCarAdded(list_car_services[3]);
-        $('div.car').append(card_add);
+        list_car_services.push(list_services[3]);
+        updateCarServices();
 
     });
     add_service_4.addEventListener('click', function () {
 
-        var card_add = createServiceCarAdded(list_car_services[4]);
-        $('div.car').append(card_add);
+        list_car_services.push(list_services[4]);
+        updateCarServices(list_services[4]);
 
     });
     add_service_5.addEventListener('click', function () {
 
-        var card_add = createServiceCarAdded(list_car_services[5]);
-        $('div.car').append(card_add);
+        list_car_services.push(list_services[5]);
+        updateCarServices(list_services[5]);
 
     });
     add_service_6.addEventListener('click', function () {
 
-        var card_add = createServiceCarAdded(list_car_services[6]);
-        $('div.car').append(card_add);
+        list_car_services.push(list_services[6]);
+        updateCarServices(list_services[6]);
+
+    });add_service_7.addEventListener('click', function () {
+
+        list_car_services.push(list_services[7]);
+        updateCarServices(list_services[7]);
+
+    });add_service_8.addEventListener('click', function () {
+
+        list_car_services.push(list_services[8]);
+        updateCarServices(list_services[8]);
+
+    });add_service_9.addEventListener('click', function () {
+
+        list_car_services.push(list_services[9]);
+        updateCarServices(list_services[9]);
+
+    });add_service_10.addEventListener('click', function () {
+
+        list_car_services.push(list_services[10]);
+        updateCarServices(list_services[10]);
 
     });
 
@@ -288,6 +315,8 @@ $(function () {
     dialog.querySelector('.close').addEventListener('click', function () {
         dialog.close();
     });
+
+    document.getElementById("schedulling").addEventListener('click', updateCarServices());
 });
 var car_sch = Array(10);
 
@@ -308,4 +337,5 @@ window.onload = initPage;
 
 function initPage() {
     createAllServiceCardsOnArray();
+
 }
