@@ -174,11 +174,6 @@ function createAllServiceCardsOnArray() {
         }
     }
 }
-
-function updateCarServices(aux_service) {
-    $('div.car').append(createServiceCarAdded(aux_service));
-
-}
 function getTotalOfPrices(){
     var sum = 0;
     for(i=0; i < list_car_services.length; i++){
@@ -186,6 +181,12 @@ function getTotalOfPrices(){
     }
     return sum;
 }
+function updateCarServices(aux_service) {
+    $('div.car').append(createServiceCarAdded(aux_service));
+    document.getElementById("sum-car").innerHTML = getTotalOfPrices();
+
+}
+
 
 $(function () {
     var dialog = document.querySelector('dialog');
