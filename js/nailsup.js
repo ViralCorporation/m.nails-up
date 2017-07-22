@@ -33,17 +33,17 @@ Guide to constructor
     name of service, Descrition of service, price, categorie
     */
 
-list_services[0] = new Service("Bronzeamento Natural", "Bronzeamento natural com uso pasma", "39", "SPRAY-TAN");
-list_services[1] = new Service("Bronzeamento Natural na Galaxia", "Bronzeamento natural com uso pasma", "39", "SPRAY-TAN");
-list_services[2] = new Service("Bronzeamento Natural na Lua", "Bronzeamento natural com uso pasma", "50", "SPRAY-TAN");
-list_services[3] = new Service("Bronzeamento Natural na Sol", "Bronzeamento natural com uso pasma", "60", "SPRAY-TAN");
-list_services[4] = new Service("Manicure", "Pintura de unhas", "30", "NAILS");
-list_services[5] = new Service("Make Up", "Maquiagem basica", "50", "MAKEUP");
-list_services[6] = new Service("Sombras", "Maquiagem basica", "50", "EYES");
-list_services[7] = new Service("Depilação Buço", "Maquiagem basica", "50", "DEPIL");
-list_services[8] = new Service("Pacote Depilação completa", "Maquiagem basica", "50", "PACK");
-list_services[9] = new Service("Massagem", "Maquiagem basica", "50", "MASSAGE");
-list_services[10] = new Service("Suco Detox", "genginbre", "12", "DETOX");
+list_services[0] = new Service("Bronzeamento Natural", "Bronzeamento natural com uso pasma", 39, "SPRAY-TAN");
+list_services[1] = new Service("Bronzeamento Natural na Galaxia", "Bronzeamento natural com uso pasma", 39, "SPRAY-TAN");
+list_services[2] = new Service("Bronzeamento Natural na Lua", "Bronzeamento natural com uso pasma", 50, "SPRAY-TAN");
+list_services[3] = new Service("Bronzeamento Natural na Sol", "Bronzeamento natural com uso pasma", 60.50, "SPRAY-TAN");
+list_services[4] = new Service("Manicure", "Pintura de unhas", 50, "NAILS");
+list_services[5] = new Service("Make Up", "Maquiagem basica", 50, "MAKEUP");
+list_services[6] = new Service("Sombras", "Maquiagem basica", 50, "EYES");
+list_services[7] = new Service("Depilação Buço", "Maquiagem basica", 50, "DEPIL");
+list_services[8] = new Service("Pacote Depilação completa", "Maquiagem basica", 50, "PACK");
+list_services[9] = new Service("Massagem", "Maquiagem basica", 50, "MASSAGE");
+list_services[10] = new Service("Suco Detox", "genginbre", 12, "DETOX");
 
 var started = false;
 
@@ -178,6 +178,13 @@ function createAllServiceCardsOnArray() {
 function updateCarServices(aux_service) {
     $('div.car').append(createServiceCarAdded(aux_service));
 
+}
+function getTotalOfPrices(){
+    var sum = 0;
+    for(i=0; i < list_car_services.length; i++){
+        sum += list_car_services[i].price;
+    }
+    return sum;
 }
 
 $(function () {
