@@ -275,6 +275,7 @@ i.material-icons.secondary-color {
 }
 
 .mdl-button--fab {
+	background: white;
 	height: 3.5vh;
 	width: 3.5vh;
 	min-width: 3.5vh;
