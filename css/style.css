@@ -9,21 +9,21 @@
 /* Variables */
 
 :root {
-    --primary_color_1: rgba(255, 255, 255, 1);
-    --primary_color_2: rgba(255, 255, 255, 0.9);
-    --primary_color_deg: -0deg;
+    --primary_color_1: rgba(255, 253, 250, 1);
+    --primary_color_2: rgba(255, 255, 255, 1);
     --hidden-primary-color: rgba(226, 20, 222, 0);
     --secondary_color_1: rgba(218, 83, 117, 0.92);
     --secondary_color_2: rgb(226, 93, 36);
     --secondary_color_deg: -90deg;
     --terciary_color_1: rgba(252, 245, 247, 0.97);
     --terciary_color_2: rgba(255, 255, 255, 0.92);
-    --terciary_color_deg: 0deg;
     --quartion_color_1: rgba(233, 152, 6, 0.72);
     --tab-icon: rgba(221, 47, 102, 0.65);
     --coadjuvant-2: rgba(193, 34, 75, 0.81);
     --coadjuvant-1: rgba(165, 165, 165, 0.68);
     --background: rgba(246, 215, 221, 0.37);
+    --primary_color_deg: -0deg;
+    --terciary_color_deg: 0deg;
 }
 
 
@@ -54,7 +54,7 @@ body {
 }
 
 .scroll {
-    height: 5vh;
+    /* height: 5vh; */
     width: 100%;
 }
 
@@ -292,21 +292,20 @@ body.presentation {
     overflow: hidden;
 }
 
-.presentation .demo-card-wide.mdl-card{
+.presentation .demo-card-wide.mdl-card {
     width: 100%;
-
 }
 
-.presentation .mdl-grid{
+.presentation .mdl-grid {
     padding: 0;
     margin: auto;
 }
 
-.presentation .mdl-cell{
+.presentation .mdl-cell {
     margin: 2vw;
 }
 
-.presentation .mdl-grid .mdl-card{
+.presentation .mdl-grid .mdl-card {
     width: 100%;
     height: 17.5vh;
 }

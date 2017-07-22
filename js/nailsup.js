@@ -18,7 +18,6 @@ function checkstate() {
 
 function saydone() {
     document.getElementById("page").style.display = "flex";
-
 }
 
 function sendEmail() {
@@ -28,7 +27,6 @@ function sendEmail() {
 function sendEmailHelp() {
     window.location.href = "mailto:help@nailsup.com.br?subject=Subject&body=message%20goes%20here";
 }
-
 
 setTimeout(function () {
     window.scrollTo(0, 1);
@@ -57,6 +55,7 @@ if (!window.location.hash && window.addEventListener) {
         }, 0);
     });
 }
+
 $(function () {
     var animation = 'animated bounceIn';
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -87,6 +86,7 @@ $(function () {
         });
     });
 });
+
 $(function () {
     var dialogBronze = document.querySelector('dialog.bronze');
     var showDialogButtonBronze = document.querySelector('#show-dialog-bronze');
@@ -126,11 +126,7 @@ $(function () {
     dialogDetox.querySelector('.close').addEventListener('click', function () {
         dialogDetox.close();
     });
-
-
 });
-
-
 
 //Block Autorotate
 screen.lockOrientation("landscape");
