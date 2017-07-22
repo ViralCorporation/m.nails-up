@@ -25,26 +25,13 @@
 	<title>Nails Up</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/material-datetime-picker.css">
 	<link rel="shortcut icon" href="images/favicon.png" />
 	<script src="js/nailsup.js"></script>
 
 	<!-- Datapicker -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/rome/2.1.22/rome.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
-	<script src="/js/material-datetime-picker.js" charset="utf-8"></script>
-	<script>
-		import MaterialDateTimePicker from 'material-datetime-picker';
 
-		const picker = new MaterialDateTimePicker()
-			.on('submit', (val) => console.log(`data: ${val}`))
-			.on('open', () => console.log('opened'))
-			.on('close', () => console.log('closed'));
-
-		document.querySelector('.c-datepicker-btn')
-			.on('click', () => picker.open());
-
-	</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
@@ -86,8 +73,24 @@
 			</section>
 
 			<!-- SCHEDULE -->
-			<section class="mdl-layout__tab-panel " id="schedulling">
+			<section class="mdl-layout__tab-panel" id="schedulling">
 				<div class="page-content">
+					<div class="services_content">
+						<div class="products">
+							<div class="content car" id="content">
+
+							</div>
+						</div>
+					</div>
+					<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+						<div class="mdl-card__title" id="spray_tan">
+							<h2 class="mdl-card__title-text">Total</h2>
+						</div>
+						<div class="mdl-card__actions mdl-card--border">
+							<a><i class="contact material-icons md-24 secondary-color"> attach_money</i></a>
+							<span id="sum-car"></span>
+						</div>
+					</div>
 
 					<div class="demo-card-wide mdl-card mdl-shadow--2dp">
 						<div class="mdl-card__title" id="spray_tan">
@@ -109,9 +112,7 @@
 			<!-- SERVICES -->
 			<section class="mdl-layout__tab-panel  no-scrolling is-active" id="services">
 
-
-
-				<!-- Simple header with scrollable tabs. -->
+				<!-- Header scrollable. -->
 				<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 					<div class="no-margin-height mdl-layout__header">
 
@@ -131,7 +132,7 @@
 								</div>
 							</div>
 
-						<!-- Tabs -->
+							<!-- Tabs -->
 							<div class="tab">
 								<a href="#spray_tan" onclick="hide_s_prst()" class="mdl-layout__tab ">Bronzeamento</a>
 								<a href="#eyes" onclick="hide_s_prst()" class="mdl-layout__tab ">Olhos</a>
@@ -146,7 +147,6 @@
 					</div>
 					<main class="mdl-layout__content">
 						<div class="page-content">
-
 							<div class="services_content">
 								<div class="products">
 									<section class="mdl-layout__tab-panel is-active" id="spray_tan">
@@ -163,77 +163,8 @@
 													<a>R$ 3~15 </a>
 												</div>
 											</div>
-											<div class="content" id="content">
-												<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
-													<div class="mdl-card__title" id="spray_tan">
-														<h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
-													</div>
-													<div class="little_text">
-														<span class="mdl-card__supporting-text">
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-                                                    </span>
-														<span id="show-dialog-bronze" type="button" class="more mdl-button">More</span>
-														<div class="mdl-card__actions mdl-card--border">
-															<a id="value">R$ 3~15 </a>
-															<a>|</a>
-															<a id="time">30min </a>
-														</div>
-													</div>
-													<div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect ">
-														<i class="contact material-icons md-24 quartenion_color">add_circle</i>
-													</div>
-													<dialog class="mdl-dialog bronze">
-														<h4 class="mdl-dialog__title">Service</h4>
-														<div class="mdl-dialog__content">
-															<p>
-																More info about the services here
-															</p>
-														</div>
-														<div class="mdl-dialog__actions">
-															<button type="button" class="mdl-button close">Close</button>
+											<div class="content spraytan" id="content">
 
-														</div>
-													</dialog>
-												</div>
-												<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
-													<div class="mdl-card__title" id="spray_tan">
-														<h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
-													</div>
-													<div class="mdl-card__supporting-text">
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-													</div>
-													<div class="mdl-card__actions mdl-card--border">
-														<a>R$ 3~15 </a>
-														<a>|</a>
-														<a>R$ 3~15 </a>
-													</div>
-												</div>
-												<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
-													<div class="mdl-card__title" id="spray_tan">
-														<h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
-													</div>
-													<div class="mdl-card__supporting-text">
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-													</div>
-													<div class="mdl-card__actions mdl-card--border">
-														<a>R$ 3~15 </a>
-														<a>|</a>
-														<a>R$ 3~15 </a>
-													</div>
-												</div>
-												<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn">
-													<div class="mdl-card__title" id="spray_tan">
-														<h2 class="mdl-card__title-text">Bronzeamento Natural</h2>
-													</div>
-													<div class="mdl-card__supporting-text">
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-													</div>
-													<div class="mdl-card__actions mdl-card--border">
-														<a>R$ 3~15 </a>
-														<a>|</a>
-														<a>R$ 3~15 </a>
-													</div>
-												</div>
 											</div>
 										</div>
 									</section>
@@ -250,7 +181,9 @@
 												<div class="mdl-card__actions mdl-card--border">
 													<a>R$ 3~15 </a>
 												</div>
+												<div class="content eyes" id="content">
 
+												</div>
 											</div>
 
 										</div>
@@ -268,7 +201,9 @@
 												<div class="mdl-card__actions mdl-card--border">
 													<a>R$ 3~15 </a>
 												</div>
+												<div class="content detox" id="content">
 
+												</div>
 											</div>
 
 										</div>
@@ -287,6 +222,9 @@
 													<a>R$ 3~15 </a>
 												</div>
 											</div>
+											<div class="content makeup" id="content">
+
+											</div>
 
 										</div>
 									</section>
@@ -303,6 +241,9 @@
 												<div class="mdl-card__actions mdl-card--border">
 													<a>R$ 3~15 </a>
 												</div>
+
+											</div>
+											<div class="content nails" id="content">
 
 											</div>
 
@@ -323,6 +264,9 @@
 												</div>
 
 											</div>
+											<div class="content massage" id="content">
+
+											</div>
 
 										</div>
 									</section>
@@ -341,6 +285,9 @@
 												</div>
 
 											</div>
+											<div class="content depil" id="content">
+
+											</div>
 
 										</div>
 									</section>
@@ -357,6 +304,9 @@
 											<div class="mdl-card__actions mdl-card--border">
 												<a>R$ 3~15 </a>
 											</div>
+
+										</div>
+										<div class="content pack" id="content">
 
 										</div>
 
