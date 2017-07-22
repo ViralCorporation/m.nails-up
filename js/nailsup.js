@@ -178,11 +178,12 @@ class Service {
 }
 
 var list_services = [];
-list_services[0] = new Service("Bronzeamento Natural na Galaxia", "Bronzeamento natural com uso pasma", "39", "SPRAY-TAN");
-list_services[1] = new Service("Bronzeamento Natural na Lua", "Bronzeamento natural com uso pasma", "50", "SPRAY-TAN");
-list_services[2] = new Service("Bronzeamento Natural na Sol", "Bronzeamento natural com uso pasma", "60", "SPRAY-TAN");
-list_services[3] = new Service("Manicure", "Pintura de unhas", "30", "NAILS");
-list_services[4] = new Service("Make Up", "Maquiagem basica", "50", "MAKE-UP");
+list_services[0] = new Service("Bronzeamento Natural", "Bronzeamento natural com uso pasma", "39", "SPRAY-TAN");
+list_services[1] = new Service("Bronzeamento Natural na Galaxia", "Bronzeamento natural com uso pasma", "39", "SPRAY-TAN");
+list_services[2] = new Service("Bronzeamento Natural na Lua", "Bronzeamento natural com uso pasma", "50", "SPRAY-TAN");
+list_services[3] = new Service("Bronzeamento Natural na Sol", "Bronzeamento natural com uso pasma", "60", "SPRAY-TAN");
+list_services[4] = new Service("Manicure", "Pintura de unhas", "30", "NAILS");
+list_services[5] = new Service("Make Up", "Maquiagem basica", "50", "MAKE-UP");
 var started = false;
 
 function createServiceCard(service_name, descrition, price, infoservice) {
