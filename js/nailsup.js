@@ -144,7 +144,7 @@ function createServiceCard(service, id) {
 
 function createServiceCarAdded(service, id) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" id="service_added_' + list_car_services.indexOf(service) + '" ><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + list_car_services.indexOf(service) + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_' + list_car_services.indexOf(service) + '"><i class="contact material-icons md-24 add-remove-color"> remove_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" id="service_added_' + list_services.indexOf(service) + '" ><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + list_services.indexOf(service) + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_' + list_services.indexOf(service) + '"><i class="contact material-icons md-24 add-remove-color"> remove_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
     return service_card;
 }
 
@@ -194,6 +194,7 @@ function removeFromCart(elem) {
         if (list_car_services[i] == elem) {
             var aux = list_car_services.slice(0, i - 1);
             aux.concat(list_car_services.slice(i + 1, list_car_services.length));
+            $("#service_added_" + i).remove();
             break;
         }
     }
@@ -217,17 +218,6 @@ $(function () {
     var add_service_8 = document.getElementById('add_service_8');
     var add_service_9 = document.getElementById('add_service_9');
     var add_service_10 = document.getElementById('add_service_10');
-    var rmv_service_0 = document.getElementById('remove_service_0');
-    var rmv_service_1 = document.getElementById('remove_service_1');
-    var rmv_service_2 = document.getElementById('remove_service_2');
-    var rmv_service_3 = document.getElementById('remove_service_3');
-    var rmv_service_4 = document.getElementById('remove_service_4');
-    var rmv_service_5 = document.getElementById('remove_service_5');
-    var rmv_service_6 = document.getElementById('remove_service_6');
-    var rmv_service_7 = document.getElementById('remove_service_7');
-    var rmv_service_8 = document.getElementById('remove_service_8');
-    var rmv_service_9 = document.getElementById('remove_service_9');
-    var rmv_service_10 = document.getElementById('remove_service_10');
 
 
     add_service_0.addEventListener('click', function () {
@@ -235,6 +225,11 @@ $(function () {
         if (list_car_services.indexOf(list_services[0]) == -1) {
             list_car_services.push(list_services[0]);
             updateCarServices(list_services[0]);
+
+            document.getElementById('remove_service_0').addEventListener('click', function(){
+                list_car_services = removeFromCart(list_services[0]);
+            });
+
         } else {
             return -1;
         }
@@ -245,6 +240,11 @@ $(function () {
         if (list_car_services.indexOf(list_services[1] == -1)) {
             list_car_services.push(list_services[1]);
             updateCarServices(list_services[1]);
+
+            document.getElementById('remove_service_1').addEventListener('click', function(){
+                list_car_services = removeFromCart(list_services[1]);
+            });
+
         } else {
             return -1;
         }
@@ -255,6 +255,11 @@ $(function () {
         if (list_car_services.indexOf(list_services[2]) == -1) {
             list_car_services.push(list_services[2]);
             updateCarServices(list_services[2]);
+
+            document.getElementById('remove_service_1').addEventListener('click', function(){
+                list_car_services = removeFromCart(list_services[1]);
+            });
+
         } else {
             return -1;
         }
@@ -265,6 +270,11 @@ $(function () {
         if (list_car_services.indexOf(list_services[3]) == -1) {
             list_car_services.push(list_services[3]);
             updateCarServices(list_services[3]);
+
+            document.getElementById('remove_service_3').addEventListener('click', function(){
+                list_car_services = removeFromCart(list_services[3]);
+            });
+
         } else {
             return -1;
         }
@@ -275,6 +285,11 @@ $(function () {
         if (list_car_services.indexOf(list_services[4]) == -1) {
             list_car_services.push(list_services[4]);
             updateCarServices(list_services[4]);
+
+            document.getElementById('remove_service_4').addEventListener('click', function(){
+                list_car_services = removeFromCart(list_services[4]);
+            });
+
         } else {
             return -1;
         }
@@ -285,6 +300,11 @@ $(function () {
         if (list_car_services.indexOf(list_services[5]) == -1) {
             list_car_services.push(list_services[5]);
             updateCarServices(list_services[5]);
+
+            document.getElementById('remove_service_5').addEventListener('click', function(){
+                list_car_services = removeFromCart(list_services[5]);
+            });
+
         } else {
             return -1;
         }
@@ -295,6 +315,11 @@ $(function () {
         if (list_car_services.indexOf(list_services[6]) == -1) {
             list_car_services.push(list_services[6]);
             updateCarServices(list_services[6]);
+
+            document.getElementById('remove_service_6').addEventListener('click', function(){
+                list_car_services = removeFromCart(list_services[6]);
+            });
+
         } else {
             return -1;
         }
@@ -305,6 +330,11 @@ $(function () {
         if (list_car_services.indexOf(list_services[7]) == -1) {
             list_car_services.push(list_services[7]);
             updateCarServices(list_services[7]);
+
+            document.getElementById('remove_service_7').addEventListener('click', function(){
+                list_car_services = removeFromCart(list_services[7]);
+            });
+
         } else {
             return -1;
         }
@@ -314,6 +344,11 @@ $(function () {
         if (list_car_services.indexOf(list_services[8]) == -1) {
             list_car_services.push(list_services[8]);
             updateCarServices(list_services[8]);
+
+            document.getElementById('remove_service_8').addEventListener('click', function(){
+                list_car_services = removeFromCart(list_services[8]);
+            });
+
         } else {
             return -1;
         }
@@ -324,6 +359,11 @@ $(function () {
         if (list_car_services.indexOf(list_services[9]) == -1) {
             list_car_services.push(list_services[9]);
             updateCarServices(list_services[9]);
+
+            document.getElementById('remove_service_9').addEventListener('click', function(){
+                list_car_services = removeFromCart(list_services[9]);
+            });
+
         } else {
             return -1;
         }
@@ -334,76 +374,17 @@ $(function () {
         if (list_car_services.indexOf(list_services[10]) == -1) {
             list_car_services.push(list_services[10]);
             updateCarServices(list_services[10]);
+
+            document.getElementById('remove_service_10').addEventListener('click', function(){
+                list_car_services = removeFromCart(list_services[10]);
+            });
+
         } else {
             return -1;
         }
 
     });
 
-    rmv_service_0.addEventListener('click', function () {
-        list_car_services = removeFromCart(list_car_services[0]);
-        $('#service_added_0').remove();
-    });
-    rmv_service_1.addEventListener('click', function () {
-
-        list_car_services = removeFromCart(list_car_services[1]);
-        $('#service_added_1').remove();
-
-    });
-    rmv_service_2.addEventListener('click', function () {
-
-        list_car_services = removeFromCart(list_car_services[2]);
-        $('#service_added_2').remove();
-
-    });
-    rmv_service_3.addEventListener('click', function () {
-
-        list_car_services = removeFromCart(list_car_services[4]);
-        updateCarServices();
-
-    });
-    rmv_service_4.addEventListener('click', function () {
-
-        list_car_services.remove(list_services[5]);
-        updateCarServices(list_services[4]);
-
-    });
-    rmv_service_5.addEventListener('click', function () {
-
-        list_car_services.remove(list_services[5]);
-        updateCarServices(list_services[5]);
-
-    });
-    rmv_service_6.addEventListener('click', function () {
-
-        list_car_services = removeFromCart(list_car_services[6]);
-        updateCarServices(list_services[6]);
-
-    });
-    rmv_service_7.addEventListener('click', function () {
-
-        list_car_services = removeFromCart(list_car_services[7]);
-        updateCarServices(list_services[7]);
-
-    });
-    rmv_service_8.addEventListener('click', function () {
-
-        list_car_services = removeFromCart(list_car_services[8]);
-        updateCarServices(list_services[8]);
-
-    });
-    rmv_service_9.addEventListener('click', function () {
-
-        list_car_services = removeFromCart(list_car_services[9]);
-        updateCarServices(list_services[9]);
-
-    });
-    rmv_service_10.addEventListener('click', function () {
-
-        list_car_services = removeFromCart(list_car_services[10]);
-        updateCarServices(list_services[10]);
-
-    });
     var showDialogButton_0 = document.querySelector('#show-dialog-0');
     var showDialogButton_1 = document.querySelector('#show-dialog-1');
     var showDialogButton_2 = document.querySelector('#show-dialog-2');
