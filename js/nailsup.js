@@ -218,9 +218,10 @@ $(function () {
              return -1;
          }
     });
+
     add_service_1.addEventListener('click', function () {
 
-        if(list_car_services.indexOf(list_services[1] == -1){
+        if(list_car_services.indexOf(list_services[1] == -1)){
              list_car_services.push(list_services[1]);
              updateCarServices(list_services[1]);
          } else{
