@@ -319,8 +319,8 @@ $(function () {
 
     });
 
-    var rmv_service_0 = document.getElementById('add_service_0');
-    var rmv_service_1 = document.getElementById('add_service_1');
+    var rmv_service_0 = document.getElementById('remove_service_0');
+    var rmv_service_1 = document.getElementById('remove_service_1');
     var rmv_service_2 = document.getElementById('add_service_2');
     var rmv_service_3 = document.getElementById('add_service_3');
     var rmv_service_4 = document.getElementById('add_service_4');
@@ -331,10 +331,20 @@ $(function () {
     var rmv_service_9 = document.getElementById('add_service_9');
     var rmv_service_10 = document.getElementById('add_service_10');
 
+    function removeFromCart(elem){
+        for(i=0; i < list_car_services; i++){
+            if(list_car_services[i] == elem){
+                list_car_services[i] = undefined;
+                break;
+            }
+
+        }
+
+    }
+
 
     rmv_service_0.addEventListener('click', function () {
-
-        list_car_services.remove(list_services[0]);
+        list_car_services[0] = undefined;
         updateCarServices(list_services[0]);
     });
     rmv_service_1.addEventListener('click', function () {
