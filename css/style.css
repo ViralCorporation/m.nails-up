@@ -92,9 +92,86 @@ a.mdl-layout__tab {
 	color: var(--coadjuvant-1) !important;
 }
 
+a[href^="#spray_tan"] i.mdl-cell {
+	margin: 1vw !important;
+	background: url("../images/icons/spray_tan.png") no-repeat center/80%;
+}
+
+a[href^="#eyes"] i.mdl-cell {
+	margin: 1vw !important;
+	background: url("../images/icons/eyes.png") no-repeat center/90%;
+}
+
+a[href^="#dtox"] i.mdl-cell {
+	margin: 1vw !important;
+	background: url("../images/icons/dtox.png") no-repeat center/100%;
+}
+
+a[href^="#make_up"] i.mdl-cell {
+	margin: 1vw !important;
+	background: url("../images/icons/make_up.png") no-repeat center/25%;
+}
+
+a[href^="#nails"] i.mdl-cell {
+	margin: 1vw !important;
+	background: url("../images/icons/nails.png") no-repeat center/50%;
+}
+
+a[href^="#massage"] i.mdl-cell {
+	margin: 1vw !important;
+	background: url("../images/icons/massage.png") no-repeat center/75%;
+}
+
+a[href^="#waxing"] i.mdl-cell {
+	margin: 1vw !important;
+	background: url("../images/icons/waxing.png") no-repeat center/90%;
+}
+
+a[href^="#packages"] i.mdl-cell {
+	margin: 1vw !important;
+	background: url("../images/icons/packages.png") no-repeat center/60%;
+}
+
 footer a.mdl-layout__tab {
 	color: var(--coadjuvant-2) !imporant;
 	;
+}
+
+h2.contact {
+	font-size: 2.5vh;
+}
+
+h6.contact {
+	font-size: 1.8vh;
+	;
+}
+
+i.mdl-cell.whatsapp {
+	width: 14vw !important;
+	height: 14vw !important;
+	margin: 0 !important;
+	background: url("../images/icons/nails.png") no-repeat center/100% !important;
+}
+
+
+i.material-icons {
+	display: flex !important;
+	justify-content: center !important;
+}
+
+i.material-icons.quartenion_color {
+	color: var(--quartion_color_1);
+}
+
+i.material-icons.secondary-color {
+	color: var(--secondary_color_1) !important;
+}
+
+i.mdl-cell {
+	margin: 0 !important;
+	height: 14vw;
+	width: 14vw;
+	background: url('http://www.kathavento.com.br/site/imagens/produtos_grandes/p25512.jpg') center / cover;
 }
 
 .mdl-layout.is-upgraded .mdl-layout__tab.is-active {
@@ -168,37 +245,8 @@ footer a.mdl-layout__tab {
 }
 
 .contact {
-	color: var(--coadjuvant-1);
+	color: var(--coadjuvant-1) !important;
 	margin: auto;
-}
-
-h2.contact {
-	font-size: 2.5vh;
-}
-
-h6.contact {
-	font-size: 1.8vh;
-	;
-}
-
-i.material-icons {
-	display: flex !important;
-	justify-content: center !important;
-}
-
-i.material-icons.quartenion_color {
-	color: var(--quartion_color_1);
-}
-
-i.material-icons.secondary-color {
-	color: var(--secondary_color_1) !important;
-}
-
-i.mdl-cell {
-	margin: 0 !important;
-	height: 14vw;
-	width: 14vw;
-	background: url('http://www.kathavento.com.br/site/imagens/produtos_grandes/p25512.jpg') center / cover;
 }
 
 .material-icons.md-18 {
@@ -231,7 +279,7 @@ i.mdl-cell {
 	top: -2.5vh;
 	left: 0;
 	max-width: 96vw;
-	margin-top: 2.5vw;
+	margin-top: 2vw;
 	min-height: 100%;
 	padding: 0px 0px 0px 16px;
 }
@@ -325,15 +373,14 @@ i.mdl-cell {
 
 .presentation h2 {
 	text-transform: uppercase;
-	font-size: 4vw;
+	font-size: 3vw;
 	text-align: center;
 	display: flex;
 	margin: auto;
 	color: var(--quartion_color_1)
 }
 
-.presentation.mdl-card__title{
-}
+.presentation.mdl-card__title {}
 
 .presentation .demo-card-wide>.mdl-card__title {
 	background: white;
@@ -408,6 +455,21 @@ i.mdl-cell {
 
 #help .mdl-grid .mdl-card {
 	width: 100% !important;
+	height: calc((100vh - 8vh - 4vh - 5*2vw)/4) !important;
+}
+
+#help .mdl-grid {
+	width: 100vw;
+	padding: 0 !important
+}
+
+#help .mdl-cell {
+	margin: 2vw 0vw 0vw 2vw !important
+}
+
+#help .mdl-cell--4-col {
+	width: 96vw !important;
+	margin: 2vw 0vw 0vw 2vw !important;
 }
 
 #page {
