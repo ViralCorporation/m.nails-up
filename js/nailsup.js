@@ -38,7 +38,7 @@ list_services[1] = new Service("Bronzeamento Natural na Galaxia", "Bronzeamento 
 list_services[2] = new Service("Bronzeamento Natural na Lua", "Bronzeamento natural com uso pasma", 50, "SPRAY_TAN");
 list_services[3] = new Service("Bronzeamento Natural na Sol", "Bronzeamento natural com uso pasma", 60.50, "SPRAY_TAN");
 list_services[4] = new Service("Manicure", "Pintura de unhas", 50, "NAILS");
-list_services[5] = new Service("Make Up", "Maquiagem basica", 50, "MAKE_UP");
+list_services[5] = new Service("Make Up", "Maquiagem basica", 50, "MAKEUP");
 list_services[6] = new Service("Sombras", "Maquiagem basica", 50, "EYES");
 list_services[7] = new Service("Depilação Buço", "Maquiagem basica", 50, "WAX");
 list_services[8] = new Service("Pacote Depilação completa", "Maquiagem basica", 50, "PACK");
@@ -158,7 +158,7 @@ function createAllServiceCardsOnArray() {
             } else if (list_services[i].type_service == "EYES") {
                 $('div.eyes').append(card);
             } else if (list_services[i].type_service == "DETOX") {
-                $('div.detox').append(card);
+                $('div.dtox').append(card);
             } else if (list_services[i].type_service == "MAKEUP") {
                 $('div.make_up').append(card);
             } else if (list_services[i].type_service == "NAILS") {
