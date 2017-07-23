@@ -319,6 +319,7 @@ $(function () {
 
     });
 
+
     var rmv_service_0 = document.getElementById('remove_service_0');
     var rmv_service_1 = document.getElementById('remove_service_1');
     var rmv_service_2 = document.getElementById('add_service_2');
@@ -341,7 +342,6 @@ $(function () {
         }
 
     }
-
 
     rmv_service_0.addEventListener('click', function () {
         list_car_services[0] = undefined;
