@@ -177,6 +177,10 @@ function createAllServiceCardsOnArray() {
 }
 
 function getTotalOfPrices() {
+    this.list_car_services = list_car_services;
+    if (list_car_services.length == 1 && list_car_services[0] == undefined) {
+        return 0
+    }
     var sum = 0;
     for (i = 0; i < list_car_services.length; i++) {
         sum += list_car_services[i].price;
@@ -184,8 +188,13 @@ function getTotalOfPrices() {
     return sum;
 }
 
+function updateTotalPrices() {
+    document.getElementById("sum-car").innerHTML = getTotalOfPrices();
+}
+
 function updateCarServices(aux_service) {
     list_car_services.push(aux_service);
+
     $('div.cart').append(createServiceCarAdded(aux_service));
 
     document.getElementById("sum-car").innerHTML = getTotalOfPrices();
@@ -198,22 +207,53 @@ function removeFromCart(elem) {
 
     for (i = 0; i < list_car_services.length; i++) {
         if (list_car_services[i] == elem) {
-            $("#service_added_" + elem.hash ).remove();
-            var aux = list_car_services.slice(0, i - 1);
-            aux.concat(list_car_services.slice(i + 1, list_car_services.length()));
-
+            $("#service_added_" + elem.hash).remove();
+            if (i == 0) {
+                var aux = list_car_services.slice(1, list_car_services.length);
+                console.log(aux);
+            } else {
+                var aux = list_car_services.slice(0, i - 1).concat(list_car_services.slice(i + 1, list_car_services.length));
+                console.log(aux);
+            }
             break;
         }
     }
-    document.getElementById("sum-car").innerHTML = getTotalOfPrices();
+    updateTotalPrices();
     return aux;
 
 }
+/*
+function gerateRemoveButton(aux) {
+    return document.getElementById('remove_service_' + aux.hash);
+}
 
+function gerateAddButton(aux) {
+    return document.getElementById('add_service_' + aux.hash);
+}
+
+function gerateServicesListeners(list) {
+
+    this.list_services = list_services;
+
+    for (i = 0; i < list_services.length; i++) {
+        var aux = list_services[i];
+
+        gerateAddButton(aux).addEventListener('click', function () {
+            updateCarServices(aux);
+            gerateRemoveButton(aux).addEventListener('click', function () {
+                list_car_services = removeFromCart(aux);
+            });
+
+        });
+    }
+}
+*/
 $(function () {
     var dialog = document.querySelector('dialog');
     var title = document.getElementById("title-more");
     var info = document.getElementById("content-service-info");
+
+    //gerateServicesListeners(list_services);
 
     var add_service_0 = document.getElementById('add_service_' + list_services[0].hash);
     var add_service_1 = document.getElementById('add_service_' + list_services[1].hash);
@@ -233,7 +273,7 @@ $(function () {
         if (list_car_services.indexOf(aux) == -1) {
             updateCarServices(aux);
 
-            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function () {
                 list_car_services = removeFromCart(aux);
             });
 
@@ -248,7 +288,7 @@ $(function () {
         if (list_car_services.indexOf(aux) == -1) {
             updateCarServices(aux);
 
-            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function () {
                 list_car_services = removeFromCart(aux);
             });
 
@@ -263,7 +303,7 @@ $(function () {
         if (list_car_services.indexOf(aux) == -1) {
             updateCarServices(aux);
 
-            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function () {
                 list_car_services = removeFromCart(aux);
             });
 
@@ -271,13 +311,14 @@ $(function () {
             return -1;
         }
 
-    });add_service_3.addEventListener('click', function () {
+    });
+    add_service_3.addEventListener('click', function () {
         var aux = list_services[3];
 
         if (list_car_services.indexOf(aux) == -1) {
             updateCarServices(aux);
 
-            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function () {
                 list_car_services = removeFromCart(aux);
             });
 
@@ -285,13 +326,14 @@ $(function () {
             return -1;
         }
 
-    });add_service_4.addEventListener('click', function () {
+    });
+    add_service_4.addEventListener('click', function () {
         var aux = list_services[4];
 
         if (list_car_services.indexOf(aux) == -1) {
             updateCarServices(aux);
 
-            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function () {
                 list_car_services = removeFromCart(aux);
             });
 
@@ -299,13 +341,14 @@ $(function () {
             return -1;
         }
 
-    });add_service_5.addEventListener('click', function () {
+    });
+    add_service_5.addEventListener('click', function () {
         var aux = list_services[5];
 
         if (list_car_services.indexOf(aux) == -1) {
             updateCarServices(aux);
 
-            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function () {
                 list_car_services = removeFromCart(aux);
             });
 
@@ -313,13 +356,14 @@ $(function () {
             return -1;
         }
 
-    });add_service_6.addEventListener('click', function () {
+    });
+    add_service_6.addEventListener('click', function () {
         var aux = list_services[6];
 
         if (list_car_services.indexOf(aux) == -1) {
             updateCarServices(aux);
 
-            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function () {
                 list_car_services = removeFromCart(aux);
             });
 
@@ -327,13 +371,14 @@ $(function () {
             return -1;
         }
 
-    });add_service_7.addEventListener('click', function () {
+    });
+    add_service_7.addEventListener('click', function () {
         var aux = list_services[7];
 
         if (list_car_services.indexOf(aux) == -1) {
             updateCarServices(aux);
 
-            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function () {
                 list_car_services = removeFromCart(aux);
             });
 
@@ -348,7 +393,7 @@ $(function () {
         if (list_car_services.indexOf(aux) == -1) {
             updateCarServices(aux);
 
-            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function () {
                 list_car_services = removeFromCart(aux);
             });
 
@@ -363,21 +408,7 @@ $(function () {
         if (list_car_services.indexOf(aux) == -1) {
             updateCarServices(aux);
 
-            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
-                list_car_services = removeFromCart(aux);
-            });
-
-        } else {
-            return -1;
-        }
-
-    });add_service_10.addEventListener('click', function () {
-        var aux = list_services[10];
-
-        if (list_car_services.indexOf(aux) == -1) {
-            updateCarServices(aux);
-
-            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function () {
                 list_car_services = removeFromCart(aux);
             });
 
@@ -386,10 +417,21 @@ $(function () {
         }
 
     });
-});
-/*
+    add_service_10.addEventListener('click', function () {
+        var aux = list_services[10];
 
+        if (list_car_services.indexOf(aux) == -1) {
+            updateCarServices(aux);
 
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function () {
+                list_car_services = removeFromCart(aux);
+            });
+
+        } else {
+            return -1;
+        }
+
+    });
 
     var showDialogButton_0 = document.querySelector('#show-dialog-0');
     var showDialogButton_1 = document.querySelector('#show-dialog-1');
@@ -446,10 +488,8 @@ $(function () {
         dialog.close();
     });
 
-    document.getElementById("schedulling").addEventListener('click', updateCarServices());
 });
 
-*/
 var car_sch = Array(10);
 
 //Hidding and showing the Services Presentation
