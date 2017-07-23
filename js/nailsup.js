@@ -176,20 +176,29 @@ function createAllServiceCardsOnArray() {
     }
 }
 
-function getTotalOfPrices() {
-    this.list_car_services = list_car_services;
-    if (list_car_services.length == 1 && list_car_services[0] == undefined) {
-        return 0
-    }
+function getTotalOfPrices(aux) {
     var sum = 0;
-    for (i = 0; i < list_car_services.length; i++) {
-        sum += list_car_services[i].price;
+
+    for (i = 0; i < aux.length; i++) {
+
+        sum += aux[i].price;
+
     }
     return sum;
 }
+function getTotalOnRemoving(aux) {
+    var sum = parseFloat(document.getElementById("sum-car").innerHTML);
+
+    sum -= aux.price;
+    document.getElementById("sum-car").innerHTML = sum;
+}
+
+function updateTotalPrices(aux) {
+    document.getElementById("sum-car").innerHTML = getTotalOfPrices(aux);
+}
 
 function updateTotalPrices() {
-    document.getElementById("sum-car").innerHTML = getTotalOfPrices();
+    document.getElementById("sum-car").innerHTML = getTotalOfPrices(list_car_services);
 }
 
 function updateCarServices(aux_service) {
@@ -197,7 +206,7 @@ function updateCarServices(aux_service) {
 
     $('div.cart').append(createServiceCarAdded(aux_service));
 
-    document.getElementById("sum-car").innerHTML = getTotalOfPrices();
+    updateTotalPrices();
 
 }
 
@@ -210,15 +219,13 @@ function removeFromCart(elem) {
             $("#service_added_" + elem.hash).remove();
             if (i == 0) {
                 var aux = list_car_services.slice(1, list_car_services.length);
-                console.log(aux);
             } else {
                 var aux = list_car_services.slice(0, i - 1).concat(list_car_services.slice(i + 1, list_car_services.length));
-                console.log(aux);
             }
             break;
         }
     }
-    updateTotalPrices();
+    getTotalOnRemoving(elem);
     return aux;
 
 }
