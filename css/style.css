@@ -12,7 +12,7 @@
 	/* Color */
 	--primary_color_1: rgba(255, 253, 250, 1);
 	--primary_color_2: rgba(255, 255, 255, 1);
-	--secondary_color_1:  ;
+	--secondary_color_1: rgba(218, 83, 117, 0.92);
 	--secondary_color_2: rgb(226, 93, 36);
 	--terciary_color_1: rgba(252, 245, 247, 0.97);
 	--terciary_color_2: rgba(255, 255, 255, 0.92);
@@ -194,6 +194,13 @@ i.material-icons.secondary-color {
 	color: var(--secondary_color_1) !important;
 }
 
+i.mdl-cell {
+	margin: 0 !important;
+	height: 14vw;
+	width: 14vw;
+	background: url('http://www.kathavento.com.br/site/imagens/produtos_grandes/p25512.jpg') center / cover;
+}
+
 .material-icons.md-18 {
 	font-size: 18px;
 }
@@ -325,8 +332,11 @@ i.material-icons.secondary-color {
 	color: var(--quartion_color_1)
 }
 
+.presentation.mdl-card__title{
+}
+
 .presentation .demo-card-wide>.mdl-card__title {
-	background: var(--reserve_1);
+	background: white;
 }
 
 #services .tab {
