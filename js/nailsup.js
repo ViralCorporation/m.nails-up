@@ -16,6 +16,7 @@ class Service {
         this.descrition = descrition;
         this.price = price;
         this.type_service = type_service;
+        this.hash = name_service.split(" ").join("");
     }
 }
 
@@ -138,13 +139,13 @@ $(function () {
 
 function createServiceCard(service, id) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + id + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect " id="add_service_' + id + '"><i class="contact material-icons md-24 add-remove-color"> add_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + service.hash + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect " id="add_service_' + service.hash + '"><i class="contact material-icons md-24 add-remove-color"> add_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
     return service_card;
 }
 
 function createServiceCarAdded(service, id) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" id="service_added_' + list_services.indexOf(service) + '" ><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + list_services.indexOf(service) + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_' + list_services.indexOf(service) + '"><i class="contact material-icons md-24 add-remove-color"> remove_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" id="service_added_' + service.hash + '" ><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + list_services.indexOf(service) + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_' + service.hash + '"><i class="contact material-icons md-24 add-remove-color"> remove_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
     return service_card;
 }
 
@@ -194,7 +195,7 @@ function removeFromCart(elem) {
         if (list_car_services[i] == elem) {
             var aux = list_car_services.slice(0, i - 1);
             aux.concat(list_car_services.slice(i + 1, list_car_services.length));
-            $("#service_added_" + i).remove();
+            $("#service_added_" + elem.hash ).remove();
             break;
         }
     }
@@ -207,17 +208,17 @@ $(function () {
     var title = document.getElementById("title-more");
     var info = document.getElementById("content-service-info");
 
-    var add_service_0 = document.getElementById('add_service_0');
-    var add_service_1 = document.getElementById('add_service_1');
-    var add_service_2 = document.getElementById('add_service_2');
-    var add_service_3 = document.getElementById('add_service_3');
-    var add_service_4 = document.getElementById('add_service_4');
-    var add_service_5 = document.getElementById('add_service_5');
-    var add_service_6 = document.getElementById('add_service_6');
-    var add_service_7 = document.getElementById('add_service_7');
-    var add_service_8 = document.getElementById('add_service_8');
-    var add_service_9 = document.getElementById('add_service_9');
-    var add_service_10 = document.getElementById('add_service_10');
+    var add_service_0 = document.getElementById('add_service_' + list_services[0].hash);
+    var add_service_1 = document.getElementById('add_service_' + list_services[1].hash);
+    var add_service_2 = document.getElementById('add_service_' + list_services[2].hash);
+    var add_service_3 = document.getElementById('add_service_' + list_services[3].hash);
+    var add_service_4 = document.getElementById('add_service_' + list_services[4].hash);
+    var add_service_5 = document.getElementById('add_service_' + list_services[5].hash);
+    var add_service_6 = document.getElementById('add_service_' + list_services[6].hash);
+    var add_service_7 = document.getElementById('add_service_' + list_services[7].hash);
+    var add_service_8 = document.getElementById('add_service_' + list_services[8].hash);
+    var add_service_9 = document.getElementById('add_service_' + list_services[9].hash);
+    var add_service_10 = document.getElementById('add_service_' + list_services[10].hash);
 
 
     add_service_0.addEventListener('click', function () {
@@ -226,7 +227,7 @@ $(function () {
             list_car_services.push(list_services[0]);
             updateCarServices(list_services[0]);
 
-            document.getElementById('remove_service_0').addEventListener('click', function(){
+            document.getElementById('remove_service_'+ list_services[0].hash).addEventListener('click', function(){
                 list_car_services = removeFromCart(list_services[0]);
             });
 
@@ -241,7 +242,7 @@ $(function () {
             list_car_services.push(list_services[1]);
             updateCarServices(list_services[1]);
 
-            document.getElementById('remove_service_1').addEventListener('click', function(){
+            document.getElementById('remove_service_' + list_services[1].hash).addEventListener('click', function(){
                 list_car_services = removeFromCart(list_services[1]);
             });
 
@@ -256,7 +257,7 @@ $(function () {
             list_car_services.push(list_services[2]);
             updateCarServices(list_services[2]);
 
-            document.getElementById('remove_service_1').addEventListener('click', function(){
+            document.getElementById('remove_service_' + list_services[2].hash).addEventListener('click', function(){
                 list_car_services = removeFromCart(list_services[1]);
             });
 
@@ -271,7 +272,7 @@ $(function () {
             list_car_services.push(list_services[3]);
             updateCarServices(list_services[3]);
 
-            document.getElementById('remove_service_3').addEventListener('click', function(){
+            document.getElementById('remove_service_' + list_services[3].hash).addEventListener('click', function(){
                 list_car_services = removeFromCart(list_services[3]);
             });
 
@@ -286,7 +287,7 @@ $(function () {
             list_car_services.push(list_services[4]);
             updateCarServices(list_services[4]);
 
-            document.getElementById('remove_service_4').addEventListener('click', function(){
+            document.getElementById('remove_service_' + list_services[4].hash).addEventListener('click', function(){
                 list_car_services = removeFromCart(list_services[4]);
             });
 
@@ -301,7 +302,7 @@ $(function () {
             list_car_services.push(list_services[5]);
             updateCarServices(list_services[5]);
 
-            document.getElementById('remove_service_5').addEventListener('click', function(){
+            document.getElementById('remove_service_' + list_services[5].hash).addEventListener('click', function(){
                 list_car_services = removeFromCart(list_services[5]);
             });
 
@@ -316,7 +317,7 @@ $(function () {
             list_car_services.push(list_services[6]);
             updateCarServices(list_services[6]);
 
-            document.getElementById('remove_service_6').addEventListener('click', function(){
+            document.getElementById('remove_service_' + list_services[6].hash).addEventListener('click', function(){
                 list_car_services = removeFromCart(list_services[6]);
             });
 
@@ -331,7 +332,7 @@ $(function () {
             list_car_services.push(list_services[7]);
             updateCarServices(list_services[7]);
 
-            document.getElementById('remove_service_7').addEventListener('click', function(){
+            document.getElementById('remove_service_' + list_services[7].hash).addEventListener('click', function(){
                 list_car_services = removeFromCart(list_services[7]);
             });
 
@@ -345,7 +346,7 @@ $(function () {
             list_car_services.push(list_services[8]);
             updateCarServices(list_services[8]);
 
-            document.getElementById('remove_service_8').addEventListener('click', function(){
+            document.getElementById('remove_service_' + list_services[8].hash).addEventListener('click', function(){
                 list_car_services = removeFromCart(list_services[8]);
             });
 
@@ -360,7 +361,7 @@ $(function () {
             list_car_services.push(list_services[9]);
             updateCarServices(list_services[9]);
 
-            document.getElementById('remove_service_9').addEventListener('click', function(){
+            document.getElementById('remove_service_' + list_services[9].hash).addEventListener('click', function(){
                 list_car_services = removeFromCart(list_services[9]);
             });
 
@@ -375,7 +376,7 @@ $(function () {
             list_car_services.push(list_services[10]);
             updateCarServices(list_services[10]);
 
-            document.getElementById('remove_service_10').addEventListener('click', function(){
+            document.getElementById('remove_service_' + list_services[10].hash).addEventListener('click', function(){
                 list_car_services = removeFromCart(list_services[10]);
             });
 
