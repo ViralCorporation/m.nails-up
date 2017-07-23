@@ -124,7 +124,7 @@ footer a.mdl-layout__tab {
 }
 
 .bottom-navigator {
-	min-height: 12vh !important;
+	min-height: 6vh !important;
 	font-weight: 100;
 	margin: 0;
 }
@@ -301,7 +301,7 @@ i.material-icons.secondary-color {
 
 .presentation .demo-card-wide.mdl-card {
 	width: calc((100vw - 3*2vw)/2);
-	height: calc((100vh - 6vh -2vh - 4vh - 5*2vh)/4);
+	height: calc((100vh - 6vh + 2vh - 4vh - 5*2vh)/4);
 	min-height: 0;
 	min-height: 0;
 }
