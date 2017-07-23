@@ -301,7 +301,7 @@ i.material-icons.secondary-color {
 
 .presentation .demo-card-wide.mdl-card {
 	width: calc((100vw - 3*2vw)/2);
-	height: calc((100vh - 10vh - 4vh - 5*2vh)/4);
+	height: calc((100vh - 8vh - 4vh - 5*2vh)/4);
 	min-height: 0;
 	min-height: 0;
 }
