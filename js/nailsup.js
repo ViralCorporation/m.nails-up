@@ -185,20 +185,27 @@ function getTotalOfPrices() {
 }
 
 function updateCarServices(aux_service) {
+    list_car_services.push(aux_service);
     $('div.cart').append(createServiceCarAdded(aux_service));
+
     document.getElementById("sum-car").innerHTML = getTotalOfPrices();
 
 }
 
 function removeFromCart(elem) {
+
+    this.list_car_services = list_car_services
+
     for (i = 0; i < list_car_services.length; i++) {
         if (list_car_services[i] == elem) {
-            var aux = list_car_services.slice(0, i - 1);
-            aux.concat(list_car_services.slice(i + 1, list_car_services.length));
             $("#service_added_" + elem.hash ).remove();
+            var aux = list_car_services.slice(0, i - 1);
+            aux.concat(list_car_services.slice(i + 1, list_car_services.length()));
+
             break;
         }
     }
+    document.getElementById("sum-car").innerHTML = getTotalOfPrices();
     return aux;
 
 }
@@ -220,30 +227,29 @@ $(function () {
     var add_service_9 = document.getElementById('add_service_' + list_services[9].hash);
     var add_service_10 = document.getElementById('add_service_' + list_services[10].hash);
 
-
     add_service_0.addEventListener('click', function () {
+        var aux = list_services[0];
 
-        if (list_car_services.indexOf(list_services[0]) == -1) {
-            list_car_services.push(list_services[0]);
-            updateCarServices(list_services[0]);
+        if (list_car_services.indexOf(aux) == -1) {
+            updateCarServices(aux);
 
-            document.getElementById('remove_service_'+ list_services[0].hash).addEventListener('click', function(){
-                list_car_services = removeFromCart(list_services[0]);
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+                list_car_services = removeFromCart(aux);
             });
 
         } else {
             return -1;
         }
+
     });
-
     add_service_1.addEventListener('click', function () {
+        var aux = list_services[1];
 
-        if (list_car_services.indexOf(list_services[1] == -1)) {
-            list_car_services.push(list_services[1]);
-            updateCarServices(list_services[1]);
+        if (list_car_services.indexOf(aux) == -1) {
+            updateCarServices(aux);
 
-            document.getElementById('remove_service_' + list_services[1].hash).addEventListener('click', function(){
-                list_car_services = removeFromCart(list_services[1]);
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+                list_car_services = removeFromCart(aux);
             });
 
         } else {
@@ -252,102 +258,98 @@ $(function () {
 
     });
     add_service_2.addEventListener('click', function () {
+        var aux = list_services[2];
 
-        if (list_car_services.indexOf(list_services[2]) == -1) {
-            list_car_services.push(list_services[2]);
-            updateCarServices(list_services[2]);
+        if (list_car_services.indexOf(aux) == -1) {
+            updateCarServices(aux);
 
-            document.getElementById('remove_service_' + list_services[2].hash).addEventListener('click', function(){
-                list_car_services = removeFromCart(list_services[1]);
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+                list_car_services = removeFromCart(aux);
             });
 
         } else {
             return -1;
         }
 
-    });
-    add_service_3.addEventListener('click', function () {
+    });add_service_3.addEventListener('click', function () {
+        var aux = list_services[3];
 
-        if (list_car_services.indexOf(list_services[3]) == -1) {
-            list_car_services.push(list_services[3]);
-            updateCarServices(list_services[3]);
+        if (list_car_services.indexOf(aux) == -1) {
+            updateCarServices(aux);
 
-            document.getElementById('remove_service_' + list_services[3].hash).addEventListener('click', function(){
-                list_car_services = removeFromCart(list_services[3]);
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+                list_car_services = removeFromCart(aux);
             });
 
         } else {
             return -1;
         }
 
-    });
-    add_service_4.addEventListener('click', function () {
+    });add_service_4.addEventListener('click', function () {
+        var aux = list_services[4];
 
-        if (list_car_services.indexOf(list_services[4]) == -1) {
-            list_car_services.push(list_services[4]);
-            updateCarServices(list_services[4]);
+        if (list_car_services.indexOf(aux) == -1) {
+            updateCarServices(aux);
 
-            document.getElementById('remove_service_' + list_services[4].hash).addEventListener('click', function(){
-                list_car_services = removeFromCart(list_services[4]);
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+                list_car_services = removeFromCart(aux);
             });
 
         } else {
             return -1;
         }
 
-    });
-    add_service_5.addEventListener('click', function () {
+    });add_service_5.addEventListener('click', function () {
+        var aux = list_services[5];
 
-        if (list_car_services.indexOf(list_services[5]) == -1) {
-            list_car_services.push(list_services[5]);
-            updateCarServices(list_services[5]);
+        if (list_car_services.indexOf(aux) == -1) {
+            updateCarServices(aux);
 
-            document.getElementById('remove_service_' + list_services[5].hash).addEventListener('click', function(){
-                list_car_services = removeFromCart(list_services[5]);
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+                list_car_services = removeFromCart(aux);
             });
 
         } else {
             return -1;
         }
 
-    });
-    add_service_6.addEventListener('click', function () {
+    });add_service_6.addEventListener('click', function () {
+        var aux = list_services[6];
 
-        if (list_car_services.indexOf(list_services[6]) == -1) {
-            list_car_services.push(list_services[6]);
-            updateCarServices(list_services[6]);
+        if (list_car_services.indexOf(aux) == -1) {
+            updateCarServices(aux);
 
-            document.getElementById('remove_service_' + list_services[6].hash).addEventListener('click', function(){
-                list_car_services = removeFromCart(list_services[6]);
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+                list_car_services = removeFromCart(aux);
             });
 
         } else {
             return -1;
         }
 
-    });
-    add_service_7.addEventListener('click', function () {
+    });add_service_7.addEventListener('click', function () {
+        var aux = list_services[7];
 
-        if (list_car_services.indexOf(list_services[7]) == -1) {
-            list_car_services.push(list_services[7]);
-            updateCarServices(list_services[7]);
+        if (list_car_services.indexOf(aux) == -1) {
+            updateCarServices(aux);
 
-            document.getElementById('remove_service_' + list_services[7].hash).addEventListener('click', function(){
-                list_car_services = removeFromCart(list_services[7]);
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+                list_car_services = removeFromCart(aux);
             });
 
         } else {
             return -1;
         }
+
     });
     add_service_8.addEventListener('click', function () {
+        var aux = list_services[8];
 
-        if (list_car_services.indexOf(list_services[8]) == -1) {
-            list_car_services.push(list_services[8]);
-            updateCarServices(list_services[8]);
+        if (list_car_services.indexOf(aux) == -1) {
+            updateCarServices(aux);
 
-            document.getElementById('remove_service_' + list_services[8].hash).addEventListener('click', function(){
-                list_car_services = removeFromCart(list_services[8]);
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+                list_car_services = removeFromCart(aux);
             });
 
         } else {
@@ -356,13 +358,27 @@ $(function () {
 
     });
     add_service_9.addEventListener('click', function () {
+        var aux = list_services[9];
 
-        if (list_car_services.indexOf(list_services[9]) == -1) {
-            list_car_services.push(list_services[9]);
-            updateCarServices(list_services[9]);
+        if (list_car_services.indexOf(aux) == -1) {
+            updateCarServices(aux);
 
-            document.getElementById('remove_service_' + list_services[9].hash).addEventListener('click', function(){
-                list_car_services = removeFromCart(list_services[9]);
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+                list_car_services = removeFromCart(aux);
+            });
+
+        } else {
+            return -1;
+        }
+
+    });add_service_10.addEventListener('click', function () {
+        var aux = list_services[10];
+
+        if (list_car_services.indexOf(aux) == -1) {
+            updateCarServices(aux);
+
+            document.getElementById('remove_service_' + aux.hash).addEventListener('click', function(){
+                list_car_services = removeFromCart(aux);
             });
 
         } else {
@@ -370,21 +386,10 @@ $(function () {
         }
 
     });
-    add_service_10.addEventListener('click', function () {
+});
+/*
 
-        if (list_car_services.indexOf(list_services[10]) == -1) {
-            list_car_services.push(list_services[10]);
-            updateCarServices(list_services[10]);
 
-            document.getElementById('remove_service_' + list_services[10].hash).addEventListener('click', function(){
-                list_car_services = removeFromCart(list_services[10]);
-            });
-
-        } else {
-            return -1;
-        }
-
-    });
 
     var showDialogButton_0 = document.querySelector('#show-dialog-0');
     var showDialogButton_1 = document.querySelector('#show-dialog-1');
@@ -444,10 +449,7 @@ $(function () {
     document.getElementById("schedulling").addEventListener('click', updateCarServices());
 });
 
-$(function () {
-
-});
-
+*/
 var car_sch = Array(10);
 
 //Hidding and showing the Services Presentation
