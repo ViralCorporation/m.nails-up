@@ -139,13 +139,13 @@ $(function () {
 
 function createServiceCard(service, id) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + service.hash + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect " id="add_service_' + service.hash + '"><i class="contact material-icons md-24 add-remove-color"> add_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + service.hash + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect " id="add_service_' + service.hash + '"><i class="contact material-icons md-24 add-remove-color"> add_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service </h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
     return service_card;
 }
 
 function createServiceCarAdded(service, id) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" id="service_added_' + service.hash + '" ><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + list_services.indexOf(service) + '" type = "button" class = "more mdl-button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_' + service.hash + '"><i class="contact material-icons md-24 add-remove-color"> remove_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" id="service_added_' + service.hash + '" ><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + list_services.indexOf(service) + '" type = "button" class = "more mdl-button" id="showDialogInfo_' + service.hash + '"> More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_' + service.hash + '"><i class="contact material-icons md-24 add-remove-color"> remove_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
     return service_card;
 }
 
@@ -186,25 +186,26 @@ function getTotalOfPrices(aux) {
     }
     return sum;
 }
+
 function getTotalOnRemoving(aux) {
-    var sum = parseFloat(document.getElementById("sum-car").innerHTML);
+    var sum = parseFloat(document.getElementById("sum-cart").innerHTML);
 
     sum -= aux.price;
-    document.getElementById("sum-car").innerHTML = sum;
+    document.getElementById("sum-cart").innerHTML = sum;
 }
 
 function updateTotalPrices(aux) {
-    document.getElementById("sum-car").innerHTML = getTotalOfPrices(aux);
+    document.getElementById("sum-cart").innerHTML = getTotalOfPrices(aux);
 }
 
 function updateTotalPrices() {
-    document.getElementById("sum-car").innerHTML = getTotalOfPrices(list_car_services);
+    document.getElementById("sum-cart").innerHTML = getTotalOfPrices(list_car_services);
 }
 
 function updateCarServices(aux_service) {
     list_car_services.push(aux_service);
 
-    $('div.cart').append(createServiceCarAdded(aux_service));
+    $('div.car').append(createServiceCarAdded(aux_service));
 
     updateTotalPrices();
 
@@ -229,8 +230,9 @@ function removeFromCart(elem) {
     return aux;
 
 }
+
 /*
-function gerateRemoveButton(aux) {
+    function gerateRemoveButton(aux) {
     return document.getElementById('remove_service_' + aux.hash);
 }
 
@@ -245,22 +247,32 @@ function gerateServicesListeners(list) {
     for (i = 0; i < list_services.length; i++) {
         var aux = list_services[i];
 
-        gerateAddButton(aux).addEventListener('click', function () {
-            updateCarServices(aux);
-            gerateRemoveButton(aux).addEventListener('click', function () {
-                list_car_services = removeFromCart(aux);
-            });
+        document.write("<script type='text/javascript'>gerateAddButton(aux).addEventListener('click', function () {updateCarServices(aux);gerateRemoveButton(aux).addEventListener('click', function () {list_car_services = removeFromCart(aux);});});</script>")
 
-        });
     }
 }
+function gerateMoreButton(aux) {
+        return document.getElementById('#showDialogInfo_' + list_services[0].hash);
+    }
+
+    function gerateMoreListeners() {
+
+        this.list_services = list_services;
+
+        for (i = 0; i < list_services.length; i++) {
+            var aux = list_services[i];
+            document.write("<script type='text/javascript'>gerateMoreButton(aux).addEventListener('click', function () {dialog.showModal();});/script>");
+
+
+        }
+    }
 */
+
+
 $(function () {
     var dialog = document.querySelector('dialog');
     var title = document.getElementById("title-more");
     var info = document.getElementById("content-service-info");
-
-    //gerateServicesListeners(list_services);
 
     var add_service_0 = document.getElementById('add_service_' + list_services[0].hash);
     var add_service_1 = document.getElementById('add_service_' + list_services[1].hash);
@@ -440,13 +452,14 @@ $(function () {
 
     });
 
-    var showDialogButton_0 = document.querySelector('#show-dialog-0');
+    var showDialogButton_0 = document.querySelector('#showDialogInfo_' + list_services[0].hash);
     var showDialogButton_1 = document.querySelector('#show-dialog-1');
     var showDialogButton_2 = document.querySelector('#show-dialog-2');
     var showDialogButton_3 = document.querySelector('#show-dialog-3');
     var showDialogButton_4 = document.querySelector('#show-dialog-4');
     var showDialogButton_5 = document.querySelector('#show-dialog-5');
     var showDialogButton_6 = document.querySelector('#show-dialog-6');
+
 
     if (!dialog.showModal) {
         dialogPolyfill.registerDialog(dialog);
@@ -455,10 +468,8 @@ $(function () {
         dialog.close();
     });
 
-    showDialogButton_0.addEventListener('click', function () {
 
-        title.innerHTML = (list_services[0].name_service);
-        info.innerHTML = (list_services[0].descrition);
+    document.getElementById('show-dialog-' + list_services[0].hash).addEventListener('click', function () {
         dialog.showModal();
     });
 
