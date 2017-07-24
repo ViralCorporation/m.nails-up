@@ -342,7 +342,7 @@ i.mdl-cell {
 }
 
 .mdl-button--fab {
-	background: white;
+	background: white !important;
 	height: 3.5vh;
 	width: 3.5vh;
 	min-width: 3.5vh;
@@ -503,6 +503,12 @@ i.mdl-cell {
 	height: 5vh !important;
 }
 
+#schedulling .demo-card-wide {
+	width: 108vw;
+	left: -4vw;
+	top: -4vw;
+}
+
 #schedulling i {
 	font-size: 8vw;
 }
@@ -512,8 +518,7 @@ i.mdl-cell {
 	height: 14vw;
 	margin: 0;
 	top: -7vw;
-	left: calc(100vw - 16vw);
-
+	left: calc(100vw - 18vw);
 }
 
 #schedulling .budget spam {
