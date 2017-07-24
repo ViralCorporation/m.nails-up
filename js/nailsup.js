@@ -34,17 +34,17 @@ Guide to constructor
     name of service, Descrition of service, price, categorie
     */
 
-list_services[0] = new Service("Bronzeamento Natural", "Bronzeamento natural com uso pasma", 39, "SPRAY_TAN");
-list_services[1] = new Service("Bronzeamento Natural na Galaxia", "Bronzeamento natural com uso pasma", 39, "SPRAY_TAN");
-list_services[2] = new Service("Bronzeamento Natural na Lua", "Bronzeamento natural com uso pasma", 50, "SPRAY_TAN");
+list_services[0] = new Service("Bronzeamento Natural", "Bronzeamento natural com uso pasma", 39.00, "SPRAY_TAN");
+list_services[1] = new Service("Bronzeamento Natural na Galaxia", "Bronzeamento natural com uso pasma", 39.00, "SPRAY_TAN");
+list_services[2] = new Service("Bronzeamento Natural na Lua", "Bronzeamento natural com uso pasma", 50.00, "SPRAY_TAN");
 list_services[3] = new Service("Bronzeamento Natural na Sol", "Bronzeamento natural com uso pasma", 60.50, "SPRAY_TAN");
-list_services[4] = new Service("Manicure", "Pintura de unhas", 50, "NAILS");
-list_services[5] = new Service("Make Up", "Maquiagem basica", 50, "MAKEUP");
-list_services[6] = new Service("Sombras", "Maquiagem basica", 50, "EYES");
-list_services[7] = new Service("Depilação Buço", "Maquiagem basica", 50, "WAX");
-list_services[8] = new Service("Pacote Depilação completa", "Maquiagem basica", 50, "PACK");
-list_services[9] = new Service("Massagem", "Maquiagem basica", 50, "MASSAGE");
-list_services[10] = new Service("Suco Detox", "genginbre", 12, "DETOX");
+list_services[4] = new Service("Manicure", "Pintura de unhas", 50.00, "NAILS");
+list_services[5] = new Service("Make Up", "Maquiagem basica", 50.00, "MAKEUP");
+list_services[6] = new Service("Sombras", "Maquiagem basica", 50.00, "EYES");
+list_services[7] = new Service("Depilação Buço", "Maquiagem basica", 50.00, "WAX");
+list_services[8] = new Service("Pacote Depilação completa", "Maquiagem basica", 50.00, "PACK");
+list_services[9] = new Service("Massagem", "Maquiagem basica", 50.00, "MASSAGE");
+list_services[10] = new Service("Suco Detox", "genginbre", 12.00, "DETOX");
 
 var started = false;
 
@@ -139,13 +139,13 @@ $(function () {
 
 function createServiceCard(service, id) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + service.hash + '" type = "button" class = "more mdl-button dialog_button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect add_button" id="add_service_' + service.hash + '"><i class="contact material-icons md-24 add-remove-color"> add_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service </h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + service.hash + '" type = "button" class = "more mdl-button dialog_button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect add_button" id="add_service_' + service.hash + '"><i class="contact material-icons md-24 add-remove-color"> add_circle </i></div><dialog class = "mdl-dialog service-box-' + service.hash + '" ><h4 class = "mdl-dialog_title service-title"'+service.name_service+'"</h4> <div class = "mdl-dialogcontent" ><p class="service-description">'+service.descrition+'</p></div><div class="mdl-dialog_actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog></div>'
     return service_card;
 }
 
 function createServiceCarAdded(service, id) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" id="service_added_' + service.hash + '" ><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a>|</a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_' + service.hash + '"><i class="contact material-icons md-24 add-remove-color"> remove_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service </h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog></div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" id="service_added_' + service.hash + '"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="mdl-card__actions mdl-card--border"><a id="value"> R$ 3~15 </a> <a>|</a> <a id="time"> 30 min </a> </div><div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_' + service.hash + '"><i class="contact material-icons md-24 add-remove-color"> remove_circle </i></div></div>'
     return service_card;
 }
 
@@ -188,14 +188,13 @@ function getTotalOfPrices(aux) {
 }
 
 function getTotalOnRemoving(aux) {
-    var sum = parseFloat(document.getElementById("sum-cart").innerHTML);
-
+    var sum = (document.getElementById("sum-cart").innerHTML);
     sum -= aux.price;
     document.getElementById("sum-cart").innerHTML = sum;
 }
 
 function updateTotalPrices(aux) {
-    document.getElementById("sum-cart").innerHTML = getTotalOfPrices(aux);
+    document.getElementById("sum-cart").innerHTML = getTotalOfPrices(aux).toFixed(2);;
 }
 
 function updateTotalPrices() {
@@ -306,6 +305,8 @@ $(function () {
                 }
             }
         }
+
+
     });
 
     $('span.dialog_button').click(function () {
@@ -315,7 +316,6 @@ $(function () {
             if (id == 'show-dialog-' + list_services[i].hash) {
 
                 var aux = list_services[i];
-
                 dialog.showModal();
             }
         }
