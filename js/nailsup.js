@@ -205,7 +205,7 @@ function updateTotalPrices() {
 function updateCarServices(aux_service) {
     list_car_services.push(aux_service);
 
-    $('div.car').append(createServiceCarAdded(aux_service));
+    $('div.cart').append(createServiceCarAdded(aux_service));
 
     updateTotalPrices();
 
