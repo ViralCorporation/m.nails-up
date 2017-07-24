@@ -399,7 +399,6 @@ i.mdl-cell {
 	background: white;
 }
 
-
 .animated.zoomIn {
 	animation-duration: .4s;
 }
@@ -412,11 +411,10 @@ i.mdl-cell {
 	top: calc((6.5vh)/2);
 }
 
-.demo-card-wide.c_add_button{
-	background: rgba(0,0,0,0);
+.demo-card-wide.c_add_button {
+	background: rgba(0, 0, 0, 0);
 	height: 12vw;
 	width: 100vw;
-
 }
 
 #services .tab {
@@ -489,7 +487,6 @@ i.mdl-cell {
 #schedulling .demo-card-wide>.mdl-card__title {
 	background: url('../images/brands/schedulling.jpg') center / cover;
 }
-
 
 #help .mdl-grid .mdl-card {
 	width: 100% !important;
@@ -564,7 +561,6 @@ i.mdl-cell {
 	animation-delay: .2s;
 	position: fixed;
 }
-
 
 #schedulling .budget {
 	bottom: 8vh !important;
