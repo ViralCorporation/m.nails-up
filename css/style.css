@@ -504,7 +504,16 @@ i.mdl-cell {
 }
 
 #schedulling i {
-	font-size: 3vh;
+	font-size: 8vw;
+}
+
+#schedulling .mdl-button--fab {
+	width: 14vw;
+	height: 14vw;
+	margin: 0;
+	top: -7vw;
+	left: calc(100vw - 16vw);
+
 }
 
 #schedulling .budget spam {
@@ -515,10 +524,9 @@ i.mdl-cell {
 	font-size: 3vh;
 	font-family: "Cinzel" !important;
 	padding: 2vw;
-
 }
 
-#schedulling .budget .mdl-card__title{
+#schedulling .budget .mdl-card__title {
 	padding: 0;
 	width: 100vw;
 }
