@@ -55,57 +55,43 @@
 <body class=" no-scrolling">
 	<div class="primary-color scroll"></div>
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" id="page">
-
 		<!-- TITLE -->
 		<div class="mdl-card__title-text"></div>
 		<header class="primary-color">
 			<h6>Nails-Up</h6>
 		</header>
-
 		<main class="mdl-layout__content">
 			<!-- HELLO -->
 			<section class="mdl-layout__tab-panel" id="hello">
 				<div class="page-content">
-
-
-
 				</div>
 			</section>
-
 			<!-- SCHEDULE -->
-			<section class="mdl-layout__tab-panel" id="schedulling">
-				<div class="page-content">
-					<div class="services_content">
-						<div class="products">
-							<div class="content cart" id="content">
+			<section class="mdl-layout__tab-panel " id="schedulling">
+				<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+					<main class="mdl-layout__content">
+						<div class=" page-content services_content">
 
+							<!-- Data Picker -->
+							<div class="demo-card-wide mdl-card mdl-shadow--6dp animated fadeIn">
+								<div class="mdl-card__title" id="spray_tan">
+									<h2 class="mdl-card__title-text">Nos diga quando você gostaria de agendar. </h2>
+								</div>
+							</div>
+
+							<div class="products">
+								<div class="content cart" id="content"></div>
 							</div>
 						</div>
-					</div>
-
-					<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-						<div class="mdl-card__title" id="spray_tan">
-							<h2 class="mdl-card__title-text">Total</h2>
+					</main>
+					<footer class="budget no-margin-height mdl-layout__header mdl-layout--fixed-tabs">
+						<div class="mdl-layout__tab-bar budget animated slideInUp mdl-shadow--16dp">
+							<div class="mdl-card__title">
+								<spam class="secondary-color">R$</spam>
+								<spam id="sum-cart">35,00</spam>
+							</div>
 						</div>
-						<div class="mdl-card__actions mdl-card--border">
-							<a><i class="contact material-icons md-24 secondary-color"> attach_money</i></a>
-							<span id="sum-car"></span>
-						</div>
-					</div>
-
-					<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-						<div class="mdl-card__title" id="spray_tan">
-							<h2 class="mdl-card__title-text">Agenda</h2>
-						</div>
-						<div class="mdl-card__supporting-text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
-						</div>
-						<div class="mdl-card__actions mdl-card--border">
-							<a>R$ 3~15 </a>
-						</div>
-						<a class="mdl-button c-btn c-datepicker-btn">Open Picker</a>
-						<pre id="events"></pre>
-					</div>
+					</footer>
 				</div>
 			</section>
 
@@ -119,15 +105,15 @@
 							<div class="presentation">
 								<div class="mdl-grid ">
 									<a href="#spray_tan" onclick="hide_s_prst()" class="mdl-layout__tab ">
-										<div class="demo-card-wide mdl-card mdl-shadow--6dp animated pulse">
+										<div class="demo-card-wide mdl-card mdl-shadow--6dp animated zoomIn">
 											<div class="mdl-card__title">
 												<i class="mdl-cell mdl-cell--1-col"></i>
-												<h2 class="mdl-card__title-text">Brozeamento</h2>
+												<h2 class="mdl-card__title-text">Bronzeamento</h2>
 											</div>
 										</div>
 									</a>
 									<a href="#eyes" onclick="hide_s_prst()" class="mdl-layout__tab ">
-										<div class="demo-card-wide mdl-card mdl-shadow--6dp animated pulse">
+										<div class="demo-card-wide mdl-card mdl-shadow--6dp animated zoomIn">
 											<div class="mdl-card__title">
 												<i class="mdl-cell mdl-cell--1-col"></i>
 												<h2 class="mdl-card__title-text">Olhos</h2>
@@ -135,7 +121,7 @@
 										</div>
 									</a>
 									<a href="#dtox" onclick="hide_s_prst()" class="mdl-layout__tab ">
-										<div class="demo-card-wide mdl-card mdl-shadow--6dp animated pulse">
+										<div class="demo-card-wide mdl-card mdl-shadow--6dp animated zoomIn">
 											<div class="mdl-card__title">
 												<i class="mdl-cell mdl-cell--1-col"></i>
 												<h2 class="mdl-card__title-text">Dtox</h2>
@@ -143,7 +129,7 @@
 										</div>
 									</a>
 									<a href="#make_up" onclick="hide_s_prst()" class="mdl-layout__tab ">
-										<div class="demo-card-wide mdl-card mdl-shadow--6dp animated pulse">
+										<div class="demo-card-wide mdl-card mdl-shadow--6dp animated zoomIn">
 											<div class="mdl-card__title">
 												<i class="mdl-cell mdl-cell--1-col"></i>
 												<h2 class="mdl-card__title-text">Maquiagem</h2>
@@ -151,7 +137,7 @@
 										</div>
 									</a>
 									<a href="#nails" onclick="hide_s_prst()" class="mdl-layout__tab ">
-										<div class="demo-card-wide mdl-card mdl-shadow--6dp animated pulse">
+										<div class="demo-card-wide mdl-card mdl-shadow--6dp animated zoomIn">
 											<div class="mdl-card__title">
 												<i class="mdl-cell mdl-cell--1-col"></i>
 												<h2 class="mdl-card__title-text">Unhas</h2>
@@ -159,7 +145,7 @@
 										</div>
 									</a>
 									<a href="#massage" onclick="hide_s_prst()" class="mdl-layout__tab ">
-										<div class="demo-card-wide mdl-card mdl-shadow--6dp animated pulse">
+										<div class="demo-card-wide mdl-card mdl-shadow--6dp animated zoomIn">
 											<div class="mdl-card__title">
 												<i class="mdl-cell mdl-cell--1-col"></i>
 												<h2 class="mdl-card__title-text">Massagem</h2>
@@ -167,7 +153,7 @@
 										</div>
 									</a>
 									<a href="#waxing" onclick="hide_s_prst()" class="mdl-layout__tab ">
-										<div class="demo-card-wide mdl-card mdl-shadow--6dp animated pulse">
+										<div class="demo-card-wide mdl-card mdl-shadow--6dp animated zoomIn">
 											<div class="mdl-card__title">
 												<i class="mdl-cell mdl-cell--1-col"></i>
 												<h2 class="mdl-card__title-text">Depilação</h2>
@@ -175,7 +161,7 @@
 										</div>
 									</a>
 									<a href="#packages " onclick="hide_s_prst()" class="mdl-layout__tab ">
-										<div class="demo-card-wide mdl-card mdl-shadow--6dp animated pulse">
+										<div class="demo-card-wide mdl-card mdl-shadow--6dp animated zoomIn">
 											<div class="mdl-card__title">
 												<i class="mdl-cell mdl-cell--1-col"></i>
 												<h2 class="mdl-card__title-text">Pacotes</h2>
@@ -376,11 +362,11 @@
 									<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" onclick="sendEmail()">
                                     	<i class="contact material-icons md-48 quartenion_color">mail</i>
                                     </button>
-                                	<a href="tel:+556199171955">
+									<a href="tel:+556199171955">
 										<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
 											<i class="contact material-icons md-48 quartenion_color">question_answer</i>
 										</button>
-                                	</a>
+									</a>
 								</div>
 								<h6 class="contact mdl-card__title-text">info@nailsup.com.br</h6>
 							</div>
@@ -393,11 +379,11 @@
 									<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
                                         <i class="contact material-icons md-48 quartenion_color">mail</i>
                                 	</button>
-                                	<a href="tel:+556199171955">
+									<a href="tel:+556199171955">
 										<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
 											<i class="contact material-icons md-48 quartenion_color"><question_answ></question_answ>er</i>
 										</button>
-                                	</a>
+									</a>
 								</div>
 								<h6 class="contact mdl-card__title-text">help@nailsup.com.br</h6>
 							</div>
@@ -416,13 +402,13 @@
 						<!-- Olá -->
 					</div>
 				</a>
-				<a href="#schedulling" class=" mdl-layout__tab schedulling">
+				<a href="#schedulling" class=" mdl-layout__tab schedulling ">
 					<i class="material-icons md-24" id="schedulling-icon">assignment</i>
 					<div class="icon-caption ">
 						<!-- Agendar -->
 					</div>
 				</a>
-				<a href="#services" onclick="show_s_prst()" class=" mdl-layout__tab is-active services">
+				<a href="#services" onclick="show_s_prst()" class=" mdl-layout__tab services is-active">
 					<i class="material-icons md-24 " id="services-icon">dehaze</i>
 					<div class="icon-caption ">
 						<!-- Serviços -->

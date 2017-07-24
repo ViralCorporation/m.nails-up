@@ -16,13 +16,13 @@
 	--secondary_color_2: rgb(226, 93, 36);
 	--terciary_color_1: rgba(252, 245, 247, 0.97);
 	--terciary_color_2: rgba(255, 255, 255, 0.92);
-	--quartion_color_1: rgba(233, 152, 6, 0.72);
-	--tab-icon: rgba(233, 152, 6, 0.9);
+	--quartion_color_1: rgba(233, 152, 6, 0.5);
+	--tab-icon: rgba(233, 152, 6, 0.5);
 	--coadjuvant-2: rgba(193, 34, 75, 0.81);
 	--coadjuvant-1: rgba(165, 165, 165, 0.68);
 	--background: rgba(246, 215, 221, 0.37);
 	--hidden-primary-color: rgba(226, 20, 222, 0);
-	--reserve_1: rgba(218, 83, 117, 0.92);
+	--add-remove-icon: rgba(193, 34, 75, 0.6);
 	--reserve_2: rgba(221, 47, 102, 0.65);
 	/* Angles */
 	--primary_color_deg: -0deg;
@@ -44,7 +44,7 @@
 }
 
 .add-remove-color {
-	color: var(--tab-icon);
+	color: var(--add-remove-icon) !important;
 }
 
 .terciary-color {
@@ -58,8 +58,9 @@
 
 /* Contents */
 
-body {
-	height: 100vh;
+html {
+	height: 100%;
+	position: fixed;
 	background: var(--background);
 }
 
@@ -85,7 +86,7 @@ header h6 {
 
 footer {
 	bottom: 0vh !important;
-	position: fixed !important;
+	position: inherit!important;
 }
 
 a.mdl-layout__tab {
@@ -152,7 +153,6 @@ i.mdl-cell.whatsapp {
 	margin: 0 !important;
 	background: url("../images/icons/nails.png") no-repeat center/100% !important;
 }
-
 
 i.material-icons {
 	display: flex !important;
@@ -245,7 +245,7 @@ i.mdl-cell {
 }
 
 .contact {
-	color: var(--coadjuvant-1) !important;
+	color: var(--coadjuvant-1);
 	margin: auto;
 }
 
@@ -273,6 +273,11 @@ i.mdl-cell {
 	width: 108vw;
 	left: -4vw;
 	top: -4vw;
+}
+
+.services_content .content .demo-card-wide.mdl-card {
+	height: 12vh !important;
+	animation-delay: .1s;
 }
 
 .content .demo-card-wide.mdl-card {
@@ -373,7 +378,7 @@ i.mdl-cell {
 
 .presentation h2 {
 	text-transform: uppercase;
-	font-size: 3vw;
+	font-size: 70%;
 	text-align: center;
 	display: flex;
 	margin: auto;
@@ -384,6 +389,10 @@ i.mdl-cell {
 
 .presentation .demo-card-wide>.mdl-card__title {
 	background: white;
+}
+
+.animated.zoomIn {
+	animation-duration: .4s;
 }
 
 #services .tab {
@@ -453,6 +462,10 @@ i.mdl-cell {
 	background: url('http://www.kathavento.com.br/site/imagens/produtos_grandes/p25512.jpg') center / cover;
 }
 
+#schedulling .demo-card-wide>.mdl-card__title {
+	background: url('https://s-media-cache-ak0.pinimg.com/originals/3a/d8/2e/3ad82e51173ae4509944512c95ae4283.jpg') center / cover;
+}
+
 #help .mdl-grid .mdl-card {
 	width: 100% !important;
 	height: calc((100vh - 8vh - 4vh - 5*2vw)/4) !important;
@@ -474,4 +487,46 @@ i.mdl-cell {
 
 #page {
 	display: none;
+}
+
+#schedulling .page-content {
+	height: calc((100vh - 8vh - 4vh)) !important;
+	padding: 0vw 0vw 0vw 2vw;
+}
+
+#schedulling .budget {
+	bottom: 8vh !important;
+	position: fixed;
+}
+
+#schedulling .mdl-layout__tab-bar {
+	height: 5vh !important;
+}
+
+#schedulling i {
+	font-size: 3vh;
+}
+
+#schedulling .budget spam {
+	text-align: center;
+	line-height: 24vh;
+	color: var(--secondary_color_1);
+	font-weight: 100;
+	font-size: 3vh;
+	font-family: "Cinzel" !important;
+	padding: 2vw;
+
+}
+
+#schedulling .budget .mdl-card__title{
+	padding: 0;
+	width: 100vw;
+}
+
+#schedulling #sum-cart {
+	position: fixed;
+	text-align: right;
+	right: 0;
+	font-size: 2.5vh;
+	color: var(--coadjuvant-1);
 }
