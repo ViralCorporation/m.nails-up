@@ -455,40 +455,41 @@ i.mdl-cell {
 }
 
 #spray_tan .demo-card-wide>.mdl-card__title {
-	background: url('http://static.vix.com/pt/sites/default/files/styles/large/public/bdm/bronzeamento-artificial_0.jpg') center / cover;
+	background: url('../images/brands/spray_tan.jpg') center / cover;
 }
 
 #eyes .demo-card-wide>.mdl-card__title {
-	background: url('https://i.ytimg.com/vi/WZerlq1RYUQ/maxresdefault.jpg') center / cover;
+	background: url('../images/brands/eyes.png.jpg') center / cover;
 }
 
 #dtox .demo-card-wide>.mdl-card__title {
-	background: url('http://fabianascaranzi.com.br/wp-content/uploads/2016/04/dieta-detox-para-emagrecer-rapido.jpg') center / cover;
+	background: url('../images/brands/dtox.jpg') center / cover;
 }
 
 #make_up .demo-card-wide>.mdl-card__title {
-	background: url('http://wallpaperpulse.com/img/5231786.jpg') center / cover;
+	background: url('../images/brands/make_up.jpg') center / cover;
 }
 
 #nails .demo-card-wide>.mdl-card__title {
-	background: url(' http://cdn2.stylecraze.com/wp-content/uploads/2013/02/Manicure-At-Home2.jpg') center / cover;
+	background: url('../images/brands/nails.jpg') center / cover;
 }
 
 #massage .demo-card-wide>.mdl-card__title {
-	background: url('http://www.channelcourt.com.au/_source/img/store-img/Thai-Massage.jpg') center / cover;
+	background: url('../images/brands/massage.jpg') center / cover;
 }
 
 #waxing .demo-card-wide>.mdl-card__title {
-	background: url('http://jjwaxing.com/wp-content/uploads/2016/02/Waxing-Leg.jpg') center / cover;
+	background: url('../images/brands/waxing.jpg') center / cover;
 }
 
 #packages .demo-card-wide>.mdl-card__title {
-	background: url('http://www.kathavento.com.br/site/imagens/produtos_grandes/p25512.jpg') center / cover;
+	background: url('../images/brands/packages.jpg') center / cover;
 }
 
 #schedulling .demo-card-wide>.mdl-card__title {
-	background: url('https://s-media-cache-ak0.pinimg.com/originals/3a/d8/2e/3ad82e51173ae4509944512c95ae4283.jpg') center / cover;
+	background: url('../images/brands/schedulling.jpg') center / cover;
 }
+
 
 #help .mdl-grid .mdl-card {
 	width: 100% !important;
