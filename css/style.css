@@ -227,6 +227,7 @@ i.mdl-cell {
 	height: 100px;
 	min-height: 100px !important;
 	width: 50%;
+	padding: 2vw !important;
 }
 
 .demo-card-wide>.mdl-card__title {
@@ -277,6 +278,7 @@ i.mdl-cell {
 
 .services_content .content .demo-card-wide.mdl-card {
 	height: 12vh !important;
+	padding: 0vw 0vw 0vw 2vw;
 	animation-delay: .1s;
 }
 
@@ -338,7 +340,7 @@ i.mdl-cell {
 
 .little_text {
 	float: left;
-	width: 80vw;
+	width: calc(90vw - 3.5vh);
 }
 
 .mdl-button--fab {
@@ -346,6 +348,8 @@ i.mdl-cell {
 	height: 3.5vh;
 	width: 3.5vh;
 	min-width: 3.5vh;
+	position: absolute;
+	right: 2vw;
 }
 
 .presentation {
@@ -393,6 +397,14 @@ i.mdl-cell {
 
 .animated.zoomIn {
 	animation-duration: .4s;
+}
+
+.cart .mdl-card__actions {
+	width: calc(90vw - 3.5vh) !important ;
+}
+
+.cart .mdl-button--fab{
+	    top: calc((6.5vh)/2 );
 }
 
 #services .tab {
@@ -494,8 +506,9 @@ i.mdl-cell {
 	padding: 0vw 0vw 0vw 0vw;
 }
 
-#schedulling .services_content .content .demo-card-wide.mdl-card {
+#schedulling .content .demo-card-wide.mdl-card {
 	height: 9vh !important;
+	margin: 2vw;
 }
 
 #schedulling .mdl-layout__tab-bar {
