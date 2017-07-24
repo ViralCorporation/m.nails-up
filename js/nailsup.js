@@ -52,8 +52,6 @@ function Scrolldown() {
     window.scroll(0, 300);
 }
 
-window.onload = Scrolldown;
-
 if (document.readyState) {
     document.onreadystatechange = checkstate;
 } else if (document.addEventListener) {
@@ -139,7 +137,7 @@ $(function () {
 
 function createServiceCard(service, id) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + service.hash + '" type = "button" class = "more mdl-button dialog_button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect add_button" id="add_service_' + service.hash + '"><i class="contact material-icons md-18 add-remove-color"> add </i></div><dialog class = "mdl-dialog service-box-' + service.hash + '" ><h4 class = "mdl-dialog_title service-title"'+service.name_service+'"</h4> <div class = "mdl-dialogcontent" ><p class="service-description">'+service.descrition+'</p></div><div class="mdl-dialog_actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog></div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + service.hash + '" type = "button" class = "more mdl-button dialog_button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect add_button" id="add_service_' + service.hash + '"><i class="contact material-icons md-18 add-remove-color"> add </i></div><dialog class = "mdl-dialog service-box-' + service.hash + '" ><h4 class = "mdl-dialog_title service-title"' + service.name_service + '"</h4> <div class = "mdl-dialogcontent" ><p class="service-description">' + service.descrition + '</p></div><div class="mdl-dialog_actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog></div>'
     return service_card;
 }
 
@@ -207,66 +205,35 @@ function updateCarServices(aux_service) {
     $('div.cart').append(createServiceCarAdded(aux_service));
 
     updateTotalPrices();
-
 }
 
-function removeFromCart(elem) {
-
-    this.list_car_services = list_car_services
-
+function findIndexOnCar(elem) {
     for (i = 0; i < list_car_services.length; i++) {
-        if (list_car_services[i] == elem) {
-            $("#service_added_" + elem.hash).remove();
-            if (i == 0) {
-                var aux = list_car_services.slice(1, list_car_services.length);
-            } else {
-                var aux = list_car_services.slice(0, i - 1).concat(list_car_services.slice(i + 1, list_car_services.length));
-            }
-            break;
+        if (elem == list_car_services[i]) {
+            return i;
         }
     }
-    getTotalOnRemoving(elem);
-    return aux;
-
+    return -1;
 }
 
-/*
-    function gerateRemoveButton(aux) {
-    return document.getElementById('remove_service_' + aux.hash);
-}
+function removeFromCartByIndex(elem) {
+    var aux;
+    id = findIndexOnCar(elem);
 
-function gerateAddButton(aux) {
-    return document.getElementById('add_service_' + aux.hash);
-}
+    $("#service_added_" + list_car_services[id].hash).remove();
 
-function gerateServicesListeners(list) {
-
-    this.list_services = list_services;
-
-    for (i = 0; i < list_services.length; i++) {
-        var aux = list_services[i];
-
-        document.write("<script type='text/javascript'>gerateAddButton(aux).addEventListener('click', function () {updateCarServices(aux);gerateRemoveButton(aux).addEventListener('click', function () {list_car_services = removeFromCart(aux);});});</script>")
+    if (id == 0) {
+        aux = list_car_services.slice(1, list_car_services.length);
+    } else {
+        aux = list_car_services.slice(0, i - 1).concat(list_car_services.slice(i + 1, list_car_services.length));
 
     }
+
+    console.log("aux: " + aux);
+    list_car_services = aux;
+    console.log("list_car: " + list_car_services);
+    this.list_car_services = list_car_services
 }
-function gerateMoreButton(aux) {
-        return document.getElementById('#showDialogInfo_' + list_services[0].hash);
-    }
-
-    function gerateMoreListeners() {
-
-        this.list_services = list_services;
-
-        for (i = 0; i < list_services.length; i++) {
-            var aux = list_services[i];
-            document.write("<script type='text/javascript'>gerateMoreButton(aux).addEventListener('click', function () {dialog.showModal();});/script>");
-
-
-        }
-    }
-*/
-
 
 $(function () {
     var dialog = document.querySelector('dialog');
@@ -297,7 +264,7 @@ $(function () {
                     updateCarServices(aux);
 
                     document.getElementById('remove_service_' + aux.hash).addEventListener('click', function () {
-                        list_car_services = removeFromCart(aux);
+                        removeFromCartByIndex(aux);
                     });
 
                 } else {
@@ -355,5 +322,5 @@ window.onload = initPage;
 
 function initPage() {
     createAllServiceCardsOnArray();
-
+    Scrolldown()
 }
