@@ -171,7 +171,7 @@ i.mdl-cell {
 	margin: 0 !important;
 	height: 14vw;
 	width: 14vw;
-	background: url('../images/brands/packages.png.jpg') center / cover;
+	background: url('http://www.kathavento.com.br/site/imagens/produtos_grandes/p25512.jpg') center / cover;
 }
 
 .mdl-layout.is-upgraded .mdl-layout__tab.is-active {
@@ -255,7 +255,7 @@ i.mdl-cell {
 }
 
 .material-icons.md-18 {
-	font-size: 2.18vh;
+	font-size: 18px;
 }
 
 .material-icons.md-24 {
@@ -455,7 +455,7 @@ i.mdl-cell {
 }
 
 #spray_tan .demo-card-wide>.mdl-card__title {
-	background: url('../images/brands/spray_tan.png.jpg') center / cover;
+	background: url('../images/brands/spray_tan.jpg') center / cover;
 }
 
 #eyes .demo-card-wide>.mdl-card__title {
@@ -463,32 +463,33 @@ i.mdl-cell {
 }
 
 #dtox .demo-card-wide>.mdl-card__title {
-	background: url('../images/brands/dtox.png.jpg') center / cover;
+	background: url('../images/brands/dtox.jpg') center / cover;
 }
 
 #make_up .demo-card-wide>.mdl-card__title {
-	background: url('../images/brands/make_up.png.jpg') center / cover;
+	background: url('../images/brands/make_up.jpg') center / cover;
 }
 
 #nails .demo-card-wide>.mdl-card__title {
-	background: url('../images/brands/nails.png.jpg') center / cover;
+	background: url('../images/brands/nails.jpg') center / cover;
 }
 
 #massage .demo-card-wide>.mdl-card__title {
-	background: url('../images/brands/massage.png.jpg') center / cover;
+	background: url('../images/brands/massage.jpg') center / cover;
 }
 
 #waxing .demo-card-wide>.mdl-card__title {
-	background: url('../images/brands/waxing.png.jpg') center / cover;
+	background: url('../images/brands/waxing.jpg') center / cover;
 }
 
 #packages .demo-card-wide>.mdl-card__title {
-	background: url('../images/brands/packages.png.jpg') center / cover;
+	background: url('../images/brands/packages.jpg') center / cover;
 }
 
 #schedulling .demo-card-wide>.mdl-card__title {
 	background: url('../images/brands/schedulling.jpg') center / cover;
 }
+
 
 #help .mdl-grid .mdl-card {
 	width: 100% !important;
@@ -537,6 +538,10 @@ i.mdl-cell {
 #schedulling .demo-card-wide.datapicker .mdl-card__title-text {
 	padding: 4vw 2vw 4vw 2vw;
 	width: 96vw;
+}
+
+#schedulling i {
+	font-size: 6vw;
 }
 
 #schedulling #clickServices.mdl-button--fab {
