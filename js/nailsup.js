@@ -229,9 +229,8 @@ function removeFromCartByIndex(elem) {
 
     }
 
-    console.log("aux: " + aux);
     list_car_services = aux;
-    console.log("list_car: " + list_car_services);
+    getTotalOnRemoving(elem);
     this.list_car_services = list_car_services
 }
 
