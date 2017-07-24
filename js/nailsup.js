@@ -306,8 +306,6 @@ $(function () {
                 }
             }
         }
-
-        alert(id);
     });
 
     $('span.dialog_button').click(function () {
