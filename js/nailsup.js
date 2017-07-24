@@ -145,7 +145,7 @@ function createServiceCard(service, id) {
 
 function createServiceCarAdded(service, id) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" id="service_added_' + service.hash + '" ><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_' + service.hash + '"><i class="contact material-icons md-24 add-remove-color"> remove_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service < /h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog> </div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" id="service_added_' + service.hash + '" ><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a>|</a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_'+ service.hash + '"><i class="contact material-icons md-24 add-remove-color"> remove_circle </i></div><dialog class = "mdl-dialog bronze" ><h4 class = "mdl-dialog__title" > Service </h4> <div class = "mdl-dialog__content" ><p >More info about the services here </p> </div> <div class = "mdl-dialog__actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog></div>'
     return service_card;
 }
 
@@ -285,6 +285,12 @@ $(function () {
     var add_service_8 = document.getElementById('add_service_' + list_services[8].hash);
     var add_service_9 = document.getElementById('add_service_' + list_services[9].hash);
     var add_service_10 = document.getElementById('add_service_' + list_services[10].hash);
+
+    var add_more = document.getElementById("clickServices");
+
+    add_more.addEventListener('click', function(){
+        document.querySelector("a.services").click();
+    });
 
     add_service_0.addEventListener('click', function () {
         var aux = list_services[0];
