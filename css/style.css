@@ -221,6 +221,10 @@ i.mdl-cell {
 	position: relative;
 }
 
+.mdl-card {
+	min-height: 0 !important;
+}
+
 .mdl-grid .mdl-card {
 	margin: auto;
 	float: inherit;
@@ -395,16 +399,24 @@ i.mdl-cell {
 	background: white;
 }
 
+
 .animated.zoomIn {
 	animation-duration: .4s;
 }
 
 .cart .mdl-card__actions {
-	width: calc(90vw - 3.5vh) !important ;
+	width: calc(90vw - 3.5vh) !important;
 }
 
-.cart .mdl-button--fab{
-	    top: calc((6.5vh)/2 );
+.cart .mdl-button--fab {
+	top: calc((6.5vh)/2);
+}
+
+.demo-card-wide.c_add_button{
+	background: rgba(0,0,0,0);
+	height: 12vw;
+	width: 100vw;
+
 }
 
 #services .tab {
@@ -528,7 +540,7 @@ i.mdl-cell {
 }
 
 #schedulling i {
-	font-size: 8vw;
+	font-size: 6vw;
 }
 
 #schedulling #clickServices.mdl-button--fab {
@@ -537,8 +549,21 @@ i.mdl-cell {
 	margin: 0;
 	top: calc(30vh - 7vw);
 	left: calc(100vw - 16vw);
-	position: absolute;
+	float: right;
+	animation-delay: .2s;
 }
+
+#schedulling #clickSndPage.mdl-button--fab {
+	width: 14vw;
+	height: 14vw;
+	margin: 0;
+	top: calc(55vh - 7vw);
+	left: calc(100vw - 16vw);
+	float: right;
+	animation-delay: .2s;
+	position: fixed;
+}
+
 
 #schedulling .budget {
 	bottom: 8vh !important;
