@@ -224,9 +224,13 @@ function removeFromCartByIndex(elem) {
 
     if (id == 0) {
         aux = list_car_services.slice(1, list_car_services.length);
-    } else {
-        aux = list_car_services.slice(0, i - 1).concat(list_car_services.slice(i + 1, list_car_services.length));
+    } else if(id == list_car_services.length){
+        aux = list_car_services.slice(0, list_car_services.length-1);
 
+    }else{
+        console.log(list_car_services[i]);
+        aux = list_car_services.slice(0, i).concat(list_car_services.slice(i+1, list_car_services.length));
+        console.log(aux);
     }
 
     list_car_services = aux;
