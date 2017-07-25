@@ -143,7 +143,7 @@ function createServiceCard(service, id) {
 
 function createServiceCarAdded(service, id) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" id="service_added_' + service.hash + '"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="mdl-card__actions mdl-card--border"><a id="value"> R$ 3~15 </a> <a>|</a> <a id="time"> 30 min </a> </div><div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_' + service.hash + '"><i class="contact material-icons md-18 add-remove-color"> remove</i></div></div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" id="service_added_' + service.hash + '"><div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_' + service.hash + '"><i class="contact material-icons md-18 add-remove-color"> remove</i></div><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="mdl-card__actions mdl-card--border"><a id="value"> R$ 3~15 </a> <a>|</a> <a id="time"> 30 min </a></div></div>'
     return service_card;
 }
 
@@ -240,8 +240,6 @@ function removeFromCartByIndex(elem) {
 
 $(function () {
     var dialog = document.querySelector('dialog');
-    var title = document.getElementById("title-more");
-    var info = document.getElementById("content-service-info");
 
     $('#casa div').click(function () {
         var id = $(this).attr('id');
@@ -281,6 +279,8 @@ $(function () {
 
     $('span.dialog_button').click(function () {
         var id = $(this).attr('id');
+        var title = document.getElementById("title-more");
+        var info = document.getElementById("content-service-info");
 
         for (i = 0; i < list_services.length; i++) {
             if (id == 'show-dialog-' + list_services[i].hash) {
