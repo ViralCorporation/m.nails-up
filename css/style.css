@@ -281,7 +281,6 @@ i.mdl-cell {
 }
 
 .services_content .content .demo-card-wide.mdl-card {
-	height: 12vh !important;
 	padding: 0vw 0vw 0vw 2vw;
 	animation-delay: .1s;
 }
@@ -312,7 +311,7 @@ i.mdl-cell {
 
 .content .mdl-card__supporting-text {
 	padding: 0px 0px 0px 0px;
-	font-size: 10px;
+	font-size: 3vw;
 	text-align: justify;
 }
 
@@ -322,7 +321,7 @@ i.mdl-cell {
 }
 
 .content a {
-	font-size: 12px;
+	font-size: 4vw;
 	padding: 0px !important;
 	margin: auto;
 	color: rgba(221, 113, 47, 0.49) !important;
@@ -330,7 +329,7 @@ i.mdl-cell {
 
 .more {
 	color: var(--secondary_color_1);
-	font-size: 10px;
+	font-size: 3vw;
 	padding: 0;
 }
 
@@ -517,8 +516,8 @@ i.mdl-cell {
 }
 
 #schedulling .content .demo-card-wide.mdl-card {
-	height: 9vh !important;
 	margin: 2vw;
+	position: inherit;
 }
 
 #schedulling .mdl-layout__tab-bar {
@@ -537,8 +536,9 @@ i.mdl-cell {
 	width: 96vw;
 }
 
-#schedulling i {
-	font-size: 6vw;
+#schedulling .button {
+	float: right;
+	position: relative !important;
 }
 
 #schedulling #clickServices.mdl-button--fab {
