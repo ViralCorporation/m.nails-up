@@ -548,7 +548,6 @@ i.mdl-cell {
 	top: calc(30vh - 7vw);
 	left: calc(100vw - 16vw);
 	float: right;
-	animation-delay: .2s;
 }
 
 #schedulling #clickSndPage.mdl-button--fab {
@@ -558,13 +557,13 @@ i.mdl-cell {
 	top: calc(87vh - 16vw);
 	left: calc(100vw - 16vw);
 	float: right;
-	animation-delay: .2s;
 	position: fixed;
 }
 
 #schedulling .budget {
 	bottom: 8vh !important;
 	position: fixed;
+	animation-duration: .3s;
 }
 
 #schedulling .budget spam {
@@ -588,4 +587,12 @@ i.mdl-cell {
 	right: 0;
 	font-size: 2.5vh;
 	color: var(--coadjuvant-1);
+}
+
+#schedulling .zoomIn {
+	animation-delay: .3s;
+}
+
+#schedulling .fadeIn {
+	animation-duration: .3s;
 }
