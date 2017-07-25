@@ -596,3 +596,11 @@ i.mdl-cell {
 #schedulling .fadeIn {
 	animation-duration: .3s;
 }
+
+#sdlPage1{
+	display: inherit;
+}
+
+#sdlPage1{
+	display: none;
+}
