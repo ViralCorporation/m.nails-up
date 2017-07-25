@@ -11,10 +11,11 @@ class Service {
         EYES
         SPRAYTAN
     */
-    constructor(name_service, descrition, price, type_service) {
+    constructor(name_service, descrition, price, duration, type_service) {
         this.name_service = name_service;
         this.descrition = descrition;
         this.price = price;
+        this.duration = duration;
         this.type_service = type_service;
         this.hash = name_service.split(" ").join("");
     }
@@ -34,17 +35,20 @@ Guide to constructor
     name of service, Descrition of service, price, categorie
     */
 
-list_services[0] = new Service("Bronzeamento Natural", "Bronzeamento natural com uso pasma", 39.00, "SPRAY_TAN");
-list_services[1] = new Service("Bronzeamento Natural na Galaxia", "Bronzeamento natural com uso pasma", 39.00, "SPRAY_TAN");
-list_services[2] = new Service("Bronzeamento Natural na Lua", "Bronzeamento natural com uso pasma", 50.00, "SPRAY_TAN");
-list_services[3] = new Service("Bronzeamento Natural na Sol", "Bronzeamento natural com uso pasma", 60.50, "SPRAY_TAN");
-list_services[4] = new Service("Manicure", "Pintura de unhas", 50.00, "NAILS");
-list_services[5] = new Service("Make Up", "Maquiagem basica", 50.00, "MAKEUP");
-list_services[6] = new Service("Sombras", "Maquiagem basica", 50.00, "EYES");
-list_services[7] = new Service("Depilação Buço", "Maquiagem basica", 50.00, "WAX");
-list_services[8] = new Service("Pacote Depilação completa", "Maquiagem basica", 50.00, "PACK");
-list_services[9] = new Service("Massagem", "Maquiagem basica", 50.00, "MASSAGE");
-list_services[10] = new Service("Suco Detox", "genginbre", 12.00, "DETOX");
+AddNewService("Bronzeamento Natural", "Bronzeamento natural com uso pasma", 39.00, "15 min", "SPRAY_TAN");
+AddNewService("Bronzeamento Natural na Galaxia", "Bronzeamento natural com uso pasma", 39.00, '15min', "SPRAY_TAN");
+AddNewService("Bronzeamento Natural na Sol", "Bronzeamento natural com uso pasma", 60.50, "25 min", "SPRAY_TAN");
+AddNewService("Manicure", "Pintura de unhas", 50.00, "15min", "NAILS");
+AddNewService("Make Up", "Maquiagem basica", 50.00, "30 min", "MAKEUP");
+AddNewService("Sombras", "Maquiagem basica", 50.00, "20 min", "EYES");
+AddNewService("Depilação Buço", "Maquiagem basica", 50.00, "10 min", "WAX");
+AddNewService("Pacote Depilação completa", "Maquiagem basica", 50.00, "2 h", "PACK");
+AddNewService("Massagem", "Maquiagem basica", 50.00, "1 h", "MASSAGE");
+AddNewService("Suco Detox", "genginbre", 12.00, "5 min", "DETOX");
+
+function AddNewService(name, descrition, price, duration, type_service) {
+    list_services.push(new Service(name, descrition, price, duration, type_service));
+}
 
 var started = false;
 
@@ -137,13 +141,13 @@ $(function () {
 
 function createServiceCard(service, id) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + service.hash + '" type = "button" class = "more mdl-button dialog_button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ 3~15 </a> <a> | </a> <a id = "time"> 30 min </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect add_button" id="add_service_' + service.hash + '"><i class="contact material-icons md-18 add-remove-color"> add </i></div><dialog class = "mdl-dialog service-box-' + service.hash + '" ><h4 class = "mdl-dialog_title service-title"' + service.name_service + '"</h4> <div class = "mdl-dialogcontent" ><p class="service-description">' + service.descrition + '</p></div><div class="mdl-dialog_actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog></div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + service.hash + '" type = "button" class = "more mdl-button dialog_button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$' + service.price + '</a> <a> | </a> <a id = "time"> ' + service.duration + ' </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect add_button" id="add_service_' + service.hash + '"><i class="contact material-icons md-18 add-remove-color"> add </i></div><dialog class = "mdl-dialog service-box-' + service.hash + '" ><h4 class = "mdl-dialog_title service-title"' + service.name_service + '"</h4> <div class = "mdl-dialogcontent" ><p class="service-description">' + service.descrition + '</p></div><div class="mdl-dialog_actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog></div>'
     return service_card;
 }
 
 function createServiceCarAdded(service, id) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" id="service_added_' + service.hash + '"><div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_' + service.hash + '"><i class="contact material-icons md-18 add-remove-color"> remove</i></div><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="mdl-card__actions mdl-card--border"><a id="value"> R$ 3~15 </a> <a>|</a> <a id="time"> 30 min </a></div></div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" id="service_added_' + service.hash + '"><div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_' + service.hash + '"><i class="contact material-icons md-18 add-remove-color"> remove</i></div><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="mdl-card__actions mdl-card--border"><a id="value"> R$' + service.price + ' </a> <a>|</a> <a id="time">' + service.duration + ' </a></div></div>'
     return service_card;
 }
 
@@ -207,29 +211,21 @@ function updateCarServices(aux_service) {
     updateTotalPrices();
 }
 
-function findIndexOnCar(elem) {
-    for (i = 0; i < list_car_services.length; i++) {
-        if (elem == list_car_services[i]) {
-            return i;
-        }
-    }
-    return -1;
-}
 
 function removeFromCartByIndex(elem) {
+
     var aux;
-    id = findIndexOnCar(elem);
+    id = list_car_services.indexOf(elem);
 
     $("#service_added_" + list_car_services[id].hash).remove();
 
     if (id == 0) {
         aux = list_car_services.slice(1, list_car_services.length);
-    } else if(id == list_car_services.length){
-        aux = list_car_services.slice(0, list_car_services.length-1);
-
-    }else{
+    } else if (id == list_car_services.length) {
+        aux = list_car_services.slice(0, list_car_services.length - 1);
+    } else {
         console.log(list_car_services[i]);
-        aux = list_car_services.slice(0, i).concat(list_car_services.slice(i+1, list_car_services.length));
+        aux = list_car_services.slice(0, i).concat(list_car_services.slice(i + 1, list_car_services.length));
         console.log(aux);
     }
 
