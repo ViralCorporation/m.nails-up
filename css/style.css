@@ -555,7 +555,7 @@ i.mdl-cell {
 	width: 14vw;
 	height: 14vw;
 	margin: 0;
-	top: calc(55vh - 7vw);
+	top: calc(87vh - 16vw);
 	left: calc(100vw - 16vw);
 	float: right;
 	animation-delay: .2s;
