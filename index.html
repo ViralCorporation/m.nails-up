@@ -33,6 +33,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/rome/2.1.22/rome.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
 
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+
+	<!-- jQuery  -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
@@ -44,6 +51,8 @@
 	<meta property="og:description" content="A unique approach to the traditional spa experience." />
 	<meta property="og:url" content="http://nailsup.com/" />
 	<meta property="og:site_name" content="Nails Up" />
+
+
 
 	<script>
 		var rotate = 0 - window.orientation;
@@ -65,12 +74,49 @@
 			<!-- HELLO -->
 			<section class="mdl-layout__tab-panel" id="hello">
 				<div class="page-content">
+					<div class="slider">
+						<ul class="slides">
+							<li>
+								<img src="https://lorempixel.com/580/250/nature/1">
+								<!-- random image -->
+								<div class="caption center-align">
+									<h3>This is our big Tagline!</h3>
+									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+								</div>
+							</li>
+							<li>
+								<img src="https://lorempixel.com/580/250/nature/2">
+								<!-- random image -->
+								<div class="caption left-align">
+									<h3>Left Aligned Caption</h3>
+									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+								</div>
+							</li>
+							<li>
+								<img src="https://lorempixel.com/580/250/nature/3">
+								<!-- random image -->
+								<div class="caption right-align">
+									<h3>Right Aligned Caption</h3>
+									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+								</div>
+							</li>
+							<li>
+								<img src="https://lorempixel.com/580/250/nature/4">
+								<!-- random image -->
+								<div class="caption center-align">
+									<h3>This is our big Tagline!</h3>
+									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+								</div>
+							</li>
+						</ul>
+					</div>
+
 				</div>
 			</section>
 			<!-- SCHEDULE -->
 			<section class="mdl-layout__tab-panel " id="schedulling">
 				<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-					<main class="mdl-layout__content">
+					<main class="mdl-layout__content" id="sdlContent">
 						<section id="sdlPage1" class=" page-content services_content">
 							<!-- Data Picker -->
 							<div class="demo-card-wide  datapicker mdl-shadow--4dp animated fadeIn">
@@ -78,8 +124,7 @@
 									<h2 class="mdl-card__title-text">Nos diga quando você gostaria de agendar. </h2>
 								</div>
 							</div>
-							<div class="demo-card-wide c_add_button"></div>
-							<div class="animated fadeIn mdl-button mdl-js-button mdl-shadow--4dp mdl-button--fab mdl-button--mini-fab mdl-button--colored  " id="clickServices">
+							<div class="animated zoomIn mdl-button mdl-js-button mdl-shadow--4dp mdl-button--fab mdl-button--mini-fab mdl-button--colored  " id="clickServices">
 								<i class=" contact material-icons md-24 add-remove-color animated ">add</i>
 							</div>
 							<div class="products animated fadeIn">
@@ -93,47 +138,60 @@
 									</dialog>
 								</div>
 							</div>
-							<div class="demo-card-wide c_add_button"></div>
-							<div class="animated zoomIn mdl-button mdl-js-button mdl-shadow--8dp mdl-button--fab mdl-button--mini-fab mdl-button--colored " id="clickSndPage">
-								<i class="contact material-icons md-24 add-remove-color animated ">keyboard_arrow_right</i>
+							<div class="demo-card-wide space_button_1"></div>
+							<div class="animated zoomIn mdl-button mdl-js-button mdl-shadow--8dp mdl-button--fab mdl-button--mini-fab mdl-button--colored " onclick="showingSdlPage2()" id="clickSdlPage2">
+								<i class="contact material-icons add-remove-color animated ">keyboard_arrow_right</i>
 							</div>
 						</section>
 						<section id="sdlPage2" class=" page-content services_content">
-							<!-- Data Picker -->
-							<div class="demo-card-wide  datapicker mdl-shadow--4dp animated fadeIn">
-								<div class="mdl-card__title">
-									<h2 class="mdl-card__title-text">Nos diga quando você gostaria de agendar. </h2>
-								</div>
-							</div>
-							<div class="demo-card-wide c_add_button"></div>
-							<div class="animated fadeIn mdl-button mdl-js-button mdl-shadow--4dp mdl-button--fab mdl-button--mini-fab mdl-button--colored  " id="clickServices">
-								<i class=" contact material-icons md-24 add-remove-color animated ">add</i>
-							</div>
-							<div class="products animated fadeIn">
-								<div class="content cart " id="content">
-									<dialog class="mdl-dialog service-box">
-										<h4 class="mdl-dialog_title service-title">Service name</h4>
-										<div class="mdl-dialogcontent">
-											<p class='service-description'>Description</p>
+							<div class="sdl_address animated fadeIn">
+								<div class="mdl-card__title animated fadeIn">
+
+									<!-- Simple Textfield -->
+									<form action="#">
+										<h2 class="mdl-card__title-text">Por favor, para que a gente possa agendar, informe abaixo seu nome contato. </h2>
+										<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+											<input class="mdl-textfield__input" type="text" id="sample1">
+											<label class="mdl-textfield__label" for="sample1">Aqui, coloque seu nome.</label>
 										</div>
-										<div class="mdl-dialog_actions"><button type="button" class="mdl-button close"> Close </button></div>
-									</dialog>
+										<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+											<input class="mdl-textfield__input" type="text" id="sample1">
+											<label class="mdl-textfield__label" for="sample1">Telefone com DDD ou Email.</label>
+										</div>
+									</form>
 								</div>
 							</div>
-							<div class="demo-card-wide c_add_button"></div>
-							<div class="animated zoomIn mdl-button mdl-js-button mdl-shadow--8dp mdl-button--fab mdl-button--mini-fab mdl-button--colored " id="clickSndPage">
-								<i class="contact material-icons md-24 add-remove-color animated ">keyboard_arrow_right</i>
+							<div class="sdl_pay animated fadeIn">
+								<div class="mdl-card__title animated fadeIn">
+									<h2 class="mdl-card__title-text">Veja abaixo as formas de pagamento que disponibilizando. </h2>
+								</div>
+								<i class="sdl_i_1 mdl-cell mdl-cell--1-col"></i>
+								<i class="sdl_i_2 mdl-cell mdl-cell--1-col"></i>
+							</div>
+							<div class="sdl_team animated fadeIn">
+								<div class="mdl-card__title animated fadeIn">
+									<h2 class="mdl-card__title-text">
+										<div>Nos garantiremos o melhor atendimento juntamente com a melhor equipe.</div><br>
+										<spam>Conheça nosso time de especialistas:</spam>
+									</h2>
+								</div>
+							</div>
+							<div class="animated zoomIn mdl-button mdl-js-button mdl-shadow--8dp mdl-button--fab mdl-button--mini-fab mdl-button--colored " onclick="showingSdlPage1()" id="clickSdlPage1">
+								<i class="contact material-icons md-24 add-remove-color animated ">keyboard_arrow_left</i>
+							</div>
+							<div class="animated zoomIn mdl-button mdl-js-button mdl-shadow--8dp mdl-button--fab mdl-button--mini-fab mdl-button--colored " onclick="showingSdlPage1()" id="clickSdlSend">
+								<i class="contact material-icons add-remove-color animated ">send</i>
 							</div>
 						</section>
 					</main>
-					<footer class="budget no-margin-height mdl-layout__header mdl-layout--fixed-tabs">
+					<div class="budget no-margin-height mdl-layout__header mdl-layout--fixed-tabs">
 						<div class="mdl-layout__tab-bar budget animated slideInUp mdl-shadow--16dp">
 							<div class="mdl-card__title">
 								<spam class="secondary-color">R$</spam>
 								<spam id="sum-cart">0.00</spam>
 							</div>
 						</div>
-					</footer>
+					</div>
 				</div>
 			</section>
 
@@ -444,7 +502,7 @@
 						<!-- Olá -->
 					</div>
 				</a>
-				<a href="#schedulling" class=" mdl-layout__tab schedulling ">
+				<a href="#schedulling" onclick="" class=" mdl-layout__tab schedulling ">
 					<i class="material-icons md-24" id="schedulling-icon">assignment</i>
 					<div class="icon-caption ">
 						<!-- Agendar -->

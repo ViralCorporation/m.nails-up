@@ -410,10 +410,33 @@ i.mdl-cell {
 	top: calc((6.5vh)/2);
 }
 
-.demo-card-wide.c_add_button {
+.demo-card-wide.space_button_1 {
 	background: rgba(0, 0, 0, 0);
-	height: 12vw;
+	height: calc(5vh + 16vw);
 	width: 100vw;
+}
+
+.sdl_address {
+	height: calc((100vh - 17vh)/3);
+	width: 96vw;
+	left: 2vw;
+	position: relative;
+	border-bottom: .5vw solid rgba(255, 193, 7, 0.41);
+}
+
+.sdl_pay {
+	height: calc((100vh - 17vh)/3);
+	width: 96vw;
+	left: 2vw;
+	position: relative;
+	border-bottom: .5vw solid rgba(255, 193, 7, 0.41);
+}
+
+.sdl_team {
+	height: calc((100vh - 17vh)/3);
+	width: 96vw;
+	left: 2vw;
+	position: relative;
 }
 
 #services .tab {
@@ -487,6 +510,18 @@ i.mdl-cell {
 	background: url('../images/brands/schedulling.jpg') center / cover;
 }
 
+#sdlPage2 .sdl_i_1 {
+	background: url('../images/brands/business.png') center / cover;
+	height: 20vw;
+	width: 20vw;
+}
+
+#sdlPage2 .sdl_i_2 {
+	background: url('../images/brands/credit.png') center / cover;
+	height: 20vw;
+	width: 20vw;
+}
+
 #help .mdl-grid .mdl-card {
 	width: 100% !important;
 	height: calc((100vh - 8vh - 4vh - 5*2vw)/4) !important;
@@ -529,6 +564,7 @@ i.mdl-cell {
 	left: -4vw;
 	top: -4vw;
 	padding: 0 !important;
+	margin: 0vh 0vh 9vw 0vh;
 }
 
 #schedulling .demo-card-wide.datapicker .mdl-card__title-text {
@@ -548,9 +584,10 @@ i.mdl-cell {
 	top: calc(30vh - 7vw);
 	left: calc(100vw - 16vw);
 	float: right;
+	animation-delay: .35s;
 }
 
-#schedulling #clickSndPage.mdl-button--fab {
+#schedulling #clickSdlPage2.mdl-button--fab {
 	width: 14vw;
 	height: 14vw;
 	margin: 0;
@@ -558,6 +595,33 @@ i.mdl-cell {
 	left: calc(100vw - 16vw);
 	float: right;
 	position: fixed;
+	animation-delay: .3s;
+}
+
+#schedulling #clickSdlPage1.mdl-button--fab {
+	width: 14vw;
+	height: 14vw;
+	margin: 0;
+	top: calc(87vh - 32vw);
+	left: calc(100vw - 16vw);
+	float: right;
+	position: fixed;
+	animation-delay: .35s;
+}
+
+#schedulling #clickSdlSend.mdl-button--fab {
+	width: 14vw;
+	height: 14vw;
+	margin: 0;
+	top: calc(87vh - 16vw);
+	left: calc(100vw - 16vw);
+	float: right;
+	position: fixed;
+	animation-delay: .3s;
+}
+
+#clickSdlSend i {
+	font-size: 3.5vh !important;
 }
 
 #schedulling .budget {
@@ -589,18 +653,43 @@ i.mdl-cell {
 	color: var(--coadjuvant-1);
 }
 
-#schedulling .zoomIn {
-	animation-delay: .3s;
+#schedulling .durationIn {
+	animation-duration: .3s;
 }
 
 #schedulling .fadeIn {
 	animation-duration: .3s;
 }
 
-#sdlPage1{
+#sdlPage1 {
 	display: inherit;
 }
 
-#sdlPage1{
+#sdlPage2 {
 	display: none;
+	position: fixed;
+	width: 100vw;
+	background: white;
+}
+
+#sdlPage2 h2 {
+	font-size: 4vw;
+	color: rgba(193, 34, 75, 0.81);
+	text-align: center;
+	width: 92vw;
+	display: block;
+}
+
+.mdl-textfield {
+	padding: 4vw 0;
+}
+
+form input {
+	margin: 1vw 8vw 1vw 8vw !important;
+	width: 76vw !important;
+}
+
+form label {
+	padding: 1vw 8vw 1vw 8vw !important;
+	width: 76vw !important;
 }
