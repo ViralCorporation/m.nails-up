@@ -12,6 +12,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="style/slider-def.css">
+
 
 	<!-- Material -->
 	<link rel="stylesheet" href="css/material.css">
@@ -20,6 +22,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
 
 	<!-- Project -->
 	<title>Nails Up</title>
@@ -33,15 +36,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/rome/2.1.22/rome.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
 
-	<!-- Compiled and minified CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css" /> // Add the new slick-theme.css if you want the default styling
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 
-	<!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-
-	<!-- jQuery  -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
 	<!-- Google Stuff -->
 	<link rel="canonical" href="http://nailsup.com/" />
@@ -74,42 +71,64 @@
 			<!-- HELLO -->
 			<section class="mdl-layout__tab-panel" id="hello">
 				<div class="page-content">
-					<div class="slider">
-						<ul class="slides">
-							<li>
-								<img src="https://lorempixel.com/580/250/nature/1">
-								<!-- random image -->
-								<div class="caption center-align">
-									<h3>This is our big Tagline!</h3>
-									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+					<div id="slider">
+						<div class="slides">
+							<!-- First slide -->
+							<div class="slider">
+								<div class="legend"></div>
+								<div class="content">
+									<div class="content-txt">
+										<h1> Your title </h1>
+										<h2> Your description </h2>
+									</div>
 								</div>
-							</li>
-							<li>
-								<img src="https://lorempixel.com/580/250/nature/2">
-								<!-- random image -->
-								<div class="caption left-align">
-									<h3>Left Aligned Caption</h3>
-									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+								<div class="images">
+									<img src="images/peace1-smarthphone.jpg">
 								</div>
-							</li>
-							<li>
-								<img src="https://lorempixel.com/580/250/nature/3">
-								<!-- random image -->
-								<div class="caption right-align">
-									<h3>Right Aligned Caption</h3>
-									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+							</div>
+							<!-- Second slide -->
+							<div class="slider">
+								<div class="legend"></div>
+								<div class="content">
+									<div class="content-txt">
+										<h1> Your title </h1>
+										<h2> Your description </h2>
+									</div>
 								</div>
-							</li>
-							<li>
-								<img src="https://lorempixel.com/580/250/nature/4">
-								<!-- random image -->
-								<div class="caption center-align">
-									<h3>This is our big Tagline!</h3>
-									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+								<div class="images">
+									<img src="images/peace1-smarthphone.jpg">
 								</div>
-							</li>
-						</ul>
+							</div>
+							<!-- Third slide -->
+							<div class="slider">
+								<div class="legend"></div>
+								<div class="content">
+									<div class="content-txt">
+										<h1> Your title </h1>
+										<h2> Your description </h2>
+									</div>
+								</div>
+								<div class="images">
+									<img src="images/peace1-smarthphone.jpg">
+								</div>
+							</div>
+							<!-- Fourth slide -->
+							<div class="slider">
+								<div class="legend"></div>
+								<div class="content">
+									<div class="content-txt">
+										<h1> Your title </h1>
+										<h2> Your description </h2>
+									</div>
+								</div>
+								<div class="images">
+									<img src="images/peace1-smarthphone.jpg">
+								</div>
+							</div>
+						</div>
 					</div>
+
+
 
 				</div>
 			</section>
@@ -530,5 +549,8 @@
 		</footer>
 	</div>
 </body>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 </html>
