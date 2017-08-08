@@ -21,6 +21,15 @@ class Service {
     }
 }
 
+class Email {
+    constructor(sender, receiver, subject, content) {
+        this.sender = sender;
+        this.receiver = receiver;
+        this.subject = subject;
+        this.content = content;
+    }
+}
+
 /*
 -ADDED SERVICES HERE
 Guide Types of Service
@@ -69,7 +78,13 @@ function saydone() {
     document.getElementById("page").style.display = "flex";
 }
 
-function sendEmail() {
+function sendEmail(email) {
+
+    var serverMail;
+    var username;
+    var password;
+
+    Email.send(email.sender,email.receiver, email.subject, email.content, serverMail, username, password);
     window.location.href = "mailto:info@nailsup.com.br?subject=Subject&body=message%20goes%20here";
 }
 
@@ -138,13 +153,13 @@ $(function () {
 
 function createServiceCard(service, id) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" style="user-select: none"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + service.hash + '" type = "button" class = "more mdl-button dialog_button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ '+service.price+' </a> <a> | </a> <a id = "time"> '+service.duration+' </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect add_button" id="add_service_' + service.hash + '"><i class="contact material-icons md-18 add-remove-color"> add </i></div><dialog class = "mdl-dialog service-box-' + service.hash + '" ><h4 class = "mdl-dialog_title service-title"' + service.name_service + '"</h4> <div class = "mdl-dialogcontent" ><p class="service-description">' + service.descrition + '</p></div><div class="mdl-dialog_actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog></div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" style="user-select: none"><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="little_text"> <span class = "mdl-card__supporting-text" >' + service.descrition + '...</span><span id ="show-dialog-' + service.hash + '" type = "button" class = "more mdl-button dialog_button" > More </span> <div class = "mdl-card__actions mdl-card--border" ><a id = "value"> R$ ' + service.price + ' </a> <a> | </a> <a id = "time"> ' + service.duration + ' </a> </div> </div> <div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect add_button" id="add_service_' + service.hash + '"><i class="contact material-icons md-18 add-remove-color"> add </i></div><dialog class = "mdl-dialog service-box-' + service.hash + '" ><h4 class = "mdl-dialog_title service-title"' + service.name_service + '"</h4> <div class = "mdl-dialogcontent" ><p class="service-description">' + service.descrition + '</p></div><div class="mdl-dialog_actions" ><button type="button" class ="mdl-button close"> Close </button></div> </dialog></div>'
     return service_card;
 }
 
 function createServiceCarAdded(service, id) {
 
-    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" id="service_added_' + service.hash + '" style="user-select: none"><div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_' + service.hash + '"><i class="contact material-icons md-18 add-remove-color"> remove</i></div><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="mdl-card__actions mdl-card--border"><a id="value"> R$'+ service.price+' </a> <a>|</a> <a id="time"> '+service.duration+' </a></div></div>'
+    var service_card = '<div class="demo-card-wide mdl-card mdl-shadow--2dp animated fadeIn" id="service_added_' + service.hash + '" style="user-select: none"><div class="button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="remove_service_' + service.hash + '"><i class="contact material-icons md-18 add-remove-color"> remove</i></div><div class="mdl-card__title" id="spray_tan"><h2 class="mdl-card__title-text">' + service.name_service + '</h2></div><div class="mdl-card__actions mdl-card--border"><a id="value"> R$' + service.price + ' </a> <a>|</a> <a id="time"> ' + service.duration + ' </a></div></div>'
     return service_card;
 }
 
@@ -225,12 +240,12 @@ function removeFromCartByIndex(elem) {
 
     if (id == 0) {
         aux = list_car_services.slice(1, list_car_services.length);
-    } else if(id == list_car_services.length){
-        aux = list_car_services.slice(0, list_car_services.length-1);
+    } else if (id == list_car_services.length) {
+        aux = list_car_services.slice(0, list_car_services.length - 1);
 
-    }else{
+    } else {
         console.log(list_car_services[i]);
-        aux = list_car_services.slice(0, i).concat(list_car_services.slice(i+1, list_car_services.length));
+        aux = list_car_services.slice(0, i).concat(list_car_services.slice(i + 1, list_car_services.length));
         console.log(aux);
     }
 
