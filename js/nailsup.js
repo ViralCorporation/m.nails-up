@@ -1,5 +1,5 @@
 var list_services = [];
-var list_car_services = [];
+var current_cart = [];
 
 // CREATE OBJECT OF TYPE SERVICE
 class Service {
@@ -60,8 +60,8 @@ function addNewServiceItem(service) {
 function CartToArray() {
     var aux = '';
 
-    for (var i = 0; i < list_car_services.length; i++) {
-        aux += list_car_services.name;
+    for (var i = 0; i < current_cart.length; i++) {
+        aux += current_cart.name;
     }
 }
 
@@ -169,7 +169,7 @@ $(function () {
             if (id == 'add_service_' + list_services[i].hash) {
                 var aux = list_services[i];
 
-                if (list_car_services.indexOf(aux) == -1) {
+                if (current_cart.indexOf(aux) == -1) {
                     updateCarServices(aux);
 
                     document.getElementById('remove_service_' + aux.hash).addEventListener('click', function () {
@@ -215,7 +215,7 @@ $(function(){
 
     $("#clickSdlSend").click(function(){
         sendEmail();
-        list_car_services = [];
+        current_cart = [];
 
     });
 
@@ -225,8 +225,8 @@ $(function(){
     function gerateBodyEmailSdl() {
         var aux = "Cliente: " + "nome cliente \n\ " + "Data: 09/08/2017 \n\ " + " \n\Serviços: \n\ ";
 
-        for (var i = 0; i < list_car_services.length; i++) {
-            aux += list_car_services[i].name_service + " - R$ " + list_car_services[i].price +"\n\ ";
+        for (var i = 0; i < current_cart.length; i++) {
+            aux += current_cart[i].name_service + " - R$ " + current_cart[i].price +"\n\ ";
         }
 
         return aux;
@@ -238,8 +238,11 @@ $(function(){
     }
 
     function sendEmail() {
-        Email.send('melissecabral07@gmail.com', 'melissecabral@gmail.com', gerateSubjectEmailSdl(), gerateBodyEmailSdl(), 'smtp.gmail.com',
+        if(current_cart.length > 0){
+            Email.send('melissecabral07@gmail.com', 'melissecabral@gmail.com', gerateSubjectEmailSdl(), gerateBodyEmailSdl(), 'smtp.gmail.com',
                    'melissecabral07@gmail.com', "85998614541");
+        removingAllFromCart();
+        }
     }
 
 // CREATE SERVICE CARD TO BE LISTED ON CATEGORIES
@@ -308,11 +311,11 @@ function createAllServiceCardsOnArray() {
     }
 
     function updateTotalPrices() {
-        document.getElementById("sum-cart").innerHTML = getTotalOfPrices(list_car_services);
+        document.getElementById("sum-cart").innerHTML = getTotalOfPrices(current_cart);
     }
 
     function updateCarServices(aux_service) {
-        list_car_services.push(aux_service);
+        current_cart.push(aux_service);
 
         $('div.cart').append(createServiceCarAdded(aux_service));
         updateTotalPrices();
@@ -320,8 +323,8 @@ function createAllServiceCardsOnArray() {
 
 //FIND ONE SERVICE ON THE CART AND RETURN THE INDEX
 function findIndexOnCar(elem) {
-    for (i = 0; i < list_car_services.length; i++) {
-        if (elem == list_car_services[i]) {
+    for (i = 0; i < current_cart.length; i++) {
+        if (elem == current_cart[i]) {
             return i;
         }
     }
@@ -333,22 +336,30 @@ function removeFromCartByIndex(elem) {
     var aux;
     id = findIndexOnCar(elem);
 
-    $("#service_added_" + list_car_services[id].hash).remove();
+    $("#service_added_" + current_cart[id].hash).remove();
 
     if (id == 0) {
-        aux = list_car_services.slice(1, list_car_services.length);
-    } else if (id == list_car_services.length) {
-        aux = list_car_services.slice(0, list_car_services.length - 1);
+        aux = current_cart.slice(1, current_cart.length);
+    } else if (id == current_cart.length) {
+        aux = current_cart.slice(0, current_cart.length - 1);
 
     } else {
-        console.log(list_car_services[i]);
-        aux = list_car_services.slice(0, i).concat(list_car_services.slice(i + 1, list_car_services.length));
+        console.log(current_cart[i]);
+        aux = current_cart.slice(0, i).concat(current_cart.slice(i + 1, current_cart.length));
         console.log(aux);
     }
 
-    list_car_services = aux;
+    current_cart = aux;
     getTotalOnRemoving(elem);
-    this.list_car_services = list_car_services
+    this.current_cart = current_cart
+}
+
+function removingAllFromCart(){
+    var aux = current_cart[0];
+    while(aux != undefined){
+        removeFromCartByIndex(current_cart[0]);
+        aux = current_cart[0];
+    }
 }
 
 var car_sch = Array(10);
