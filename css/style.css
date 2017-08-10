@@ -21,6 +21,7 @@
   --coadjuvant-2: rgba(193, 34, 34, 0.81);
   --coadjuvant-1: rgba(165, 165, 165, 0.68);
   --background: rgba(246, 215, 221, 0.37);
+  --background-2: rgba(255, 233, 210, 1);
   --hidden-primary-color: rgba(226, 20, 222, 0);
   --add-remove-icon: rgba(193, 34, 34, 0.6);
   --reserve_2: rgba(221, 47, 47, 0.65);
@@ -417,26 +418,22 @@ i.mdl-cell {
 }
 
 .sdl_address {
-  height: calc((100vh - 17vh)/3);
-  width: 96vw;
-  left: 2vw;
+  height: calc((100vh - 17vh)*.4);
   position: relative;
   border-bottom: 1px solid var(--reserve_2);
 }
 
 .sdl_pay {
-  height: calc((100vh - 17vh)/3);
-  width: 96vw;
-  left: 2vw;
+  height: calc((100vh - 17vh)*.3);
   position: relative;
   border-bottom: 1px solid var(--reserve_2);
+  background: var(--background-2);
 }
 
 .sdl_team {
-  height: calc((100vh - 17vh)/3);
-  width: 96vw;
-  left: 2vw;
+  height: calc((100vh - 17vh)*.3);
   position: relative;
+  background: var(--background-2);
 }
 
 #services .tab {
@@ -602,22 +599,22 @@ i.mdl-cell {
   width: 14vw;
   height: 14vw;
   margin: 0;
-  top: calc(87vh - 32vw);
+  top: calc(87vh - 16vw);
   left: calc(100vw - 16vw);
   float: right;
   position: fixed;
-  animation-delay: .35s;
+  animation-delay: .3s;
 }
 
 #schedulling #clickSdlSend.mdl-button--fab {
   width: 14vw;
   height: 14vw;
   margin: 0;
-  top: calc(87vh - 16vw);
+  top: calc(((100vh - 17vh)*.4) - 6vh);
   left: calc(100vw - 16vw);
   float: right;
   position: fixed;
-  animation-delay: .3s;
+  animation-delay: .35s;
 }
 
 #clickSdlSend i {
@@ -694,12 +691,12 @@ i.mdl-cell {
 form input {
   font-size: 4vw !important;
   color: var(--reserve_2) !important;
-  margin: 1vw 8vw 1vw 2vw !important;
+  margin: 1vw 8vw 1vw 4vw !important;
   width: 92vw !important;
 }
 
 form label {
   font-size: 4vw !important;
-  padding: 1vw 8vw 1vw 2vw !important;
+  padding: 1vw 8vw 1vw 4vw !important;
   width: 76vw !important;
 }
