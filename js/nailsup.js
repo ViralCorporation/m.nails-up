@@ -376,15 +376,8 @@ function initPage() {
   Scrolldown()
 }
 
-var windowProxy;
-window.onload = function () {
-  // Create a proxy window to send to and receive
-  // messages from the parent
-  windowProxy = new Porthole.WindowProxy(
-    'https://fractalmarket.github.io/ipea/');
-
-  // Register an event handler to receive messages;
-  windowProxy.addEventListener(function (event) {
-    // handle event
-  });
-};
+//Test IPEA Julio's work, dont remove.
+function callServices() {
+  document.querySelector("a.services").click();
+}
+//Closing Scope: Test IPEA Julio's work, dont remove.
