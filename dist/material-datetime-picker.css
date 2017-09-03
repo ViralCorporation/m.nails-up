@@ -110,6 +110,7 @@
   transition: opacity 100ms ease-in-out; }
 
 .c-datepicker__header-date__month {
+    margin-top: 1.5em !important;
   cursor: pointer;
   font-size: 24px;
   opacity: 0.6; }
