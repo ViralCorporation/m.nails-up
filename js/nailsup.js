@@ -290,7 +290,7 @@ function gerateSubjectEmailSdl() {
 }
 
 function sendEmail() {
-    if (current_cart.length > 0) {
+    if (current_cart.length >= 0) {
         Email.send('naislupdetoxbar@gmail.com', 'melissecabral@gmail.com', gerateSubjectEmailSdl(), gerateBodyEmailSdl(), 'smtp.gmail.com',
             'naislupdetoxbar@gmail.com', "Projectnumber1");
         removingAllFromCart();
