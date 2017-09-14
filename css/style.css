@@ -599,7 +599,7 @@ i.mdl-cell {
     width: 14vw;
     height: 14vw;
     margin: 0;
-    top: calc(87vh - 16vw);
+    top: calc(80vh - 16vw);
     left: calc(100vw - 16vw);
     float: right;
     position: fixed;
@@ -610,7 +610,7 @@ i.mdl-cell {
     width: 14vw;
     height: 14vw;
     margin: 0;
-    /*top: calc(((100vh - 17vh)*.4) - 6vh);*/
+    top: calc(70vh - 16vw)
     left: calc(100vw - 16vw);
     float: right;
     position: fixed;

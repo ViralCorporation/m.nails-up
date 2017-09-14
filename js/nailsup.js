@@ -121,13 +121,20 @@ if (!window.location.hash && window.addEventListener) {
         }, 0);
     });
 }
+function get_Date(){
+    var val;
+
+    val = $('#output');
+
+    return val;
+}
 
 $(function () {
     var animation = 'animated bounceIn';
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
     $('#output').change(function () {
-        $('#input_date').val($('#output').innerHTML);
+        $('#input_date').value = get_Date();
     });
 
     $('a.home').on('click', function () {
