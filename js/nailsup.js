@@ -74,8 +74,8 @@ list_services[24] = new Service("Esmaltação Infantil com Arte Personalizada e 
 list_services[25] = new Service("Esmaltação & Parafina", "", 35.00, "", "NAILS");
 list_services[26] = new Service("Manicure & Parafina", "", 35.00, "", "NAILS");
 list_services[27] = new Service("Remoção Porcelana", "", 60.00, "", "NAILS");
-list_services[28] = new Service("SPA NAILS-UP Manicure & Stone / Parafina & Massagem", "10 min", 55.00, "", "NAILS");
-list_services[29] = new Service("SPA NAILS-UP Pedicure & Stone / Parafina & Massagem", "10 min", 65.00, "", "NAILS");
+list_services[28] = new Service("SPA NAILS-UP Manicure & Stone / Parafina & Massagem", "", 55.00, "10 min", "NAILS");
+list_services[29] = new Service("SPA NAILS-UP Pedicure & Stone / Parafina & Massagem", "", 65.00, "10 min", "NAILS");
 list_services[30] = new Service("Manicure & Pedicure", "", 55.00, "", "NAILS");
 list_services[31] = new Service("Monthly Package", "", 55.00, "", "NAILS");
 
