@@ -765,6 +765,9 @@ body {
     animation-delay: .35s;
     margin-top: 0.5em;
 }
-#date-time-label{
-
+#label_date{
+    width: 150px;
+}
+#label_time{
+    width: 150px;
 }
