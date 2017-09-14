@@ -276,13 +276,13 @@ i.mdl-cell {
 }
 
 .services_content .demo-card-wide.mdl-card {
-    width: 108vw;
-    left: -4vw;
+    width: auto;
+   /*left: -4vw;*/
     top: -4vw;
 }
 
 .services_content .content .demo-card-wide.mdl-card {
-    padding: 0vw 0vw 0vw 2vw;
+    margin: 0vw vw 2vw 2vw;
     animation-delay: .1s;
 }
 
@@ -458,7 +458,7 @@ i.mdl-cell {
 }
 
 #services .page-content .page-content {
-    padding: 0vw 2vw 2vw 0vw;
+    padding: 2vw 2vw 2vw 2vw;
     height: 100vh;
 }
 
