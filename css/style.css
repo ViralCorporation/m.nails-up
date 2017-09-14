@@ -283,6 +283,7 @@ i.mdl-cell {
 
 .services_content .content .demo-card-wide.mdl-card {
     margin: 0vw vw 2vw 2vw;
+    padding-top: 0.3em;
     animation-delay: .1s;
 }
 
