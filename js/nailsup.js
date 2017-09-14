@@ -87,7 +87,7 @@ list_services[24] = new Service("Nutrição Análises Day  & Semanal ", "", 20.0
 list_services[25] = new Service("Yoga Day & Vitamina e Análise de Nutrição ", "", 00, "", "DETOX");
 list_services[26] = new Service("Focus Vitamina Day-  DTOX & DAY SPA", "", 00, "", "DETOX");
 
-list_services[27] = new Service("Bronzeamento Natural Solar 90 mins  seguido de esfoliação profunda ", "", 65.00, "", "SPRAY_TAN");
+list_services[27] = new Service("Bronzeamento Natural Solar & esfoliação profunda ", "", 65.00, "90 min", "SPRAY_TAN");
 
 
 
