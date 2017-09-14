@@ -610,7 +610,7 @@ i.mdl-cell {
     width: 14vw;
     height: 14vw;
     margin: 0;
-    top: calc(((100vh - 17vh)*.4) - 6vh);
+    /*top: calc(((100vh - 17vh)*.4) - 6vh);*/
     left: calc(100vw - 16vw);
     float: right;
     position: fixed;
@@ -751,4 +751,17 @@ body {
 }
 .c-datepicker--open{
     z-index: 10 !important;
+}
+
+#btn_date{
+    width: 14vw;
+    height: 14vw;
+    margin: 0;
+    top: calc(((100vh - 17vh)*.4) - 6vh);
+    left: calc(100vw - 16vw);
+    border-radius: 50%;
+    float: right;
+    position: fixed;
+    animation-delay: .35s;
+    margin-top: 0.5em;
 }
