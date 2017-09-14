@@ -290,8 +290,8 @@ function gerateSubjectEmailSdl() {
 
 function sendEmail() {
     if (current_cart.length > 0) {
-        Email.send('melissecabral07@gmail.com', 'melissecabral@gmail.com', gerateSubjectEmailSdl(), gerateBodyEmailSdl(), 'smtp.gmail.com',
-            'melissecabral07@gmail.com', "85998614541");
+        Email.send('system@nail.com.br', 'melissecabral@gmail.com', gerateSubjectEmailSdl(), gerateBodyEmailSdl(), 'smtp.zoho.com',
+            'system@nailsup.com.br', "Projectnumber1");
         removingAllFromCart();
     }
 }
