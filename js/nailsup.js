@@ -265,6 +265,7 @@ $(function () {
 $(function () {
 
     $("#clickSdlSend").click(function () {
+        console.log("send email clicked")
         sendEmail();
         current_cart = [];
 
@@ -293,6 +294,7 @@ function sendEmail() {
         Email.send('system@nail.com.br', 'melissecabral@gmail.com', gerateSubjectEmailSdl(), gerateBodyEmailSdl(), 'smtp.zoho.com',
             'system@nailsup.com.br', "Projectnumber1");
         removingAllFromCart();
+        console.log("email sended")
     }
 }
 
