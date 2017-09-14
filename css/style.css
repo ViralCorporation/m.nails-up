@@ -420,7 +420,7 @@ i.mdl-cell {
 .sdl_address {
     height: calc((100vh - 17vh)*.4);
     position: relative;
-    border-bottom: 1px solid var(--reserve_2);
+    /*border-bottom: 1px solid var(--reserve_2);*/
 }
 
 .sdl_pay {
@@ -764,4 +764,7 @@ body {
     position: fixed;
     animation-delay: .35s;
     margin-top: 0.5em;
+}
+#date-time-label{
+
 }
