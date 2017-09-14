@@ -693,7 +693,7 @@ form input {
     font-size: 4vw !important;
     color: var(--reserve_2) !important;
     margin: 1vw 8vw 1vw 4vw !important;
-    width: 92vw !important;
+    width: 92vw;
 }
 
 form label {
@@ -767,8 +767,11 @@ body {
     margin-top: 0.5em;
 }
 #label_date{
-    width: 140px;
+    width: 100% !important;
 }
 #label_time{
+
+}
+#date-time-label{
     width: 140px;
 }
