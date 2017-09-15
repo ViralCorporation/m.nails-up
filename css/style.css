@@ -773,7 +773,7 @@ body {
 
 }
 #date-time-label{
-    width: 140px;
+    width: 49.8%;
 }
 #title_h2{
     margin: auto !important;
@@ -783,4 +783,7 @@ body {
     font-weight: 100;
     font-size: 2.5vh;
     font-family: "Cinzel" !important;
+}
+#name_phone_label{
+    width: 100%;
 }
