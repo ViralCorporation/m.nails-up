@@ -605,6 +605,7 @@ i.mdl-cell {
     float: right;
     position: fixed;
     animation-delay: .3s;
+    padding: 1vw 0vw 1vw 0vw;
 }
 
 #schedulling #clickSdlSend.mdl-button--fab {
