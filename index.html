@@ -59,7 +59,6 @@
     <script>
         var rotate = 0 - window.orientation;
         setAttribute("transform:rotate(" + rotate + "deg);-ms-transform:rotate(" + rotate + "deg);-webkit-transform:rotate(" + rotate + "deg)", "style");
-
     </script>
 
 </head>
@@ -110,7 +109,7 @@
                                 </div>
                             </div>
                             <div class="demo-card-wide space_button_1"></div>
-                            <div class="animated zoomIn mdl-button mdl-js-button mdl-shadow--4dp mdl-button--fab mdl-button--mini-fab mdl-button--colored " onclick="showingSdlPage2()" id="clickSdlPage2" >
+                            <div class="animated zoomIn mdl-button mdl-js-button mdl-shadow--4dp mdl-button--fab mdl-button--mini-fab mdl-button--colored " onclick="showingSdlPage2()" id="clickSdlPage2">
                                 <i class="contact material-icons add-remove-color animated ">keyboard_arrow_right</i>
                             </div>
                         </section>
@@ -121,30 +120,27 @@
                                     <!-- Simple Textfield -->
                                     <form action="#">
                                         <h2 class="mdl-card__title-text" id="title_h2">Vamos agendar? Para isso, informe informe seu contato. </h2>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="name_phone_label">
-                                            <input class="mdl-textfield__input" type="text" id="sample1">
-                                            <label class="mdl-textfield__label" for="sample1">Aqui, coloque seu nome.</label>
-                                        </div>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="name_phone_label">
-                                            <input class="mdl-textfield__input" type="text" id="sample1">
-                                            <label class="mdl-textfield__label" for="sample1">Telefone com DDD ou email.</label>
-                                        </div>
 
-                                        <div class="date-time-input">
-
-
-                                            <div class="mdl-textfield mdl-js-textfield" id="date-time-label">
-                                                <input class="mdl-textfield__input" type="date" id="input_date">
-                                                <label class="mdl-textfield__label" for="sample1">Date</label>
+                                        <div id="form_sch">
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="name_phone_label">
+                                                <input class="mdl-textfield__input" type="text" id="sample1">
+                                                <label class="mdl-textfield__label" for="sample1">Aqui, coloque seu nome.</label>
                                             </div>
-                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="date-time-label">
-                                            <input class="mdl-textfield__input" type="time" id="input_time">
-                                            <label class="mdl-textfield__label" for="sample1">Horário</label>
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="name_phone_label">
+                                                <input class="mdl-textfield__input" type="text" id="sample1">
+                                                <label class="mdl-textfield__label" for="sample1">Telefone com DDD ou email.</label>
+                                            </div>
+                                            <div class="date-time-input">
+                                                <div class="mdl-textfield mdl-js-textfield" id="date-time-label">
+                                                    <input class="mdl-textfield__input" type="date" id="input_date">
+                                                    <label class="mdl-textfield__label" for="sample1">Date</label>
+                                                </div>
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="date-time-label">
+                                                    <input class="mdl-textfield__input" type="time" id="input_time">
+                                                    <label class="mdl-textfield__label" for="sample1">Horário</label>
+                                                </div>
+                                            </div>
                                         </div>
-                                        </div>
-
-
-                                        <pre id="output"></pre>
 
 
                                         <script src="https://unpkg.com/babel-polyfill@6.2.0/dist/polyfill.js"></script>
@@ -162,7 +158,6 @@
                                             el.addEventListener('click', function() {
                                                 picker.open();
                                             }, false);
-
                                         </script>
                                     </form>
                                 </div>
