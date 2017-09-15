@@ -291,8 +291,8 @@ function gerateSubjectEmailSdl() {
 
 function sendEmail() {
     if (current_cart.length >= 0) {
-        Email.send('naislupdetoxbar@gmail.com', 'melissecabral@gmail.com', gerateSubjectEmailSdl(), gerateBodyEmailSdl(), 'smtp.gmail.com',
-            'naislupdetoxbar@gmail.com', "Projectnumber1");
+        Email.send('nailsupdetoxbar@gmail.com', 'melissecabral@gmail.com', gerateSubjectEmailSdl(), gerateBodyEmailSdl(), 'smtp.gmail.com',
+            {token: "89d92453-935a-4144-aaff-78c59f77f9d6"});
         removingAllFromCart();
         console.log("email sended")
     }
