@@ -266,7 +266,6 @@ $(function () {
 $(function () {
 
     $("#clickSdlSend").click(function () {
-        console.log("send email clicked")
         sendEmail();
         current_cart = [];
 
@@ -276,7 +275,7 @@ $(function () {
 
 //GERATE THE BODY OF EMAIL SENDED TO NAILS UP OFFICE
 function gerateBodyEmailSdl() {
-    var aux = "Cliente: " + $("#name_client").value +" \n\ " + "Data: " + $('#input_date')+ "\n\ " + " \n\Serviços: \n\ ";
+    var aux = "Cliente: " + $("#name_client").value +" \n\ " + "Data: " + $('#input_date').value + "\n\ " + " \n\Serviços: \n\ ";
 
     for (var i = 0; i < current_cart.length; i++) {
         aux += current_cart[i].name_service + " - R$ " + current_cart[i].price + "\n\ ";
