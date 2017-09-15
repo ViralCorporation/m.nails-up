@@ -277,7 +277,7 @@ i.mdl-cell {
 
 .services_content .demo-card-wide.mdl-card {
     width: auto;
-   /*left: -4vw;*/
+    /*left: -4vw;*/
     top: -4vw;
 }
 
@@ -730,7 +730,6 @@ body {
     box-shadow: 0 3.08696px 5.82609px 0 rgba(0, 0, 0, 0.16174), 0 3.65217px 12.91304px 0 rgba(0, 0, 0, 0.12435);
 }
 
-
 .c-btn--flat {
     background: transparent;
     margin: 10px 8px;
@@ -751,11 +750,12 @@ body {
 .c-btn--flat:active {
     box-shadow: none;
 }
-.c-datepicker--open{
+
+.c-datepicker--open {
     z-index: 10 !important;
 }
 
-#btn_date{
+#btn_date {
     width: 14vw;
     height: 14vw;
     margin: 0;
@@ -767,16 +767,18 @@ body {
     animation-delay: .35s;
     margin-top: 0.5em;
 }
-#label_date{
+
+#label_date {
     width: 100% !important;
 }
-#label_time{
 
-}
-#date-time-label{
+#label_time {}
+
+#date-time-label {
     width: 45%;
 }
-#title_h2{
+
+#title_h2 {
     margin: auto !important;
     text-align: center;
     line-height: 4vh;
@@ -785,6 +787,33 @@ body {
     font-size: 2.5vh;
     font-family: "Cinzel" !important;
 }
-#name_phone_label{
+
+#name_phone_label {
     width: 100%;
+}
+
+
+/* Desktops and laptops ———– */
+
+@media only screen and (min-width: 1224px) {
+    /* Styles */
+    #schedulling #clickServices.mdl-button--fab {
+        width: 8vw;
+        height: 8vw;
+    }
+    #schedulling #clickSdlPage2.mdl-button--fab {
+        width: 8vw;
+        height: 8vw;
+    }
+    #sdlPage2 h2 {
+        font-size: 2vw;
+    }
+    #schedulling #clickSdlSend.mdl-button--fab{
+        width: 8vw;
+        height: 8vw;
+    }
+    #schedulling #clickSdlPage1.mdl-button--fab{
+        width: 8vw;
+        height: 8vw;
+    }
 }
