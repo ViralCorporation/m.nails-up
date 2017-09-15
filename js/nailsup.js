@@ -156,7 +156,8 @@ if (!window.location.hash && window.addEventListener) {
         }, 0);
     });
 }
-function get_Date(){
+
+function get_Date() {
     var val;
 
     val = $('#output');
@@ -275,7 +276,7 @@ $(function () {
 
 //GERATE THE BODY OF EMAIL SENDED TO NAILS UP OFFICE
 function gerateBodyEmailSdl() {
-    var aux = "Cliente: " + "nome cliente \n\ " + "Data: 09/08/2017 \n\ " + " \n\Serviços: \n\ ";
+    var aux = "Cliente: " + $("#name_client").value +" \n\ " + "Data: " + $('#input_date')+ "\n\ " + " \n\Serviços: \n\ ";
 
     for (var i = 0; i < current_cart.length; i++) {
         aux += current_cart[i].name_service + " - R$ " + current_cart[i].price + "\n\ ";
@@ -286,17 +287,20 @@ function gerateBodyEmailSdl() {
 
 //GERATE THE SUBJECT OF EMAIL INDENTIFIER THE CLIENT AND DATE
 function gerateSubjectEmailSdl() {
-    return "Agendamento cliente: " + 'client_name' + " " + 'dateSdl';
+    return "Agendamento cliente: " + $("#name_client").value + " " + $("#input_date").value;
 }
 
 function sendEmail() {
     if (current_cart.length >= 0) {
-        Email.send('nailsupdetoxbar@gmail.com', 'melissecabral@gmail.com', gerateSubjectEmailSdl(), gerateBodyEmailSdl(), 'smtp.gmail.com',
-            'nailsupdetoxbar@gmail.com', "Projectnumber1");
-        removingAllFromCart();
-        console.log("email sended")
+        Email.send("systemnails@gmail.com",
+            "melissecabral@gmail.com",
+            gerateSubjectEmailSdl(),
+            gerateBodyEmailSdl(),
+            {token: "d9638177-f593-4e83-9511-6944f7f11877"});
     }
 }
+
+
 
 // CREATE SERVICE CARD TO BE LISTED ON CATEGORIES
 function createServiceCard(service, id) {
