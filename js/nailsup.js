@@ -85,7 +85,18 @@ list_services[24] = new Service("Nutrição Análises Day  & Semanal ", "", 20.0
 list_services[25] = new Service("Yoga Day & Vitamina e Análise de Nutrição ", "", 00, "", "DETOX");
 list_services[26] = new Service("Focus Vitamina Day-  DTOX & DAY SPA", "", 00, "", "DETOX");
 
-list_services[27] = new Service("Bronzeamento Natural Solar & esfoliação profunda ", "", 65.00, "90 min", "SPRAY_TAN");
+list_services[27] = new Service("Bronzeamento Natural Solar & esfoliação profunda", "", 65.00, "90 min", "SPRAY_TAN");
+
+list_services[28] = new Service("Maniure e Pedicure DTOX SPA", "", 0.00, "75 min", "PACK");
+list_services[29] = new Service("Facial", "Esfoliação & hidratação", 0.00, "30 min", "PACK");
+list_services[30] = new Service("Corporal", "Esfoliação & hidraracão", 0.00, "45 min", "PACK");
+list_services[31] = new Service("Banho de Lua e Bronzeamento", "", 0.00, "", "PACK");
+list_services[32] = new Service("Solar", "3 Sessões", 0.00, "90 min", "PACK");
+list_services[33] = new Service("Depilação Essencial", "Axila, Meia Perna e Bikini", 0.00, "", "PACK");
+list_services[34] = new Service("Make Up Artística Importada", "", 0.00, "", "MAKEUP");
+list_services[35] = new Service("Make Up Noiva e Glamour", "Esfoliação e hidratação", 0.00, "", "MAKEUP");
+list_services[36] = new Service("Cadeira Shiatsu Back Massagem", "", 0.00, "15 min", "MASSAGE");
+list_services[37] = new Service("Massagem Corporal Terapêutica", "Com Pedras Quentes", 0.00, "", "MASSAGE");
 
 
 
