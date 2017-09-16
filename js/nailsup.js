@@ -275,7 +275,7 @@ $(function () {
 
 //GERATE THE BODY OF EMAIL SENDED TO NAILS UP OFFICE
 function gerateBodyEmailSdl() {
-    var aux = "<b>Cliente: </b>" + $("#name_client").val() +" <br> " + "<br><b>Data: </b>" + $('#input_date').val() + "<b>Hora: </b>" + $('#input_date').val()+ "<br><b>Contato: </b>"+ $("#contact").val() +"<br> " + " <br><b>Serviços:</b> <br><br> ";
+    var aux = "<b>Cliente: </b>" + $("#name_client").val() +" <br> " + "<b>Data: </b>" + $('#input_date').val() + "<br><b>Hora: </b>" + $('#input_date').val()+ "<br><b>Contato: </b>"+ $("#contact").val() +"<br> " + " <br><b>Serviços:</b> <br><br> ";
 
     for (var i = 0; i < current_cart.length; i++) {
         aux += current_cart[i].name_service + " - R$ " + current_cart[i].price + "<br> ";
