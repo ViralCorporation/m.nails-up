@@ -279,7 +279,7 @@ function gerateBodyEmailSdl() {
         aux += current_cart[i].name_service + " - R$ " + current_cart[i].price + "<br> ";
     }
 
-    aux += "<br><b>Total: </b> R$" + $("#sum-cart").val();
+    aux += "<br><b>Total: </b> R$" + $(".sum-cart").innerHTML;
 
     return aux;
 }
