@@ -23,7 +23,7 @@ class Service {
         this.price = price;
         this.duration = duration;
         this.type_service = type_service;
-        this.hash = gerateID(name_service);
+        this.hash = name_service.split(" ").join("");
 
         function gerateID(id) {
             var aux = id.split("&").join("");
