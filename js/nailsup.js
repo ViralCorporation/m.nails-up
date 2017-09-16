@@ -283,6 +283,8 @@ function gerateBodyEmailSdl() {
 
     aux += "<b>Total: </b> R$" + $("#sum-cart").val();
 
+    current_cart = [];
+
     return aux;
 }
 
