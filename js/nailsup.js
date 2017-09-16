@@ -275,18 +275,20 @@ $(function () {
 
 //GERATE THE BODY OF EMAIL SENDED TO NAILS UP OFFICE
 function gerateBodyEmailSdl() {
-    var aux = "Cliente: " + $("#name_client").value +" \n\ " + "Data: " + $('#input_date').value + "\n\ " + " \n\Serviços: \n\ ";
+    var aux = "<b>Cliente: </b>" + $("#name_client").val() +" <br> " + "<b>Data: </b>" + $('#input_date').val() + "<br><b>Contato: </b>"+ $("#contact").val() +"<br> " + " <br><b>Serviços: </b><br> ";
 
     for (var i = 0; i < current_cart.length; i++) {
-        aux += current_cart[i].name_service + " - R$ " + current_cart[i].price + "\n\ ";
+        aux += current_cart[i].name_service + " - R$ " + current_cart[i].price + "<br> ";
     }
+
+    aux += "<b>Total: </b> R$" + $("#sum-cart");
 
     return aux;
 }
 
 //GERATE THE SUBJECT OF EMAIL INDENTIFIER THE CLIENT AND DATE
 function gerateSubjectEmailSdl() {
-    return "Agendamento cliente: " + $("#name_client").value + " " + $("#input_date").value;
+    return "Agendamento " + $("#name_client").val() + " " + $("#input_date").val();
 }
 
 function sendEmail() {
