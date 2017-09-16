@@ -45,8 +45,8 @@ Guide to constructor
 
 list_services[0] = new Service("Colocação de Cílios 2D ", "Volume e delicadeza", 90.00, "45-60 min", "EYES");
 list_services[1] = new Service("Aplicação de Cílios Fio a Fio", "(Glamour e sensual", 115.00, "", "EYES");
-list_services[2] = new Service("Design Sobrancelhas", "Pigmentação com henna", 35.00, "", "EYES");
-list_services[3] = new Service("Design Sobrancelhas", "Pigmentação com tinta", 65.00, "", "EYES");
+list_services[2] = new Service("Design Sobrancelhas & Henna", "Pigmentação com henna", 35.00, "", "EYES");
+list_services[3] = new Service("Design Sobrancelhas & Tinta", "Pigmentação com tinta", 65.00, "", "EYES");
 
 list_services[5] = new Service("Depilação Buço", "", 15.00, "", "WAX");
 list_services[6] = new Service("Depilação Sobrancelhas", "", 30.00, "", "WAX");
@@ -275,13 +275,13 @@ $(function () {
 
 //GERATE THE BODY OF EMAIL SENDED TO NAILS UP OFFICE
 function gerateBodyEmailSdl() {
-    var aux = "<b>Cliente: </b>" + $("#name_client").val() +" <br> " + "<b>Data: </b>" + $('#input_date').val() + "<br><b>Contato: </b>"+ $("#contact").val() +"<br> " + " <br><b>Serviços: </b><br> ";
+    var aux = "<b>Cliente: </b>" + $("#name_client").val() +" <br> " + "<b>Data: </b>" + $('#input_date').val() + "<br><b>Contato: </b>"+ $("#contact").val() +"<br> " + " <br><b>Serviços:</b> <br><br> ";
 
     for (var i = 0; i < current_cart.length; i++) {
         aux += current_cart[i].name_service + " - R$ " + current_cart[i].price + "<br> ";
     }
 
-    aux += "<b>Total: </b> R$" + $("#sum-cart").val();
+    aux += "<br><b>Total: </b> R$" + $("#sum-cart").val();
 
     current_cart = [];
 
