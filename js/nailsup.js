@@ -300,7 +300,7 @@ function sendEmail() {
             {token: "d9638177-f593-4e83-9511-6944f7f11877"});
     }
 
-    current_cart = [];
+    removingAllFromCart();
 }
 
 
