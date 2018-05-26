@@ -302,11 +302,11 @@ function gerateSubjectEmailSdl() {
 
 function sendEmail() {
     if (current_cart.length >= 0) {
-        Email.send("systemnails@gmail.com",
+        Email.send("c44c9d4a-1e88-4388-8ca3-42d27f8de2c2",
             "melissecabral@gmail.com",
             gerateSubjectEmailSdl(),
             gerateBodyEmailSdl(), {
-                token: "d9638177-f593-4e83-9511-6944f7f11877"
+                token: "c44c9d4a-1e88-4388-8ca3-42d27f8de2c2"
             });
     }
 
