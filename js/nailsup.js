@@ -309,6 +309,7 @@ function sendEmail() {
             "smtp.gmail.com",
             "nailsupscheduling@gmail.com",
             "nailsupbr");
+        console.log("Email enviado") 
     }
 
     removingAllFromCart();
