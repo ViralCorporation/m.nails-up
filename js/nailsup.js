@@ -302,12 +302,13 @@ function gerateSubjectEmailSdl() {
 
 function sendEmail() {
     if (current_cart.length >= 0) {
-        Email.send("c44c9d4a-1e88-4388-8ca3-42d27f8de2c2",
-            "melissecabral@gmail.com",
+        Email.send("nailsupscheduling@gmail.com",
+            "melissecabral@gmail.com",,
             gerateSubjectEmailSdl(),
-            gerateBodyEmailSdl(), {
-                token: "c44c9d4a-1e88-4388-8ca3-42d27f8de2c2"
-            });
+            gerateBodyEmailSdl(),
+            "smtp.gmail.com",
+            "nailsupscheduling@gmail.com",
+            "nailsupbr");
     }
 
     removingAllFromCart();
