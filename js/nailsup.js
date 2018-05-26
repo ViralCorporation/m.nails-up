@@ -275,6 +275,7 @@ $(function () {
 $(function () {
 
     $("#clickSdlSend").click(function () {
+        console.log("clicked");
         sendEmail();
         current_cart = [];
 
