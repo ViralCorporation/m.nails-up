@@ -283,8 +283,8 @@ i.mdl-cell {
 }
 
 .services_content .content .demo-card-wide.mdl-card {
-    margin: 0vw vw 2vw 2vw;
-    padding-top: 0.3em;
+    margin: 0;
+    padding-top: 1em;
     animation-delay: .1s;
 }
 
@@ -343,7 +343,9 @@ i.mdl-cell {
     line-height: 100%;
     font-family: "Helvetica", "Arial", sans-serif;
 }
-
+#content{
+    margin-top: 0.5em;  
+}
 .little_text {
     float: left;
     width: calc(90vw - 3.5vh);
@@ -356,6 +358,7 @@ i.mdl-cell {
     min-width: 3.5vh;
     position: absolute;
     right: 2vw;
+    top: 1vw;
 }
 
 .presentation {
@@ -395,8 +398,6 @@ i.mdl-cell {
     margin: auto;
     color: var(--quartion_color_1)
 }
-
-
 .presentation .demo-card-wide>.mdl-card__title {
     background: white;
 }
