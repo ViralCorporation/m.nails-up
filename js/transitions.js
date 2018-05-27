@@ -1,21 +1,18 @@
 //Hidding and showing the Services Presentation.
 function hide_s_prst() {
-	console.log("hide_s_prst");
-	document.documentElement.style.setProperty(`--state_s_prst`, 'none');
-	document.documentElement.style.setProperty(`--state_s_tbar`, 'none');
 	document.documentElement.style.setProperty(`--state_s_tab`, 'flex');
 	document.documentElement.style.setProperty(`--state_s_box`, '0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)');
-	
+	document.documentElement.style.setProperty(`--state_s_pres`, 'none');
+	document.documentElement.style.setProperty(`--state_s_a`, 'none');
 }
 
 function show_s_prst() {
-	console.log("show_s_prst");
-	document.getElementsByClassName("presentation").display = "block";
 	document.getElementsByClassName("presentation").position = "fixed";
-	document.documentElement.style.setProperty(`--state_s_prst`, 'contents');
+	document.documentElement.style.setProperty(`--state_s_pres`, 'block');
 	document.documentElement.style.setProperty(`--state_s_tbar`, 'flex');
 	document.documentElement.style.setProperty(`--state_s_tab`, 'none');
 	document.documentElement.style.setProperty(`--state_s_box`, 'none');
+	document.documentElement.style.setProperty(`--state_s_a`, 'block');
 }
 function hideBtns(){
 	document.getElementsByClassName("presentation").display = "none";

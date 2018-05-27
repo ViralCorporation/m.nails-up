@@ -283,8 +283,8 @@ i.mdl-cell {
 }
 
 .services_content .content .demo-card-wide.mdl-card {
-    margin: 0;
-    padding-top: 1em;
+    margin-bottom: 1vh;
+    padding-top: 0.5em;
     animation-delay: .1s;
 }
 
@@ -292,6 +292,7 @@ i.mdl-cell {
     top: -2.5vh;
     left: 0;
     max-width: 96vw;
+    margin-bottom: 2vw;
     margin-top: 2vw;
     min-height: 100%;
     padding: 0px 0px 0px 16px;
@@ -362,7 +363,7 @@ i.mdl-cell {
 }
 
 .presentation {
-    display: block;
+    display: var(--state_s_pres) !important;
     position: fixed;
 }
 
@@ -388,6 +389,7 @@ i.mdl-cell {
     margin: 2vw 0vw 0vw 2vw !important;
     padding: 0 !important;
     position: relative;
+    display: var(--state_s_a) !important;
 }
 
 .presentation h2 {
