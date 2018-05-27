@@ -4,8 +4,9 @@
     font-family: "Cinzel";
     src: url('fonts/cinzel.otf') format('truetype');
 }
-
-
+.presentation{
+    display: block;
+}
 /* Variables */
 
 :root {
@@ -358,7 +359,7 @@ i.mdl-cell {
 }
 
 .presentation {
-    display: var(--state_s_prst);
+    display: block;
     position: fixed;
 }
 
@@ -383,6 +384,7 @@ i.mdl-cell {
 .presentation a {
     margin: 2vw 0vw 0vw 2vw !important;
     padding: 0 !important;
+    position: relative;
 }
 
 .presentation h2 {
@@ -394,7 +396,6 @@ i.mdl-cell {
     color: var(--quartion_color_1)
 }
 
-.presentation.mdl-card__title {}
 
 .presentation .demo-card-wide>.mdl-card__title {
     background: white;

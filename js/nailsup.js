@@ -225,7 +225,6 @@ $(function () {
 
     $('div.add_button').click(function () {
         var id = $(this).attr('id');
-        console.log("entrou no add")
         for (i = 0; i < list_services.length; i++) {
             if (id == 'add_service_' + list_services[i].hash) {
                 var aux = list_services[i];
