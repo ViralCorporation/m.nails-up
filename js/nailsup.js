@@ -275,7 +275,6 @@ $(function () {
 $(function () {
 
     $("#clickSdlSend").click(function () {
-        console.log("clicked");
         sendEmail();
         current_cart = [];
 
@@ -291,7 +290,7 @@ function gerateBodyEmailSdl() {
         aux += current_cart[i].name_service + " - R$ " + current_cart[i].price + "<br> ";
     }
 
-    aux += "<br><b>Total: </b> R$" + $(".sum-cart").innerHTML;
+    aux += "<br><b>Total: </b> R$" + getTotalOfPrices(current_cart);
 
     return aux;
 }
@@ -303,14 +302,15 @@ function gerateSubjectEmailSdl() {
 
 function sendEmail() {
     if (current_cart.length >= 0) {
-        Email.send("nailsupscheduling@gmail.com",
-            "melissecabral@gmail.com",,
-            gerateSubjectEmailSdl(),
-            gerateBodyEmailSdl(),
-            "smtp.gmail.com",
-            "nailsupscheduling@gmail.com",
-            "nailsupbr");
-        console.log("Email enviado") 
+        if (current_cart.length >= 0) {
+            Email.send("nailsupscheduling@gmail.com",
+                "nailsupscheduling@gmail.com",
+                gerateSubjectEmailSdl(),
+                gerateBodyEmailSdl(),
+                "smtp.gmail.com",
+                "nailsupscheduling@gmail.com",
+                "nailsupbr");
+        }
     }
 
     removingAllFromCart();
