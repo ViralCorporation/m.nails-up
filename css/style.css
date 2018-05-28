@@ -17,7 +17,7 @@
     --secondary_color_2: rgba(193, 34, 34, 0.81);
     --terciary_color_1: rgb(255, 255, 255);
     --terciary_color_2: rgb(255, 255, 255);
-    --quartion_color_1: rgba(233, 152, 6, 0.5);
+    --quartion_color_1: rgb(247, 181, 0);
     --tab-icon: rgb(255, 65, 128);
     --coadjuvant-2: rgba(193, 34, 34, 0.81);
     --coadjuvant-1: rgba(211, 211, 211, 0.747);
@@ -26,6 +26,8 @@
     --background: rgb(250, 233, 79);
     --background-2: rgba(255, 233, 210, 1);
     --hidden-primary-color: rgba(226, 20, 222, 0);
+    --text-color: rgba(68, 57, 57, 0.747);
+    --price-color: rgb(255, 50, 30);
     --add-remove-icon: rgb(255, 50, 67);
     --reserve_2: rgba(255, 49, 76, 0.65);
     /* Angles */
@@ -98,42 +100,35 @@ a.mdl-layout__tab {
 }
 
 a[href^="#spray_tan"] i.mdl-cell {
-    margin: 1vw !important;
-    background: url("/images/icons/spray_tan.png") no-repeat center/80%;
+    background: url("../images/icons/spray_tan.png") no-repeat center/80%;
 }
 
 a[href^="#eyes"] i.mdl-cell {
-    margin: 1vw !important;
-    background: url("/images/icons/eyes.png") no-repeat center/90%;
+    background: url("../images/icons/eyes.png") no-repeat center/90%;
 }
 
 a[href^="#dtox"] i.mdl-cell {
     margin: 1vw !important;
-    background: url("/images/icons/dtox.png") no-repeat center/100%;
+    background: url("../images/icons/dtox.png") no-repeat center/100%;
 }
 
 a[href^="#make_up"] i.mdl-cell {
-    margin: 1vw !important;
     background: url("../images/icons/make_up.png") no-repeat center/25%;
 }
 
 a[href^="#nails"] i.mdl-cell {
-    margin: 1vw !important;
     background: url("../images/icons/nails.png") no-repeat center/50%;
 }
 
 a[href^="#massage"] i.mdl-cell {
-    margin: 1vw !important;
     background: url("../images/icons/massage.png") no-repeat center/75%;
 }
 
 a[href^="#waxing"] i.mdl-cell {
-    margin: 1vw !important;
     background: url("../images/icons/waxing.png") no-repeat center/90%;
 }
 
 a[href^="#packages"] i.mdl-cell {
-    margin: 1vw !important;
     background: url("../images/icons/packages.png") no-repeat center/60%;
 }
 
@@ -231,7 +226,7 @@ z-index: -0;
 }
 
 .page-content .page-content {
-    padding: 2vw;
+    /* padding: 2vw; */
     position: relative;
 }
 
@@ -281,7 +276,7 @@ z-index: -0;
 }
 
 .material-icons.md-48 {
-    font-size: 5vh;
+    font-size: 4vh;
 }
 
 .services_content {
@@ -295,7 +290,7 @@ z-index: -0;
 }
 
 .services_content .content .demo-card-wide.mdl-card {
-    margin-bottom: 1vh;
+    margin-left: 1vh !important;
     padding-top: 0.5em;
     animation-delay: .1s;
 }
@@ -322,6 +317,7 @@ z-index: -0;
 }
 
 .content .mdl-card__title-text {
+    color: var(--text-color) !important;
     font-size: 16px;
 }
 
@@ -337,10 +333,11 @@ z-index: -0;
 }
 
 .content a {
-    font-size: 4vw;
+    font-family: "Cinzel";
+    font-size: 3.5vw;
     padding: 0px !important;
     margin: auto;
-    color: rgba(221, 113, 47, 0.49) !important;
+    color: var(--price-color) !important;
 }
 
 .more {
@@ -371,7 +368,7 @@ z-index: -0;
     min-width: 3.5vh;
     position: absolute;
     right: 2vw;
-    top: 7vw;
+    top: 10vw;
 }
 
 .presentation {
@@ -410,7 +407,8 @@ z-index: -0;
     text-align: center;
     display: flex;
     margin: auto;
-    color: var(--quartion_color_1)
+    color: var(--quartion_color_1);
+    width: 100%;
 }
 .presentation .demo-card-wide>.mdl-card__title {
     background: white;
@@ -468,6 +466,7 @@ z-index: -0;
 #services .demo-card-wide.mdl-card a {
     color: var(--quartion_color_1);
     padding: 2vw;
+    font-family: "Cinzel"
 }
 
 #services .services_content {
@@ -475,7 +474,7 @@ z-index: -0;
 }
 
 #services .page-content .page-content {
-    padding: 2vw 2vw 2vw 2vw;
+    /* padding: 2vw 2vw 2vw 2vw; */
     height: 100vh;
 }
 
@@ -868,9 +867,6 @@ body {
     }
     .content .mdl-card__supporting-text{
         font-size: 12px;
-    }
-    .content a{
-        font-size: 12px
     }
     #form_sch{
         padding-top: 3em;
