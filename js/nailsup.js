@@ -304,7 +304,7 @@ function sendEmail() {
     if (current_cart.length >= 0) {
         if (current_cart.length >= 0) {
             Email.send("nailsupscheduling@gmail.com",
-                "nailsupscheduling@gmail.com",
+                "info@nailsup.com.br",
                 gerateSubjectEmailSdl(),
                 gerateBodyEmailSdl(),
                 "smtp.gmail.com",
