@@ -235,10 +235,11 @@ $(function () {
                     document.getElementById('remove_service_' + aux.hash).addEventListener('click', function () {
                         removeFromCartByIndex(aux);
                     });
-
+                    
                 } else {
                     return -1;
                 }
+                snackbar(list_services[i].name_service + " adicionado ao carrinho");
             }
         }
 
@@ -407,7 +408,7 @@ function findIndexOnCar(elem) {
 function removeFromCartByIndex(elem) {
     var aux;
     id = findIndexOnCar(elem);
-
+    snackbar(list_services[id].name_service + " removido ao carrinho");
     $("#service_added_" + current_cart[id].hash).remove();
 
     if (id == 0) {

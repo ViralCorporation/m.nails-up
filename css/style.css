@@ -14,21 +14,23 @@
     --primary_color_1: rgba(255, 253, 250, 1);
     --primary_color_2: rgba(255, 255, 255, 1);
     --secondary_color_1: rgba(218, 83, 83, 0.92);
-    --secondary_color_2: rgb(226, 93, 36);
-    --terciary_color_1: rgba(252, 245, 247, 0.97);
-    --terciary_color_2: rgba(255, 255, 255, 0.92);
+    --secondary_color_2: rgba(193, 34, 34, 0.81);
+    --terciary_color_1: rgb(255, 255, 255);
+    --terciary_color_2: rgb(255, 255, 255);
     --quartion_color_1: rgba(233, 152, 6, 0.5);
-    --tab-icon: rgba(221, 47, 47, 0.65);
+    --tab-icon: rgb(255, 65, 128);
     --coadjuvant-2: rgba(193, 34, 34, 0.81);
-    --coadjuvant-1: rgba(165, 165, 165, 0.68);
-    --background: rgba(246, 215, 221, 0.37);
+    --coadjuvant-1: rgba(211, 211, 211, 0.747);
+    --coadjuvant-3:rgba(193, 34, 34, 0.81);
+    --coadjuvant-4:rgb(255, 0, 85);
+    --background: rgb(250, 233, 79);
     --background-2: rgba(255, 233, 210, 1);
     --hidden-primary-color: rgba(226, 20, 222, 0);
-    --add-remove-icon: rgba(193, 34, 34, 0.6);
-    --reserve_2: rgba(221, 47, 47, 0.65);
+    --add-remove-icon: rgb(255, 50, 67);
+    --reserve_2: rgba(255, 49, 76, 0.65);
     /* Angles */
     --primary_color_deg: -0deg;
-    --secondary_color_deg: -90deg;
+    --secondary_color_deg: 90deg;
     --terciary_color_deg: 0deg;
     /* Services Presentation */
     --state_s_prst: contents;
@@ -38,7 +40,7 @@
 }
 
 .primary-color {
-    background: linear-gradient(var(--secondary_color_deg), var(--secondary_color_1), var(--secondary_color_2));
+    background: linear-gradient(var(--secondary_color_deg), var(--coadjuvant-4), var(--tab-icon));
 }
 
 .secondary-color {
@@ -50,11 +52,11 @@
 }
 
 .terciary-color {
-    background: linear-gradient(var(--terciary_color_deg), var(--terciary_color_1), var(--terciary_color_2)) !important;
+    background: var(--terciary_color_1) !important;
 }
 
 .quartenion_color {
-    color: var(--quartion_color_1)!important;
+    color: var(--coadjuvant-4) !important;
 }
 
 
@@ -97,17 +99,17 @@ a.mdl-layout__tab {
 
 a[href^="#spray_tan"] i.mdl-cell {
     margin: 1vw !important;
-    background: url("../images/icons/spray_tan.png") no-repeat center/80%;
+    background: url("/images/icons/spray_tan.png") no-repeat center/80%;
 }
 
 a[href^="#eyes"] i.mdl-cell {
     margin: 1vw !important;
-    background: url("../images/icons/eyes.png") no-repeat center/90%;
+    background: url("/images/icons/eyes.png") no-repeat center/90%;
 }
 
 a[href^="#dtox"] i.mdl-cell {
     margin: 1vw !important;
-    background: url("../images/icons/dtox.png") no-repeat center/100%;
+    background: url("/images/icons/dtox.png") no-repeat center/100%;
 }
 
 a[href^="#make_up"] i.mdl-cell {
@@ -136,11 +138,13 @@ a[href^="#packages"] i.mdl-cell {
 }
 
 footer a.mdl-layout__tab {
-    color: var(--coadjuvant-2) !imporant;
+    color: var(--coadjuvant-1) !important;
     ;
 }
 
 h2.contact {
+    font-family: "Cinzel";
+    color: black !important;
     font-size: 2.5vh;
 }
 
@@ -176,8 +180,16 @@ i.mdl-cell {
     background: url('http://www.kathavento.com.br/site/imagens/produtos_grandes/p25512.jpg') center / cover;
 }
 
+.mdl-layout__tab-bar-container{
+    z-index: -999;
+}
+
 .mdl-layout.is-upgraded .mdl-layout__tab.is-active {
     color: var(--tab-icon) !important;
+}
+
+.mdl-layout__container {
+z-index: -0;
 }
 
 .no-margin-height {
@@ -252,7 +264,7 @@ i.mdl-cell {
 }
 
 .contact {
-    color: var(--coadjuvant-1);
+    color: black;
     margin: auto;
 }
 
@@ -261,7 +273,7 @@ i.mdl-cell {
 }
 
 .material-icons.md-24 {
-    font-size: 4vh;
+    /*font-size: 30px;*/
 }
 
 .material-icons.md-36 {
@@ -273,7 +285,7 @@ i.mdl-cell {
 }
 
 .services_content {
-    background: rgb(251, 240, 242);
+    background: var(--background-2);
 }
 
 .services_content .demo-card-wide.mdl-card {
@@ -405,7 +417,7 @@ i.mdl-cell {
 }
 
 .animated.zoomIn {
-    animation-duration: .4s;
+    animation-duration: 0s;
 }
 
 .cart .mdl-card__actions {
@@ -481,7 +493,7 @@ i.mdl-cell {
 }
 
 #eyes .demo-card-wide>.mdl-card__title {
-    background: url('../images/brands/eyes.png.jpg') center / cover;
+    background: url('../images/brands/eyes.jpg') center / cover;
 }
 
 #dtox .demo-card-wide>.mdl-card__title {
@@ -646,6 +658,7 @@ i.mdl-cell {
 #schedulling .budget .mdl-card__title {
     padding: 0;
     width: 100vw;
+    background-color: var(--terciary_color_1)
 }
 
 #schedulling #sum-cart {
@@ -786,7 +799,7 @@ body {
     margin: auto !important;
     text-align: center;
     line-height: 4vh;
-    color: rgb(218, 83, 83) !important;
+    color: var(--reserve_2) !important;
     font-weight: 100;
     font-size: 2.5vh;
     font-family: "Cinzel" !important;

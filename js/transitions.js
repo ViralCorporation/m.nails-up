@@ -14,7 +14,7 @@ function show_s_prst() {
 	document.documentElement.style.setProperty(`--state_s_box`, 'none');
 	document.documentElement.style.setProperty(`--state_s_a`, 'block');
 }
-function hideBtns(){
+function hideBtns() {
 	document.getElementsByClassName("presentation").display = "none";
 	document.getElementsByClassName("presentation").position = "absolute";
 	document.getElementById("spray_tan_b").display = "none";
@@ -60,10 +60,19 @@ function unmargingSdl() {
 }
 
 $('.autoplay').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	autoplay: true,
+	autoplaySpeed: 2000,
 });
 
 $('.single-item').slick();
+
+// Snackbar function.
+function snackbar(string) {
+	var snackbarContainer = document.querySelector('#demo-snackbar-example');
+	var data = {
+		message: string,
+	};
+	snackbarContainer.MaterialSnackbar.showSnackbar(data);
+};
