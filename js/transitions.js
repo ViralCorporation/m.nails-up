@@ -37,6 +37,7 @@ function showingSdlPage1() {
 	margingSdl();
 	var div = document.getElementById("sdlPage1");
 	div.style.display = "inherit";
+	document.getElementById("shrink").classList.remove("tab-shrink");
 }
 
 function showingSdlPage2() {
@@ -44,6 +45,7 @@ function showingSdlPage2() {
 	unmargingSdl();
 	var div = document.getElementById("sdlPage2");
 	div.style.display = "inherit";
+	document.getElementById("shrink").classList.add("tab-shrink");
 }
 
 //Margin to show remove button in Schedulling.

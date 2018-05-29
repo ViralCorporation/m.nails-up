@@ -39,6 +39,8 @@
     --state_s_tbar: flex;
     --state_s_tab: none;
     --state_s_box: none;
+    /* Positions */
+    --price-tab: 85vh;
 }
 
 .primary-color {
@@ -410,6 +412,7 @@ z-index: -0;
     color: var(--quartion_color_1);
     width: 100%;
 }
+
 .presentation .demo-card-wide>.mdl-card__title {
     background: white;
 }
@@ -569,7 +572,7 @@ z-index: -0;
 }
 
 #schedulling .mdl-layout__tab-bar {
-    height: 5vh !important;
+    height: 10vw !important;
 }
 
 #schedulling .demo-card-wide.datapicker .mdl-card__title {
@@ -591,32 +594,31 @@ z-index: -0;
 }
 
 #schedulling #clickServices.mdl-button--fab {
-    width: 14vw;
-    height: 14vw;
+    width: 10vw;
+    height: 10vw;
     margin: 0;
-    top: calc(30vh - 7vw);
-    left: calc(100vw - 16vw);
+    top: calc(35vh - 7vw);
+    left: calc(100vw - 12vw);
     float: right;
+    position: fixed;
     animation-delay: .35s;
 }
 
 #schedulling #clickSdlPage2.mdl-button--fab {
-    width: 14vw;
-    height: 14vw;
+    width: 10vw;
+    height: 10vw;
     margin: 0;
-    top: calc(80vh - 16vw);
-    left: calc(100vw - 16vw);
+    top: calc(84vh - 12vw);
     float: right;
     position: fixed;
     animation-delay: .3s;
 }
 
 #schedulling #clickSdlPage1.mdl-button--fab {
-    width: 14vw;
-    height: 14vw;
+    width: 10vw;
+    height: 10vw;
     margin: 0;
-    top: calc(80vh - 16vw);
-    left: calc(100vw - 16vw);
+    top: calc(83.5vh - 12vw);
     float: right;
     position: fixed;
     animation-delay: .3s;
@@ -624,29 +626,42 @@ z-index: -0;
 }
 
 #schedulling #clickSdlSend.mdl-button--fab {
-    width: 14vw;
-    height: 14vw;
+    width: 10vw;
+    height: 10vw;
     margin: 0;
-    top: calc(70vh - 16vw);
-    left: calc(100vw - 16vw);
+    top: calc(81vh);
     float: right;
-    position: fixed;
+    position: absolute;
     animation-delay: .35s;
+    background: var(--tab-icon) !important;;
+    color: #F1F1F1 !important;
 }
 
 #clickSdlSend i {
-    font-size: 3.5vh !important;
+    font-size: 3vh !important;
+    color: white !important;
+    
 }
 
 #schedulling .budget {
-    bottom: 8vh !important;
+    top: var(--price-tab) !important;
+    padding-left: 1.5vw;
     position: fixed;
     animation-duration: .3s;
+    border-radius: 20px;
+    width: 97vw;
 }
+
+
+
+.tab-shrink{
+    width: 85% !important;
+}
+
 
 #schedulling .budget spam {
     text-align: center;
-    line-height: 24vh;
+    line-height: 4vh;
     color: var(--secondary_color_1);
     font-weight: 100;
     font-size: 3vh;
@@ -656,8 +671,13 @@ z-index: -0;
 
 #schedulling .budget .mdl-card__title {
     padding: 0;
-    width: 100vw;
+    width: 80vw;
     background-color: var(--terciary_color_1)
+    
+}
+
+.budget{
+width: 80%;
 }
 
 #schedulling #sum-cart {

@@ -304,13 +304,12 @@ function sendEmail() {
     if (current_cart.length >= 0) {
         if (current_cart.length >= 0) {
             Email.send("nailsupscheduling@gmail.com",
-                "info@nailsup.com.br",
+                "nailsupscheduling@gmail.com",
                 gerateSubjectEmailSdl(),
                 gerateBodyEmailSdl(),
                 "smtp.gmail.com",
                 "nailsupscheduling@gmail.com",
                 "nailsupbr");
-                snackbar("Agendado com sucesso!");
         }
     }
 
@@ -409,7 +408,7 @@ function findIndexOnCar(elem) {
 function removeFromCartByIndex(elem) {
     var aux;
     id = findIndexOnCar(elem);
-    
+    snackbar(list_services[id].name_service + " removido ao carrinho");
     $("#service_added_" + current_cart[id].hash).remove();
 
     if (id == 0) {
