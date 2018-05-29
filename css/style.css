@@ -572,7 +572,7 @@ z-index: -0;
 }
 
 #schedulling .mdl-layout__tab-bar {
-    height: 10vw !important;
+    height: 40px !important;
 }
 
 #schedulling .demo-card-wide.datapicker .mdl-card__title {
@@ -594,8 +594,8 @@ z-index: -0;
 }
 
 #schedulling #clickServices.mdl-button--fab {
-    width: 10vw;
-    height: 10vw;
+    width: 40px !important;
+    height: 40px !important;    
     margin: 0;
     top: calc(35vh - 7vw);
     left: calc(100vw - 12vw);
@@ -605,8 +605,8 @@ z-index: -0;
 }
 
 #schedulling #clickSdlPage2.mdl-button--fab {
-    width: 10vw;
-    height: 10vw;
+    width: 40px !important;
+    height: 40px !important;    
     margin: 0;
     top: calc(84vh - 12vw);
     float: right;
@@ -615,8 +615,8 @@ z-index: -0;
 }
 
 #schedulling #clickSdlPage1.mdl-button--fab {
-    width: 10vw;
-    height: 10vw;
+    width: 40px !important;
+    height: 40px !important;    
     margin: 0;
     top: calc(83.5vh - 12vw);
     float: right;
@@ -626,8 +626,8 @@ z-index: -0;
 }
 
 #schedulling #clickSdlSend.mdl-button--fab {
-    width: 10vw;
-    height: 10vw;
+    width: 40px !important;
+    height: 40px !important;    
     margin: 0;
     top: calc(81vh);
     float: right;
