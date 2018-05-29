@@ -24,7 +24,7 @@
     --coadjuvant-3:rgba(193, 34, 34, 0.81);
     --coadjuvant-4:rgb(255, 0, 85);
     --background: rgb(250, 233, 79);
-    --background-2: rgba(255, 233, 210, 1);
+    --background-2: rgba(255, 233, 210, 0);
     --hidden-primary-color: rgba(226, 20, 222, 0);
     --text-color: rgba(68, 57, 57, 0.747);
     --price-color: rgb(255, 50, 30);
